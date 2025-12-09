@@ -8,6 +8,12 @@ from selenium.webdriver.chrome.options import Options
 from selenium.common.exceptions import WebDriverException
 import requests
 
+from bs4 import BeautifulSoup
+from urllib.parse import urljoin
+from selenium.common.exceptions import WebDriverException
+
+from requests.adapters import HTTPAdapter, Retry
+
 # Config
 START_URL = "https://intranet.gov.bc.ca/csnr/csnr-services/procurement-contract-management-support/learning-tools-and-resources/a-z-index"
 # START_URL = "https://www2.gov.bc.ca/gov/content/bc-procurement-resources/buy-for-government/solicitation-processes-and-templates?keyword=templates"
@@ -124,7 +130,6 @@ def download_file_in_browser(file_url, indent):
     except Exception as e:
         print(f"❌ Failed to download {file_url}: {e}")
 
-from requests.adapters import HTTPAdapter, Retry
 
 def download_file_with_requests(file_url, indent, max_retries=2):
     try:
@@ -177,9 +182,7 @@ def wait_for_login_if_needed():
     if "idir" in page_text or "password" in page_text:
         input("🔒 Login prompt detected. Please complete login and press Enter to continue...")
 
-from bs4 import BeautifulSoup
-from urllib.parse import urljoin
-from selenium.common.exceptions import WebDriverException
+
 
 def extract_main_content(soup):
     # Remove top/side/footer sections

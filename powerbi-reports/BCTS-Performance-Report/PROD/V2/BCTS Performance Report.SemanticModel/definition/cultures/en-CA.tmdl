@@ -21703,6 +21703,39 @@ cultureInfo en-CA
 			    }
 			  },
 			  "Relationships": {
+			    "bcts_reporting_bcts_performance_report_licence_issued_detail_issued_has_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "bcts_reporting bcts_performance_report_licence_issued_details"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bcts_reporting_bcts_performance_report_licence_issued_detail.issued": {
+			          "Target": {
+			            "Entity": "bcts_reporting_bcts_performance_report_licence_issued_detail.issued"
+			          }
+			        },
+			        "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.date_hierarchy": {
+			          "Target": {
+			            "Entity": "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bcts_reporting_bcts_performance_report_licence_issued_detail.issued"
+			            },
+			            "Object": {
+			              "Role": "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "issued_have_issued_date_hierarchies"
+			        }
+			      ]
+			    },
 			    "bcts_reporting_recent_auction_result_business_area_region_category_hierarchy_business_area_region_has_bcts_reporting_recent_auction_result_business_area_region_category_hierarchy_business_area": {
 			      "Binding": {
 			        "ConceptualEntity": "bcts_reporting recent_auction_results"
@@ -24668,19 +24701,6 @@ cultureInfo en-CA
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "bcts_reporting_bcts_performance_report_not_awarded_details_have_business_area_regions"
-			        },
-			        {
-			          "DynamicAdjective": {
-			            "Subject": {
-			              "Role": "bcts_reporting_bcts_performance_report_not_awarded_detail"
-			            },
-			            "Adjective": {
-			              "Role": "bcts_reporting_bcts_performance_report_not_awarded_detail.business_area_region"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "business_area_regions_describe_bcts_reporting_bcts_performance_report_not_awarded_details"
 			        }
 			      ]
 			    },
@@ -31071,39 +31091,6 @@ cultureInfo en-CA
 			          "State": "Generated",
 			          "Weight": 0.9,
 			          "ID": "bcts_reporting_licence_issued_advertised_mains_are_auctioned_on_first_auction_dates"
-			        }
-			      ]
-			    },
-			    "bcts_reporting_bcts_performance_report_licence_issued_detail_issued_has_date_hierarchy": {
-			      "Binding": {
-			        "ConceptualEntity": "bcts_reporting bcts_performance_report_licence_issued_details"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "bcts_reporting_bcts_performance_report_licence_issued_detail.issued": {
-			          "Target": {
-			            "Entity": "bcts_reporting_bcts_performance_report_licence_issued_detail.issued"
-			          }
-			        },
-			        "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.date_hierarchy": {
-			          "Target": {
-			            "Entity": "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.date_hierarchy"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "bcts_reporting_bcts_performance_report_licence_issued_detail.issued"
-			            },
-			            "Object": {
-			              "Role": "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.date_hierarchy"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "issued_have_issued_date_hierarchies"
 			        }
 			      ]
 			    },

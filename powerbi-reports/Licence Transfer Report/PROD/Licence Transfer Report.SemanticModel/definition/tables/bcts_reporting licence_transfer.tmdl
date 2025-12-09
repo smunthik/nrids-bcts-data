@@ -1,0 +1,270 @@
+table 'bcts_reporting licence_transfer'
+	lineageTag: 07d2404b-2ac2-46e3-9d19-88e5c9b2907f
+
+	column business_area_region
+		dataType: string
+		lineageTag: 2eff3ab2-6625-410b-ab3f-a24ee62b95c1
+		summarizeBy: none
+		sourceColumn: business_area_region
+
+		annotation SummarizationSetBy = Automatic
+
+	column business_area
+		dataType: string
+		lineageTag: cbb6fdeb-5e8f-47f3-b890-fd205418eee2
+		summarizeBy: none
+		sourceColumn: business_area
+
+		annotation SummarizationSetBy = Automatic
+
+	column management_unit_type
+		dataType: string
+		lineageTag: 1cc43f89-0890-467b-8880-ed57d1eef586
+		summarizeBy: none
+		sourceColumn: management_unit_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column management_unit_id
+		dataType: string
+		lineageTag: 01748183-105f-4f49-9526-b8dd732361f7
+		summarizeBy: none
+		sourceColumn: management_unit_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column management_unit
+		dataType: string
+		lineageTag: 1816af79-ce1a-439a-ba17-a1a7821c5caa
+		summarizeBy: none
+		sourceColumn: management_unit
+
+		annotation SummarizationSetBy = Automatic
+
+	column forest_file_id
+		dataType: string
+		lineageTag: bbd6d318-8a4e-4890-bdd3-d9b1c9c31e46
+		summarizeBy: none
+		sourceColumn: forest_file_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column bcts_category_code
+		dataType: string
+		lineageTag: 44ffdf3d-d9c4-4ccd-bff1-1a1953df96f0
+		summarizeBy: none
+		sourceColumn: bcts_category_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column category
+		dataType: string
+		lineageTag: e4c9c34b-1f2e-45e4-bb94-2f4881e9fe1d
+		summarizeBy: none
+		sourceColumn: category
+
+		annotation SummarizationSetBy = Automatic
+
+	column auction_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 9e726ada-db44-44aa-aa31-4245a5d22200
+		summarizeBy: none
+		sourceColumn: auction_date
+
+		variation Variation
+			isDefault
+			relationship: 3f9fd255-4c13-4503-a3a5-ecdb6b280820
+			defaultHierarchy: LocalDateTable_93b8e3b5-a30d-4f3e-9b49-5624a957fae5.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column sale_volume
+		dataType: double
+		lineageTag: 2d913cf6-0f61-47a4-8130-365b52d2445b
+		summarizeBy: sum
+		sourceColumn: sale_volume
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column fta_file_status
+		dataType: string
+		lineageTag: 05e4b82c-9d31-454b-8c7b-732cb17f4b35
+		summarizeBy: none
+		sourceColumn: fta_file_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column legal_effective_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: b479870b-ffbe-4296-a6f3-8ff45ef4cede
+		summarizeBy: none
+		sourceColumn: legal_effective_date
+
+		variation Variation
+			isDefault
+			relationship: d74abbc9-93d9-4c93-b1a3-c3a4b09dc369
+			defaultHierarchy: LocalDateTable_34d07d7c-34c8-48c8-bfb6-072c35ccf2ed.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column client_number
+		dataType: string
+		lineageTag: dbe64a3e-3a4e-48a2-b6e8-6854d1d2159e
+		summarizeBy: none
+		sourceColumn: client_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column client_name
+		dataType: string
+		lineageTag: f6bb2cfa-5fbb-41e3-921d-e9abf101d3b2
+		summarizeBy: none
+		sourceColumn: client_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column client_type
+		dataType: string
+		lineageTag: 65cf9ee5-0df9-415f-8fb6-b5212c4dafdd
+		summarizeBy: none
+		sourceColumn: client_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column registry_company_type_code
+		dataType: string
+		lineageTag: 4b39b8f8-8948-437c-9d8b-60c58e8896a2
+		summarizeBy: none
+		sourceColumn: registry_company_type_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column licensee_start_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: f81ca412-d74f-4c41-a8f0-f1b8c90cd42c
+		summarizeBy: none
+		sourceColumn: licensee_start_date
+
+		variation Variation
+			isDefault
+			relationship: 35a29f3e-0a0f-49c3-802b-c9534d496edb
+			defaultHierarchy: LocalDateTable_7ea27490-11ab-4014-8250-082b79d54e0b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column licensee_end_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 786bddb5-0eb1-4969-8225-872b89f6e7d8
+		summarizeBy: none
+		sourceColumn: licensee_end_date
+
+		variation Variation
+			isDefault
+			relationship: 2a86637d-5821-4df4-ac80-d7471201b2ab
+			defaultHierarchy: LocalDateTable_b7f86b7d-ab5b-4438-b813-2fd9b8723d53.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column revision_count
+		dataType: double
+		lineageTag: 4f7472f5-eeb9-4285-a37d-af83ffebe2fe
+		summarizeBy: sum
+		sourceColumn: revision_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column licensee_order
+		dataType: int64
+		formatString: 0
+		lineageTag: 204600bf-8c85-485c-b3fc-7f8b4af3900b
+		summarizeBy: sum
+		sourceColumn: licensee_order
+
+		annotation SummarizationSetBy = Automatic
+
+	column report_start_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 3dd2c14a-f2f8-4e52-8869-5c5cb29da26b
+		summarizeBy: none
+		sourceColumn: report_start_date
+
+		variation Variation
+			isDefault
+			relationship: bad47bd3-b35b-45da-96ba-798a9556d18c
+			defaultHierarchy: LocalDateTable_258b3ed3-b0fb-45b7-bdb1-0135b783035c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column report_end_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 67daa3ba-a8c0-434a-9adf-2a222e0ab1c0
+		summarizeBy: none
+		sourceColumn: report_end_date
+
+		variation Variation
+			isDefault
+			relationship: ade3415e-f111-4e31-8c55-250cda299cb7
+			defaultHierarchy: LocalDateTable_c06b3ccf-95d0-4c00-aa90-b39051200d1d.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column report_run_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 4088507e-a2c4-465e-b466-2734a018779e
+		summarizeBy: none
+		sourceColumn: report_run_date
+
+		variation Variation
+			isDefault
+			relationship: cef89b45-6cfe-4139-99c4-7ea3f5e5b7da
+			defaultHierarchy: LocalDateTable_0c5f26fa-2b10-4a88-996e-0a9dc0a55974.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Fiscal Period Info' = ```
+			
+			"Data shown reflects period from " & 
+			FORMAT(MAX('bcts_reporting licence_transfer'[report_start_date]), "MMMM DD, YYYY") & 
+			" to " & 
+			FORMAT(MAX('bcts_reporting licence_transfer'[report_end_date]), "MMMM DD, YYYY") &
+			" | " & 
+			"Report Run Date: " & 
+			FORMAT(MAX('bcts_reporting licence_transfer'[report_run_date]), "MMMM DD, YYYY")
+			```
+		lineageTag: fab082c4-1eb5-46fc-83f8-9ac7e868d69d
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'bcts_reporting licence_transfer' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("existence.bcgov:5435", "odsprd"),
+				    bcts_reporting_licence_transfer = Source{[Schema="bcts_reporting",Item="licence_transfer"]}[Data]
+				in
+				    bcts_reporting_licence_transfer
+

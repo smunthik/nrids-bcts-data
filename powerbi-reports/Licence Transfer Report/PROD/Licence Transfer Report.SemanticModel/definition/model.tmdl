@@ -1,0 +1,26 @@
+model Model
+	culture: en-CA
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-CA
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["bcts_reporting licence_transfer"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table 'bcts_reporting licence_transfer'
+ref table DateTableTemplate_c7a36501-a0a1-4a50-8c8b-305927ff4d3c
+ref table LocalDateTable_93b8e3b5-a30d-4f3e-9b49-5624a957fae5
+ref table LocalDateTable_34d07d7c-34c8-48c8-bfb6-072c35ccf2ed
+ref table LocalDateTable_7ea27490-11ab-4014-8250-082b79d54e0b
+ref table LocalDateTable_b7f86b7d-ab5b-4438-b813-2fd9b8723d53
+ref table LocalDateTable_258b3ed3-b0fb-45b7-bdb1-0135b783035c
+ref table LocalDateTable_c06b3ccf-95d0-4c00-aa90-b39051200d1d
+ref table LocalDateTable_0c5f26fa-2b10-4a88-996e-0a9dc0a55974
+
+ref cultureInfo en-CA
+

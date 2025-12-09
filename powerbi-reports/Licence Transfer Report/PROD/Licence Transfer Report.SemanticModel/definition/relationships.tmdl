@@ -1,0 +1,35 @@
+relationship 3f9fd255-4c13-4503-a3a5-ecdb6b280820
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'bcts_reporting licence_transfer'.auction_date
+	toColumn: LocalDateTable_93b8e3b5-a30d-4f3e-9b49-5624a957fae5.Date
+
+relationship d74abbc9-93d9-4c93-b1a3-c3a4b09dc369
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'bcts_reporting licence_transfer'.legal_effective_date
+	toColumn: LocalDateTable_34d07d7c-34c8-48c8-bfb6-072c35ccf2ed.Date
+
+relationship 35a29f3e-0a0f-49c3-802b-c9534d496edb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'bcts_reporting licence_transfer'.licensee_start_date
+	toColumn: LocalDateTable_7ea27490-11ab-4014-8250-082b79d54e0b.Date
+
+relationship 2a86637d-5821-4df4-ac80-d7471201b2ab
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'bcts_reporting licence_transfer'.licensee_end_date
+	toColumn: LocalDateTable_b7f86b7d-ab5b-4438-b813-2fd9b8723d53.Date
+
+relationship bad47bd3-b35b-45da-96ba-798a9556d18c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'bcts_reporting licence_transfer'.report_start_date
+	toColumn: LocalDateTable_258b3ed3-b0fb-45b7-bdb1-0135b783035c.Date
+
+relationship ade3415e-f111-4e31-8c55-250cda299cb7
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'bcts_reporting licence_transfer'.report_end_date
+	toColumn: LocalDateTable_c06b3ccf-95d0-4c00-aa90-b39051200d1d.Date
+
+relationship cef89b45-6cfe-4139-99c4-7ea3f5e5b7da
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'bcts_reporting licence_transfer'.report_run_date
+	toColumn: LocalDateTable_0c5f26fa-2b10-4a88-996e-0a9dc0a55974.Date
+

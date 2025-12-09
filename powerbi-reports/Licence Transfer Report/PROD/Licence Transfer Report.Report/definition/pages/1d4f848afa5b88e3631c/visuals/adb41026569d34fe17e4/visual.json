@@ -1,0 +1,459 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "adb41026569d34fe17e4",
+  "position": {
+    "x": 15.437185929648241,
+    "y": 151.79899497487438,
+    "z": 5000,
+    "height": 554.45226130653271,
+    "width": 1250.4120603015076,
+    "tabOrder": 5000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_transfer"
+                    }
+                  },
+                  "Property": "business_area_region"
+                }
+              },
+              "queryRef": "bcts_reporting licence_transfer.business_area_region",
+              "nativeQueryRef": "business_area_region"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_transfer"
+                    }
+                  },
+                  "Property": "business_area"
+                }
+              },
+              "queryRef": "bcts_reporting licence_transfer.business_area",
+              "nativeQueryRef": "business_area"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_transfer"
+                    }
+                  },
+                  "Property": "bcts_category_code"
+                }
+              },
+              "queryRef": "bcts_reporting licence_transfer.bcts_category_code",
+              "nativeQueryRef": "bcts_category_code"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_transfer"
+                    }
+                  },
+                  "Property": "category"
+                }
+              },
+              "queryRef": "bcts_reporting licence_transfer.category",
+              "nativeQueryRef": "category"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_transfer"
+                    }
+                  },
+                  "Property": "auction_date"
+                }
+              },
+              "queryRef": "bcts_reporting licence_transfer.auction_date",
+              "nativeQueryRef": "auction_date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_transfer"
+                    }
+                  },
+                  "Property": "client_name"
+                }
+              },
+              "queryRef": "bcts_reporting licence_transfer.client_name",
+              "nativeQueryRef": "client_name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_transfer"
+                    }
+                  },
+                  "Property": "client_number"
+                }
+              },
+              "queryRef": "bcts_reporting licence_transfer.client_number",
+              "nativeQueryRef": "client_number"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_transfer"
+                    }
+                  },
+                  "Property": "client_type"
+                }
+              },
+              "queryRef": "bcts_reporting licence_transfer.client_type",
+              "nativeQueryRef": "client_type"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_transfer"
+                    }
+                  },
+                  "Property": "forest_file_id"
+                }
+              },
+              "queryRef": "bcts_reporting licence_transfer.forest_file_id",
+              "nativeQueryRef": "forest_file_id"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_transfer"
+                    }
+                  },
+                  "Property": "sale_volume"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting licence_transfer.sale_volume)",
+              "nativeQueryRef": "sale_volume"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_transfer"
+                    }
+                  },
+                  "Property": "fta_file_status"
+                }
+              },
+              "queryRef": "bcts_reporting licence_transfer.fta_file_status",
+              "nativeQueryRef": "fta_file_status"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_transfer"
+                    }
+                  },
+                  "Property": "legal_effective_date"
+                }
+              },
+              "queryRef": "bcts_reporting licence_transfer.legal_effective_date",
+              "nativeQueryRef": "legal_effective_date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_transfer"
+                    }
+                  },
+                  "Property": "licensee_end_date"
+                }
+              },
+              "queryRef": "bcts_reporting licence_transfer.licensee_end_date",
+              "nativeQueryRef": "licensee_end_date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_transfer"
+                    }
+                  },
+                  "Property": "licensee_order"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting licence_transfer.licensee_order)",
+              "nativeQueryRef": "licensee_order"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_transfer"
+                    }
+                  },
+                  "Property": "licensee_start_date"
+                }
+              },
+              "queryRef": "bcts_reporting licence_transfer.licensee_start_date",
+              "nativeQueryRef": "licensee_start_date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_transfer"
+                    }
+                  },
+                  "Property": "management_unit"
+                }
+              },
+              "queryRef": "bcts_reporting licence_transfer.management_unit",
+              "nativeQueryRef": "management_unit"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_transfer"
+                    }
+                  },
+                  "Property": "management_unit_id"
+                }
+              },
+              "queryRef": "bcts_reporting licence_transfer.management_unit_id",
+              "nativeQueryRef": "management_unit_id"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_transfer"
+                    }
+                  },
+                  "Property": "management_unit_type"
+                }
+              },
+              "queryRef": "bcts_reporting licence_transfer.management_unit_type",
+              "nativeQueryRef": "management_unit_type"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_transfer"
+                    }
+                  },
+                  "Property": "registry_company_type_code"
+                }
+              },
+              "queryRef": "bcts_reporting licence_transfer.registry_company_type_code",
+              "nativeQueryRef": "registry_company_type_code"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_transfer"
+                    }
+                  },
+                  "Property": "revision_count"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting licence_transfer.revision_count)",
+              "nativeQueryRef": "revision_count"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_transfer"
+                    }
+                  },
+                  "Property": "report_run_date"
+                }
+              },
+              "queryRef": "bcts_reporting licence_transfer.report_run_date",
+              "nativeQueryRef": "report_run_date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_transfer"
+                    }
+                  },
+                  "Property": "report_start_date"
+                }
+              },
+              "queryRef": "bcts_reporting licence_transfer.report_start_date",
+              "nativeQueryRef": "report_start_date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_transfer"
+                    }
+                  },
+                  "Property": "report_end_date"
+                }
+              },
+              "queryRef": "bcts_reporting licence_transfer.report_end_date",
+              "nativeQueryRef": "report_end_date"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "keepLayerOrder": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.6
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "19D"
+                }
+              }
+            },
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

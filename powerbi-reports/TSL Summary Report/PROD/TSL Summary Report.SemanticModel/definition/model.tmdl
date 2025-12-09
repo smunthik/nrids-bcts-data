@@ -10,8 +10,6 @@ annotation PBI_QueryOrder = ["bcts_reporting v_tsl_summary","bcts_reporting tsl_
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBIDesktopVersion = 2.146.705.0 (25.08)+b71502aff0a01340c88f384884ef42771068f115
-
 annotation PBI_ProTooling = ["DevMode"]
 
 ref table 'bcts_reporting v_tsl_summary'
