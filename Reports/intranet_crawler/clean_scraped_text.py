@@ -4,7 +4,7 @@ import random
 from urllib.parse import urlparse
 
 INPUT_FILE = "./intranet_full_crawl.txt"   # your large text file
-OUTPUT_FOLDER = "./bcts_chatbot_additional_context_procurement_contracts_2025_11_05/"    # folder to save individual files
+OUTPUT_FOLDER = "./huntig_faq_2025_12_11/"    # folder to save individual files
 MIN_TEXT_LENGTH = 50  
 MAX_FILENAME_LEN = 75  # updated limit
 

@@ -112,7 +112,7 @@ table 'bcts_reporting tsl_summary_main'
 
 	column auction_closing_date
 		dataType: dateTime
-		formatString: General Date
+		formatString: yyyy-mm-dd
 		lineageTag: 24fd45ff-c5db-40df-b238-d1b95f22240f
 		summarizeBy: none
 		sourceColumn: auction_closing_date
@@ -123,6 +123,8 @@ table 'bcts_reporting tsl_summary_main'
 			defaultHierarchy: LocalDateTable_1b31c76a-282c-4205-93f6-3b6293f0fa9d.'Date Hierarchy'
 
 		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
 
 	column number_of_bidders
 		dataType: string

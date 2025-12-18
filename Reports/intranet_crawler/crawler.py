@@ -15,10 +15,12 @@ from selenium.common.exceptions import WebDriverException
 from requests.adapters import HTTPAdapter, Retry
 
 # Config
-START_URL = "https://intranet.gov.bc.ca/csnr/csnr-services/procurement-contract-management-support/learning-tools-and-resources/a-z-index"
+# START_URL = "https://intranet.gov.bc.ca/csnr/csnr-services/procurement-contract-management-support/learning-tools-and-resources/a-z-index"
+START_URL = "https://www2.gov.bc.ca/gov/content/sports-culture/recreation/fishing-hunting/hunting/frequently-asked-questions"
+
 # START_URL = "https://www2.gov.bc.ca/gov/content/bc-procurement-resources/buy-for-government/solicitation-processes-and-templates?keyword=templates"
 # START_URL = "https://intranet.fin.gov.bc.ca/program/insurance-program-types"
-MAX_DEPTH = 2
+MAX_DEPTH = 1
 OUTPUT_FILE = "intranet_full_crawl.txt"
 HIERARCHY_FILE = "intranet_url_tree.txt"
 DOWNLOAD_FOLDER = "downloads"
