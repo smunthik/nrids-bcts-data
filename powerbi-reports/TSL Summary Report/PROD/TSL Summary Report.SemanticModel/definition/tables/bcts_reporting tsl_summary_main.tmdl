@@ -67,23 +67,25 @@ table 'bcts_reporting tsl_summary_main'
 
 	column volume_advertised_m3
 		dataType: double
+		formatString: #,0
 		lineageTag: 092377ec-4811-45c1-ade0-48316fa4750e
 		summarizeBy: sum
 		sourceColumn: volume_advertised_m3
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"isDecimal":true}
 
 	column volume_readvertised_m3
 		dataType: double
+		formatString: #,0
 		lineageTag: 8161b05b-7c4e-41cd-95bb-5d7933896b00
 		summarizeBy: sum
 		sourceColumn: volume_readvertised_m3
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"isDecimal":true}
 
 	column auctioned_bcts_category_code
 		dataType: string

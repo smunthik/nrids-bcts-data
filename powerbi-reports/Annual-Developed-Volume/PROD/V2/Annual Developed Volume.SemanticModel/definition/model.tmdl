@@ -6,11 +6,9 @@ model Model
 		legacyRedirects
 		returnErrorValuesAsNull
 
-annotation PBI_QueryOrder = ["bcts_reporting annual_developed_volume","bcts_reporting annual_developed_volume_hist"]
+annotation PBI_QueryOrder = ["bcts_reporting annual_developed_volume","bcts_reporting annual_developed_volume_hist","ADV_Targets"]
 
 annotation __PBI_TimeIntelligenceEnabled = 1
-
-annotation PBIDesktopVersion = 2.145.1105.0 (25.07)+decbc46fce458c5b8d5109d6f32a743f2ac949c8
 
 annotation PBI_ProTooling = ["DevMode"]
 
@@ -31,6 +29,7 @@ ref table LocalDateTable_86d477bf-2906-4261-8b6f-59dbec546a05
 ref table LocalDateTable_bdab1fb6-b24f-4893-ba4f-2fd4a302464e
 ref table LocalDateTable_4474cb75-be81-42a8-9f67-63f64f4e58d1
 ref table LocalDateTable_87a6cc1b-29be-4912-92f9-951899eab970
+ref table ADV_Targets
 
 ref cultureInfo en-CA
 

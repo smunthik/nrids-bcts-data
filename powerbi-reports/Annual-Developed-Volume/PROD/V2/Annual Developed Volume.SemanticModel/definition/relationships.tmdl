@@ -72,3 +72,12 @@ relationship bae7b790-e67d-457a-b0f4-8890c7ddd48a
 	fromColumn: 'bcts_reporting annual_developed_volume_hist'.report_run_date
 	toColumn: LocalDateTable_87a6cc1b-29be-4912-92f9-951899eab970.Date
 
+relationship AutoDetected_a41bebb6-cdad-4c80-b5ef-378b8ba85a0e
+	fromColumn: 'bcts_reporting annual_developed_volume'.business_area
+	toColumn: ADV_Targets.business_area
+
+relationship AutoDetected_748a572f-44e5-4d83-ad4e-423d47824167
+	isActive: false
+	fromColumn: 'bcts_reporting annual_developed_volume_hist'.business_area
+	toColumn: ADV_Targets.business_area
+

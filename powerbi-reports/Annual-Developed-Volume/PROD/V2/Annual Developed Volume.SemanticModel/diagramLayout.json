@@ -33,6 +33,18 @@
             "width": 396
           },
           "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1063,
+            "y": 62
+          },
+          "nodeIndex": "ADV_Targets",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "All tables",
