@@ -4986,6 +4986,27 @@ cultureInfo en-CA
 			        }
 			      },
 			      "State": "Generated"
+			    },
+			    "bcts_staging_dim_business_area.business_area_region_category": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bcts_staging dim_business_area",
+			          "ConceptualProperty": "Business Area"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Business Area": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {

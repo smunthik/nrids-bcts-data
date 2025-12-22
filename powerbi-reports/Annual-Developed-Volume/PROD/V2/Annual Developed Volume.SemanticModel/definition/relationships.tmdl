@@ -58,10 +58,6 @@ relationship c4d7a235-27e5-4580-9e1f-ff4cf0ef1974
 	fromColumn: 'bcts_reporting annual_developed_volume_hist'.report_end_date
 	toColumn: LocalDateTable_bdab1fb6-b24f-4893-ba4f-2fd4a302464e.Date
 
-relationship 8d10a282-b5ba-0040-116c-bed96477f8aa
-	fromColumn: 'bcts_reporting annual_developed_volume_hist'.cutb_seq_nbr
-	toColumn: 'bcts_reporting annual_developed_volume'.cutb_seq_nbr
-
 relationship 2bbec1cc-4871-4324-88e6-4d8d6330db32
 	joinOnDateBehavior: datePartOnly
 	fromColumn: 'bcts_reporting annual_developed_volume'.report_run_date
@@ -72,12 +68,13 @@ relationship bae7b790-e67d-457a-b0f4-8890c7ddd48a
 	fromColumn: 'bcts_reporting annual_developed_volume_hist'.report_run_date
 	toColumn: LocalDateTable_87a6cc1b-29be-4912-92f9-951899eab970.Date
 
-relationship AutoDetected_a41bebb6-cdad-4c80-b5ef-378b8ba85a0e
+relationship 466e789d-3839-c1a3-a55e-3e68c75aa06e
 	fromColumn: 'bcts_reporting annual_developed_volume'.business_area
-	toColumn: ADV_Targets.business_area
+	toColumn: 'bcts_staging dim_business_area'.business_area
 
-relationship AutoDetected_748a572f-44e5-4d83-ad4e-423d47824167
-	isActive: false
-	fromColumn: 'bcts_reporting annual_developed_volume_hist'.business_area
+relationship d6a3c682-59e5-ed6f-65e9-69a89f4be281
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'bcts_staging dim_business_area'.business_area
 	toColumn: ADV_Targets.business_area
 

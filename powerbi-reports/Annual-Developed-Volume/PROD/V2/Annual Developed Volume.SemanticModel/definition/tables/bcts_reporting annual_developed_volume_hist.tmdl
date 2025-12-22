@@ -257,7 +257,7 @@ table 'bcts_reporting annual_developed_volume_hist'
 	column cutb_seq_nbr
 		dataType: int64
 		lineageTag: af381525-cebd-4754-8ea6-e50ec3a2d77b
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: cutb_seq_nbr
 
 		annotation SummarizationSetBy = Automatic
