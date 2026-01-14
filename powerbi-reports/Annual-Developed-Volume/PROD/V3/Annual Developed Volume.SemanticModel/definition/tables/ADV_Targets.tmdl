@@ -1,0 +1,63 @@
+table ADV_Targets
+	lineageTag: 5c9bf7b6-8809-491a-a932-856be2f959ff
+
+	measure 'ADV Target' =
+			
+			SUM ( 'ADV_Targets'[adv_target_m3])
+		lineageTag: e5dce528-6c43-4657-8b98-8334356687c9
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column business_area_region
+		dataType: string
+		lineageTag: 3bd32a2b-bbe0-4be9-8b77-1564e97c1ab9
+		summarizeBy: none
+		sourceColumn: business_area_region
+
+		annotation SummarizationSetBy = Automatic
+
+	column business_area
+		dataType: string
+		lineageTag: 8b5f8200-3df8-46ba-a8e0-809ca32b7ca6
+		summarizeBy: none
+		sourceColumn: business_area
+
+		annotation SummarizationSetBy = Automatic
+
+	column adv_target_m3
+		dataType: double
+		formatString: #,0
+		lineageTag: 440b1d3d-50d0-4e41-b1b9-6b8487305c4c
+		summarizeBy: sum
+		sourceColumn: adv_target_m3
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column fiscal_year
+		dataType: string
+		lineageTag: 72fd971d-1fa5-440f-8ddd-dd9085ab1675
+		summarizeBy: none
+		sourceColumn: fiscal_year
+
+		annotation SummarizationSetBy = Automatic
+
+	column business_area_region_category
+		dataType: string
+		lineageTag: 6e9c8abe-a3e0-43f4-8ded-ccea675bf59e
+		summarizeBy: none
+		sourceColumn: business_area_region_category
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ADV_Targets = m
+		mode: import
+		source =
+				let
+				    Source = Value.NativeQuery(PostgreSQL.Database("existence.bcgov:5435", "odsprd"), "select *#(lf)    from bcts_staging.bcts_adv_targets#(lf)    where fiscal_year = (select max(fiscal_year) from bcts_staging.bcts_adv_targets)", null, [EnableFolding=true])
+				in
+				    Source
+
+	annotation PBI_ResultType = Table
+

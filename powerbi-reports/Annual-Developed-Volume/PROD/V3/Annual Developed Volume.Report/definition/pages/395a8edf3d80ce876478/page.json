@@ -1,0 +1,8 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "395a8edf3d80ce876478",
+  "displayName": "Annual Developed Volume",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280
+}
