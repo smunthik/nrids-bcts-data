@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "d48f934221bb73a1d038",
+  "name": "76e86952b6d52d859dc9",
   "position": {
-    "x": 817.419945105215,
-    "y": 137.01738334858189,
-    "z": 15001,
-    "height": 209.62488563586459,
-    "width": 455.55352241537054,
-    "tabOrder": 15001
+    "x": 816.84210526315792,
+    "y": 137.54385964912279,
+    "z": 15003,
+    "height": 209.12280701754386,
+    "width": 456.140350877193,
+    "tabOrder": 15003
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -102,74 +102,15 @@
                       "Entity": "bcts_reporting annual_developed_volume_hist"
                     }
                   },
-                  "Property": "PreviousFY_CruiseVolume"
+                  "Property": "PreviousFY_YTD_CruiseVolume"
                 }
               },
-              "queryRef": "bcts_reporting annual_developed_volume_hist.PreviousFY_CruiseVolume",
-              "nativeQueryRef": "Previous FY Total Volume",
-              "displayName": "Previous FY Total Volume"
+              "queryRef": "bcts_reporting annual_developed_volume_hist.PreviousFY_YTD_CruiseVolume",
+              "nativeQueryRef": "Previous FY YTD Volume",
+              "displayName": "Previous FY YTD Volume"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "HierarchyLevel": {
-                "Expression": {
-                  "Hierarchy": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "bcts_reporting annual_developed_volume_hist"
-                      }
-                    },
-                    "Hierarchy": "business_area_region_category Hierarchy"
-                  }
-                },
-                "Level": "business_area_region_category"
-              }
-            },
-            "direction": "Ascending"
-          },
-          {
-            "field": {
-              "HierarchyLevel": {
-                "Expression": {
-                  "Hierarchy": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "bcts_reporting annual_developed_volume_hist"
-                      }
-                    },
-                    "Hierarchy": "business_area_region_category Hierarchy"
-                  }
-                },
-                "Level": "business_area_region"
-              }
-            },
-            "direction": "Ascending"
-          },
-          {
-            "field": {
-              "HierarchyLevel": {
-                "Expression": {
-                  "Hierarchy": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "bcts_reporting annual_developed_volume_hist"
-                      }
-                    },
-                    "Hierarchy": "business_area_region_category Hierarchy"
-                  }
-                },
-                "Level": "business_area"
-              }
-            },
-            "direction": "Ascending"
-          }
-        ],
-        "isDefaultSort": true
       }
     },
     "objects": {
@@ -393,7 +334,7 @@
             }
           },
           "selector": {
-            "metadata": "bcts_reporting annual_developed_volume_hist.PreviousFY_CruiseVolume"
+            "metadata": "bcts_reporting annual_developed_volume_hist.PreviousFY_YTD_CruiseVolume"
           }
         }
       ],
@@ -417,6 +358,39 @@
               "expr": {
                 "Literal": {
                   "Value": "'Cruise Volume (m³)'"
+                }
+              }
+            },
+            "gridlineStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "'solid'"
+                }
+              }
+            },
+            "gridlineThickness": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "gridlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "gridlineTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
                 }
               }
             }

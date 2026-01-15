@@ -5079,6 +5079,27 @@ cultureInfo en-CA
 			          }
 			        }
 			      ]
+			    },
+			    "bcts_reporting_annual_developed_volume_hist.previousfy_ytd_cruisevolume": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bcts_reporting annual_developed_volume_hist",
+			          "ConceptualProperty": "PreviousFY_YTD_CruiseVolume"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Previous FY YTD Volume": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
