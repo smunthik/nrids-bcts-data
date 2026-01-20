@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "d39fb7843404d1ae07ba",
   "position": {
-    "x": 15.43859649122807,
-    "y": 151.57894736842104,
+    "x": 15.555555555555555,
+    "y": 163.33333333333334,
     "z": 6000,
-    "height": 558.59649122807014,
-    "width": 1247.719298245614,
+    "height": 546.66666666666663,
+    "width": 1247.7777777777778,
     "tabOrder": 6000
   },
   "visual": {
@@ -96,8 +96,8 @@
                 }
               },
               "queryRef": "Sum(bcts_reporting annual_developed_volume.cruise_volume)",
-              "nativeQueryRef": "Actual ADV (m³)",
-              "displayName": "Actual ADV (m³)",
+              "nativeQueryRef": "Actual ADV YTD (m³)",
+              "displayName": "Actual ADV YTD (m³)",
               "format": "#,0"
             },
             {
@@ -117,8 +117,8 @@
                 }
               },
               "queryRef": "Sum(ADV_Targets.adv_target_m3)",
-              "nativeQueryRef": "Target ADV (m³)",
-              "displayName": "Target ADV (m³)"
+              "nativeQueryRef": "Annual Target ADV (m³)",
+              "displayName": "Annual Target ADV (m³)"
             },
             {
               "field": {
@@ -161,33 +161,11 @@
                 }
               },
               "queryRef": "bcts_reporting annual_developed_volume_hist.Increase Since Last Report",
-              "nativeQueryRef": "Increase Since Last Report  (m³)",
-              "displayName": "Increase Since Last Report  (m³)"
+              "nativeQueryRef": "Increase Since Last Month (m³)",
+              "displayName": "Increase Since Last Month (m³)"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "HierarchyLevel": {
-                "Expression": {
-                  "Hierarchy": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "bcts_staging dim_business_area"
-                      }
-                    },
-                    "Hierarchy": "Business Area Hierarchy"
-                  }
-                },
-                "Level": "Business Area"
-              }
-            },
-            "direction": "Descending"
-          }
-        ]
       }
     },
     "expansionStates": [
@@ -462,7 +440,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Annual Developed Volume (ADV): Actual ADV and Target ADV by Business Area '"
+                  "Value": "'Annual Developed Volume (ADV): Actual ADV YTD  and Annual Target ADV by Business Area '"
                 }
               }
             },
@@ -571,132 +549,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "d08dc7306dc020b2a9c7",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "bcts_staging dim_business_area"
-                  }
-                },
-                "Hierarchy": "Business Area Hierarchy"
-              }
-            },
-            "Level": "Business Area"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "4804e1a9ec2551ab6c43",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "bcts_staging dim_business_area"
-                  }
-                },
-                "Hierarchy": "Business Area Hierarchy"
-              }
-            },
-            "Level": "business_area_region"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "c2d7c7ed75a404118057",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "bcts_staging dim_business_area"
-                  }
-                },
-                "Hierarchy": "Business Area Hierarchy"
-              }
-            },
-            "Level": "business_area"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "dfea78aec06015b60ea9",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "bcts_reporting annual_developed_volume"
-                  }
-                },
-                "Property": "cruise_volume"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "846b97d6c143733e780a",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "ADV_Targets"
-                  }
-                },
-                "Property": "adv_target_m3"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "795ca66939d8b796dc24",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "bcts_reporting annual_developed_volume_hist"
-              }
-            },
-            "Property": "Increase Since Last Report"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "54f3457804d843812905",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "bcts_reporting annual_developed_volume_hist"
-              }
-            },
-            "Property": "Previous Month Cruise Volume"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

@@ -5006,7 +5006,7 @@ cultureInfo en-CA
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "Current FY YTD Volume": {
+			          "Current YTD Volume": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -5024,19 +5024,7 @@ cultureInfo en-CA
 			          "ConceptualProperty": "PreviousFY_CruiseVolume"
 			        }
 			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "Previous FY Total Volume": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        }
-			      ]
+			      "State": "Generated"
 			    },
 			    "bcts_reporting_annual_developed_volume_hist.previous_month_cruise_volume": {
 			      "Definition": {
@@ -5069,7 +5057,7 @@ cultureInfo en-CA
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "Increase Since Last Report  (m³)": {
+			          "Increase Since Last Month (m³)": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -5090,7 +5078,28 @@ cultureInfo en-CA
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "Previous FY YTD Volume": {
+			          "Previous YTD Volume": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "adv_targets.adv_target": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ADV_Targets",
+			          "ConceptualProperty": "ADV Target"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Annual Target ADV": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",

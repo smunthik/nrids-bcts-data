@@ -3,9 +3,9 @@
   "name": "499d0bb0c63307b0bd00",
   "position": {
     "x": 0,
-    "y": 77.330928764652839,
+    "y": 77.777777777777771,
     "z": 4000,
-    "height": 49.630297565374207,
+    "height": 63,
     "width": 1280,
     "tabOrder": 4000
   },
@@ -23,11 +23,11 @@
                       "Entity": "bcts_reporting annual_developed_volume"
                     }
                   },
-                  "Property": "Fiscal Period Info"
+                  "Property": "Blank Title"
                 }
               },
-              "queryRef": "bcts_reporting annual_developed_volume.Fiscal Period Info",
-              "nativeQueryRef": "Fiscal Period Info"
+              "queryRef": "bcts_reporting annual_developed_volume.Blank Title",
+              "nativeQueryRef": "Blank Title"
             }
           ]
         }
@@ -107,7 +107,7 @@
             "titleWrap": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -127,8 +127,13 @@
             },
             "text": {
               "expr": {
-                "Literal": {
-                  "Value": "'Annual Developed Volume (ADV): Volume in blocks that have had the block activity development complete set to done during the fiscal year'"
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting annual_developed_volume"
+                    }
+                  },
+                  "Property": "Title Measure"
                 }
               }
             },
@@ -296,7 +301,7 @@
             "top": {
               "expr": {
                 "Literal": {
-                  "Value": "5D"
+                  "Value": "6D"
                 }
               }
             },

@@ -4,9 +4,10 @@ table ADV_Targets
 	measure 'ADV Target' =
 			
 			SUM ( 'ADV_Targets'[adv_target_m3])
+		formatString: #,0
 		lineageTag: e5dce528-6c43-4657-8b98-8334356687c9
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"isDecimal":true}
 
 	column business_area_region
 		dataType: string

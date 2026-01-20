@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "c87f6053d04804ec1859",
+  "name": "fd9fdb718c9b532b1185",
   "position": {
-    "x": 817.419945105215,
-    "y": 359.52424519670632,
-    "z": 15002,
-    "height": 354.83989021043004,
-    "width": 455.55352241537054,
-    "tabOrder": 15002
+    "x": 809.39237899073123,
+    "y": 151.59629248197734,
+    "z": 14000,
+    "height": 275,
+    "width": 464.0164778578785,
+    "tabOrder": 14000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -22,17 +22,17 @@
                     "Hierarchy": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "bcts_reporting annual_developed_volume"
+                          "Entity": "bcts_staging dim_business_area"
                         }
                       },
-                      "Hierarchy": "business_area_region_category Hierarchy"
+                      "Hierarchy": "Business Area Hierarchy"
                     }
                   },
                   "Level": "Business Area"
                 }
               },
-              "queryRef": "bcts_reporting annual_developed_volume.business_area_region_category Hierarchy.business_area_region_category",
-              "nativeQueryRef": "business_area_region_category Hierarchy business_area_region_category",
+              "queryRef": "bcts_staging dim_business_area.Business Area Hierarchy.Business Area",
+              "nativeQueryRef": "Business Area Hierarchy Business Area",
               "active": true
             },
             {
@@ -42,17 +42,17 @@
                     "Hierarchy": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "bcts_reporting annual_developed_volume"
+                          "Entity": "bcts_staging dim_business_area"
                         }
                       },
-                      "Hierarchy": "business_area_region_category Hierarchy"
+                      "Hierarchy": "Business Area Hierarchy"
                     }
                   },
                   "Level": "business_area_region"
                 }
               },
-              "queryRef": "bcts_reporting annual_developed_volume.business_area_region_category Hierarchy.business_area_region",
-              "nativeQueryRef": "business_area_region_category Hierarchy business_area_region",
+              "queryRef": "bcts_staging dim_business_area.Business Area Hierarchy.business_area_region",
+              "nativeQueryRef": "Business Area Hierarchy business_area_region",
               "active": true
             },
             {
@@ -62,17 +62,17 @@
                     "Hierarchy": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "bcts_reporting annual_developed_volume"
+                          "Entity": "bcts_staging dim_business_area"
                         }
                       },
-                      "Hierarchy": "business_area_region_category Hierarchy"
+                      "Hierarchy": "Business Area Hierarchy"
                     }
                   },
                   "Level": "business_area"
                 }
               },
-              "queryRef": "bcts_reporting annual_developed_volume.business_area_region_category Hierarchy.business_area",
-              "nativeQueryRef": "business_area_region_category Hierarchy business_area",
+              "queryRef": "bcts_staging dim_business_area.Business Area Hierarchy.business_area",
+              "nativeQueryRef": "Business Area Hierarchy business_area",
               "active": false
             }
           ]
@@ -81,44 +81,33 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "bcts_reporting annual_developed_volume"
-                        }
-                      },
-                      "Property": "cruise_volume"
+                    "SourceRef": {
+                      "Entity": "bcts_reporting annual_developed_volume_hist"
                     }
                   },
-                  "Function": 0
+                  "Property": "CurrentFY_CruiseVolume"
                 }
               },
-              "queryRef": "Sum(bcts_reporting annual_developed_volume.cruise_volume)",
-              "nativeQueryRef": "Actual ADV",
-              "displayName": "Actual ADV"
+              "queryRef": "bcts_reporting annual_developed_volume_hist.CurrentFY_CruiseVolume",
+              "nativeQueryRef": "Current YTD Volume",
+              "displayName": "Current YTD Volume"
             },
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "bcts_reporting annual_developed_volume"
-                        }
-                      },
-                      "Property": "adv_target_m3"
+                    "SourceRef": {
+                      "Entity": "bcts_reporting annual_developed_volume_hist"
                     }
                   },
-                  "Function": 4
+                  "Property": "PreviousFY_YTD_CruiseVolume"
                 }
               },
-              "queryRef": "Sum(bcts_reporting annual_developed_volume.adv_target_m3)",
-              "nativeQueryRef": "Target ADV",
-              "displayName": "Target ADV",
-              "format": "#,0"
+              "queryRef": "bcts_reporting annual_developed_volume_hist.PreviousFY_YTD_CruiseVolume",
+              "nativeQueryRef": "Previous YTD Volume",
+              "displayName": "Previous YTD Volume"
             }
           ]
         }
@@ -304,8 +293,9 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#013366'"
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": -0.25
                     }
                   }
                 }
@@ -320,7 +310,7 @@
             }
           },
           "selector": {
-            "metadata": "Sum(bcts_reporting annual_developed_volume.adv_target_m3)"
+            "metadata": "bcts_reporting annual_developed_volume_hist.CurrentFY_CruiseVolume"
           }
         },
         {
@@ -330,7 +320,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#FCBA19'"
+                      "Value": "'#228B22'"
                     }
                   }
                 }
@@ -345,7 +335,7 @@
             }
           },
           "selector": {
-            "metadata": "Sum(bcts_reporting annual_developed_volume.cruise_volume)"
+            "metadata": "bcts_reporting annual_developed_volume_hist.PreviousFY_YTD_CruiseVolume"
           }
         }
       ],
@@ -355,7 +345,7 @@
             "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "'Business Area'"
+                  "Value": "'Business Area Region'"
                 }
               }
             }
@@ -368,7 +358,40 @@
             "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "'Cruise Volume (m³)'"
+                  "Value": "'Volume (m³)'"
+                }
+              }
+            },
+            "gridlineStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "'solid'"
+                }
+              }
+            },
+            "gridlineThickness": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "gridlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "gridlineTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
                 }
               }
             }
@@ -435,7 +458,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Annual Developed Volume (ADV): Total Volume by Business Area '"
+                  "Value": "'Annual Developed Volume (ADV): Current Fiscal YTD Compared with Previous Fiscal YTD by Business Area Region'"
                 }
               }
             }

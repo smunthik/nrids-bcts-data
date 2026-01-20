@@ -6,7 +6,7 @@ table 'bcts_staging dim_business_area'
 		lineageTag: ea3b6151-ab76-4e62-af06-c6a586427b6d
 		summarizeBy: none
 		sourceColumn: Business Area
-		sortByColumn: business_area_region_cat_sort_order
+		sortByColumn: business_area_region_cat_number2
 
 		changedProperty = SortByColumn
 
@@ -17,7 +17,6 @@ table 'bcts_staging dim_business_area'
 		lineageTag: 3ea02462-1ee4-4d82-a525-ec944d68aed0
 		summarizeBy: none
 		sourceColumn: business_area_region
-		sortByColumn: business_area_region_sort_order
 
 		changedProperty = SortByColumn
 
@@ -28,6 +27,7 @@ table 'bcts_staging dim_business_area'
 		lineageTag: bc2e4f82-3747-4a8c-8416-6d492ebecc99
 		summarizeBy: none
 		sourceColumn: business_area
+		sortByColumn: business_area_region_sort_order
 
 		changedProperty = SortByColumn
 
@@ -42,14 +42,16 @@ table 'bcts_staging dim_business_area'
 
 		annotation SummarizationSetBy = Automatic
 
-	column business_area_region_cat_sort_order
-		dataType: int64
+	column business_area_region_cat_number2 =
+			
+			SWITCH(
+			    TRUE(),
+			    'bcts_staging dim_business_area'[business_area_region] IN { "North Interior", "South Interior" }, 1,
+			    2
+			)
 		formatString: 0
-		lineageTag: fb548fad-1cd5-47b3-a8e2-5cabbc6bb187
+		lineageTag: 6871dda8-4c8a-4129-af87-737d1ed0d011
 		summarizeBy: sum
-		sourceColumn: business_area_region_cat_sort_order
-
-		changedProperty = SortByColumn
 
 		annotation SummarizationSetBy = Automatic
 
@@ -74,7 +76,8 @@ table 'bcts_staging dim_business_area'
 				let
 				    Source = PostgreSQL.Database("existence.bcgov:5435", "odsprd"),
 				    bcts_staging_dim_business_area = Source{[Schema="bcts_staging",Item="dim_business_area"]}[Data],
-				    #"Renamed Columns" = Table.RenameColumns(bcts_staging_dim_business_area,{{"business_area_region_category", "Business Area"}})
+				    #"Renamed Columns" = Table.RenameColumns(bcts_staging_dim_business_area,{{"business_area_region_category", "Business Area"}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Renamed Columns",{"business_area_region_cat_sort_order"})
 				in
-				    #"Renamed Columns"
+				    #"Removed Columns"
 

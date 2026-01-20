@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "76e86952b6d52d859dc9",
+  "name": "3f51ec20878abe010404",
   "position": {
-    "x": 816.84210526315792,
-    "y": 137.54385964912279,
-    "z": 15003,
-    "height": 209.12280701754386,
-    "width": 456.140350877193,
-    "tabOrder": 15003
+    "x": 809.39237899073123,
+    "y": 438.97013388259529,
+    "z": 15000,
+    "height": 275.50978372811534,
+    "width": 464.0164778578785,
+    "tabOrder": 15000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -22,17 +22,17 @@
                     "Hierarchy": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "bcts_reporting annual_developed_volume_hist"
+                          "Entity": "bcts_staging dim_business_area"
                         }
                       },
-                      "Hierarchy": "business_area_region_category Hierarchy"
+                      "Hierarchy": "Business Area Hierarchy"
                     }
                   },
-                  "Level": "business_area_region_category"
+                  "Level": "Business Area"
                 }
               },
-              "queryRef": "bcts_reporting annual_developed_volume_hist.business_area_region_category Hierarchy.business_area_region_category",
-              "nativeQueryRef": "business_area_region_category Hierarchy business_area_region_category",
+              "queryRef": "bcts_staging dim_business_area.Business Area Hierarchy.Business Area",
+              "nativeQueryRef": "Business Area Hierarchy Business Area",
               "active": true
             },
             {
@@ -42,17 +42,17 @@
                     "Hierarchy": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "bcts_reporting annual_developed_volume_hist"
+                          "Entity": "bcts_staging dim_business_area"
                         }
                       },
-                      "Hierarchy": "business_area_region_category Hierarchy"
+                      "Hierarchy": "Business Area Hierarchy"
                     }
                   },
                   "Level": "business_area_region"
                 }
               },
-              "queryRef": "bcts_reporting annual_developed_volume_hist.business_area_region_category Hierarchy.business_area_region",
-              "nativeQueryRef": "business_area_region_category Hierarchy business_area_region",
+              "queryRef": "bcts_staging dim_business_area.Business Area Hierarchy.business_area_region",
+              "nativeQueryRef": "Business Area Hierarchy business_area_region",
               "active": true
             },
             {
@@ -62,17 +62,17 @@
                     "Hierarchy": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "bcts_reporting annual_developed_volume_hist"
+                          "Entity": "bcts_staging dim_business_area"
                         }
                       },
-                      "Hierarchy": "business_area_region_category Hierarchy"
+                      "Hierarchy": "Business Area Hierarchy"
                     }
                   },
                   "Level": "business_area"
                 }
               },
-              "queryRef": "bcts_reporting annual_developed_volume_hist.business_area_region_category Hierarchy.business_area",
-              "nativeQueryRef": "business_area_region_category Hierarchy business_area",
+              "queryRef": "bcts_staging dim_business_area.Business Area Hierarchy.business_area",
+              "nativeQueryRef": "Business Area Hierarchy business_area",
               "active": false
             }
           ]
@@ -81,36 +81,99 @@
           "projections": [
             {
               "field": {
-                "Measure": {
+                "Aggregation": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "bcts_reporting annual_developed_volume_hist"
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "bcts_reporting annual_developed_volume"
+                        }
+                      },
+                      "Property": "cruise_volume"
                     }
                   },
-                  "Property": "CurrentFY_CruiseVolume"
+                  "Function": 0
                 }
               },
-              "queryRef": "bcts_reporting annual_developed_volume_hist.CurrentFY_CruiseVolume",
-              "nativeQueryRef": "Current FY YTD Volume",
-              "displayName": "Current FY YTD Volume"
+              "queryRef": "Sum(bcts_reporting annual_developed_volume.cruise_volume)",
+              "nativeQueryRef": "Actual ADV YTD ",
+              "displayName": "Actual ADV YTD "
             },
             {
               "field": {
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "bcts_reporting annual_developed_volume_hist"
+                      "Entity": "ADV_Targets"
                     }
                   },
-                  "Property": "PreviousFY_YTD_CruiseVolume"
+                  "Property": "ADV Target"
                 }
               },
-              "queryRef": "bcts_reporting annual_developed_volume_hist.PreviousFY_YTD_CruiseVolume",
-              "nativeQueryRef": "Previous FY YTD Volume",
-              "displayName": "Previous FY YTD Volume"
+              "queryRef": "ADV_Targets.ADV Target",
+              "nativeQueryRef": "Annual Target ADV ",
+              "displayName": "Annual Target ADV "
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "HierarchyLevel": {
+                "Expression": {
+                  "Hierarchy": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "bcts_staging dim_business_area"
+                      }
+                    },
+                    "Hierarchy": "Business Area Hierarchy"
+                  }
+                },
+                "Level": "Business Area"
+              }
+            },
+            "direction": "Ascending"
+          },
+          {
+            "field": {
+              "HierarchyLevel": {
+                "Expression": {
+                  "Hierarchy": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "bcts_staging dim_business_area"
+                      }
+                    },
+                    "Hierarchy": "Business Area Hierarchy"
+                  }
+                },
+                "Level": "business_area_region"
+              }
+            },
+            "direction": "Ascending"
+          },
+          {
+            "field": {
+              "HierarchyLevel": {
+                "Expression": {
+                  "Hierarchy": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "bcts_staging dim_business_area"
+                      }
+                    },
+                    "Hierarchy": "Business Area Hierarchy"
+                  }
+                },
+                "Level": "business_area"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
       }
     },
     "objects": {
@@ -309,7 +372,7 @@
             }
           },
           "selector": {
-            "metadata": "bcts_reporting annual_developed_volume_hist.CurrentFY_CruiseVolume"
+            "metadata": "Sum(bcts_reporting annual_developed_volume.cruise_volume)"
           }
         },
         {
@@ -324,17 +387,10 @@
                   }
                 }
               }
-            },
-            "borderShow": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
             }
           },
           "selector": {
-            "metadata": "bcts_reporting annual_developed_volume_hist.PreviousFY_YTD_CruiseVolume"
+            "metadata": "ADV_Targets.ADV Target"
           }
         }
       ],
@@ -344,7 +400,7 @@
             "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "'Business Area'"
+                  "Value": "'Business Area Region'"
                 }
               }
             }
@@ -357,40 +413,7 @@
             "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "'Cruise Volume (m³)'"
-                }
-              }
-            },
-            "gridlineStyle": {
-              "expr": {
-                "Literal": {
-                  "Value": "'solid'"
-                }
-              }
-            },
-            "gridlineThickness": {
-              "expr": {
-                "Literal": {
-                  "Value": "1D"
-                }
-              }
-            },
-            "gridlineColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
-            "gridlineTransparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "5D"
+                  "Value": "'Volume (m³)'"
                 }
               }
             }
@@ -457,7 +480,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Annual Developed Volume (ADV): Total Volume by Business Area '"
+                  "Value": "'Annual Developed Volume (ADV): Total Volume by Business Area Region'"
                 }
               }
             }

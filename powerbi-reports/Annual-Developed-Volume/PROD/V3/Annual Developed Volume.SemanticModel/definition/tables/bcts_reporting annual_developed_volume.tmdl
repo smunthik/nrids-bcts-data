@@ -23,6 +23,22 @@ table 'bcts_reporting annual_developed_volume'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure 'Title Measure' = ```
+			
+			"Annual Developed Volume (ADV) is the total volume of timber for which all required development activities have been completed within the fiscal year."
+			 & UNICHAR(10) &
+			 "A block is included once its Development Completed status is set to Done, indicating the timber is fully prepared and eligible for auction as a Timber Sale Licence."
+			
+			  & UNICHAR(10) &
+			
+			  'bcts_reporting annual_developed_volume'[Fiscal Period Info]
+			
+			```
+		lineageTag: 77bb3280-920c-4969-8428-d63cfd3a0a64
+
+	measure 'Blank Title' = ""
+		lineageTag: fa9da2a9-7617-456b-9b70-c286f1ae433b
+
 	column business_area_region_category
 		dataType: string
 		lineageTag: d4fd69fe-869f-48a9-baa2-aae003a39ce0

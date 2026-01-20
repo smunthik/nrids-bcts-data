@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "0d4fe961b75dba193cc8",
   "position": {
-    "x": 404.15748031496065,
-    "y": 296.31496062992125,
-    "z": 15000,
-    "height": 38.2992125984252,
-    "width": 176.37795275590551,
-    "tabOrder": 15000
+    "x": 433,
+    "y": 157,
+    "z": 13000,
+    "height": 39,
+    "width": 200,
+    "tabOrder": 13000
   },
   "visual": {
     "visualType": "textbox",
@@ -19,10 +19,10 @@
               {
                 "textRuns": [
                   {
-                    "value": "Target ADV (m³) :",
+                    "value": "Annual Target ADV (m³) :",
                     "textStyle": {
                       "fontFamily": "DIN",
-                      "fontSize": "18pt",
+                      "fontSize": "14pt",
                       "color": "#013366"
                     }
                   }

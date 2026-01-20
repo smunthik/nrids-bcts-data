@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "5c8bcdf4b80fad579ed1",
   "position": {
-    "x": 566.17148316216867,
-    "y": 282.47432529257225,
-    "z": 14000,
-    "height": 46.467637926916645,
-    "width": 180.97922139957009,
-    "tabOrder": 14000
+    "x": 613,
+    "y": 157,
+    "z": 12000,
+    "height": 38,
+    "width": 145,
+    "tabOrder": 12000
   },
   "visual": {
     "visualType": "card",
@@ -37,22 +37,17 @@
             },
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "ADV_Targets"
-                        }
-                      },
-                      "Property": "adv_target_m3"
+                    "SourceRef": {
+                      "Entity": "ADV_Targets"
                     }
                   },
-                  "Function": 0
+                  "Property": "ADV Target"
                 }
               },
-              "queryRef": "CountNonNull(ADV_Targets.adv_target_m3)",
-              "nativeQueryRef": "Sum of adv_target_m3"
+              "queryRef": "ADV_Targets.ADV Target",
+              "nativeQueryRef": "ADV Target"
             }
           ]
         }
@@ -101,7 +96,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "30D"
+                  "Value": "20D"
                 }
               }
             },
@@ -363,14 +358,14 @@
             "top": {
               "expr": {
                 "Literal": {
-                  "Value": "5D"
+                  "Value": "0D"
                 }
               }
             },
             "bottom": {
               "expr": {
                 "Literal": {
-                  "Value": "5D"
+                  "Value": "8D"
                 }
               }
             },

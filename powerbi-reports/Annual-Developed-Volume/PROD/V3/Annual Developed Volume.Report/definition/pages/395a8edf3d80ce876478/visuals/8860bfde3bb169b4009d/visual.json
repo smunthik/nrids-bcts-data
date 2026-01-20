@@ -1,0 +1,64 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "8860bfde3bb169b4009d",
+  "position": {
+    "x": 11,
+    "y": 265,
+    "z": 16000,
+    "height": 86,
+    "width": 777,
+    "tabOrder": 16000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Annual Developed Volume (ADV) figures should not be interpreted as monthly production or incremental monthly progress. ADV reflects when development activities are fully completed and a block reaches “Development Completed – Done” status. Because many blocks are delivered in bulk based on contract timelines and seasonal operational windows, volumes may post in irregular increments. As a result, ADV should be viewed as progress toward achieving the ",
+                    "textStyle": {
+                      "fontSize": "9pt"
+                    }
+                  },
+                  {
+                    "value": "year-end target",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "9pt"
+                    }
+                  },
+                  {
+                    "value": ", rather than as a measure of monthly performance.",
+                    "textStyle": {
+                      "fontSize": "9pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
