@@ -81,23 +81,18 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "bcts_reporting annual_developed_volume"
-                        }
-                      },
-                      "Property": "cruise_volume"
+                    "SourceRef": {
+                      "Entity": "bcts_reporting annual_developed_volume_hist"
                     }
                   },
-                  "Function": 0
+                  "Property": "CurrentFY_CruiseVolume"
                 }
               },
-              "queryRef": "Sum(bcts_reporting annual_developed_volume.cruise_volume)",
-              "nativeQueryRef": "Actual ADV YTD ",
-              "displayName": "Actual ADV YTD "
+              "queryRef": "bcts_reporting annual_developed_volume_hist.CurrentFY_CruiseVolume",
+              "nativeQueryRef": "Actual ADV YTD",
+              "displayName": "Actual ADV YTD"
             },
             {
               "field": {
@@ -222,6 +217,13 @@
               "expr": {
                 "Literal": {
                   "Value": "10D"
+                }
+              }
+            },
+            "borderShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -357,6 +359,24 @@
                 "color": {
                   "expr": {
                     "Literal": {
+                      "Value": "'#013366'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "ADV_Targets.ADV Target"
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
                       "Value": "'#FCBA19'"
                     }
                   }
@@ -372,25 +392,7 @@
             }
           },
           "selector": {
-            "metadata": "Sum(bcts_reporting annual_developed_volume.cruise_volume)"
-          }
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#013366'"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "ADV_Targets.ADV Target"
+            "metadata": "bcts_reporting annual_developed_volume_hist.CurrentFY_CruiseVolume"
           }
         }
       ],

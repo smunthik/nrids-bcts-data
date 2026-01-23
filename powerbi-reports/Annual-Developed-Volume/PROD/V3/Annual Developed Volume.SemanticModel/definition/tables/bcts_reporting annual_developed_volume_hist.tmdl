@@ -100,41 +100,21 @@ table 'bcts_reporting annual_developed_volume_hist'
 	measure PreviousFY_YTD_CruiseVolume = ```
 			
 			VAR CurrentReportEnd =
-			    MAX('bcts_reporting annual_developed_volume_hist'[report_end_date])
-			
-			-- Get same date in previous year
-			VAR PrevYearReportEnd =
-			    DATE(
-			        YEAR(CurrentReportEnd) - 1,
-			        MONTH(CurrentReportEnd),
-			        DAY(CurrentReportEnd)
-			    )
-			
-			-- Adjust Feb 29 to Feb 28 if previous year is not leap year
-			VAR AdjustedPrevYearReportEnd =
-			    IF(
-			        MONTH(PrevYearReportEnd) = 2
-			            && DAY(PrevYearReportEnd) = 29
-			            && DAY(EOMONTH(PrevYearReportEnd, 0)) <> 29,
-			        DATE(YEAR(PrevYearReportEnd), 2, 28),
-			        PrevYearReportEnd
-			    )
-			
+			    MAX ( 'bcts_reporting annual_developed_volume_hist'[report_end_date] )
 			VAR CurrentFiscalStart =
-			    MAX('bcts_reporting annual_developed_volume_hist'[fiscal_year_start_date])
-			
-			VAR PreviousFiscalStart =
-			    DATE(
-			        YEAR(CurrentFiscalStart) - 1,
-			        MONTH(CurrentFiscalStart),
-			        DAY(CurrentFiscalStart)
-			    )
-			
+			    MAX ( 'bcts_reporting annual_developed_volume_hist'[fiscal_year_start_date] )
 			RETURN
-			CALCULATE(
-			    SUM('bcts_reporting annual_developed_volume_hist'[cruise_volume]),
-			    KEEPFILTERS('bcts_reporting annual_developed_volume_hist'[fiscal_year_start_date] = PreviousFiscalStart),
-			    KEEPFILTERS('bcts_reporting annual_developed_volume_hist'[report_end_date] = AdjustedPrevYearReportEnd)
+			IF (
+			    ISBLANK ( CurrentReportEnd ) || ISBLANK ( CurrentFiscalStart ),
+			    BLANK (),
+			    VAR PrevYearReportEnd   = EDATE ( CurrentReportEnd,   -12 )
+			    VAR PreviousFiscalStart = EDATE ( CurrentFiscalStart, -12 )
+			    RETURN
+			        CALCULATE (
+			            SUM ( 'bcts_reporting annual_developed_volume_hist'[cruise_volume] ),
+			            'bcts_reporting annual_developed_volume_hist'[fiscal_year_start_date] = PreviousFiscalStart,
+			            'bcts_reporting annual_developed_volume_hist'[report_end_date]        = PrevYearReportEnd
+			        )
 			)
 			
 			```

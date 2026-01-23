@@ -5006,6 +5006,16 @@ cultureInfo en-CA
 			      "State": "Generated",
 			      "Terms": [
 			        {
+			          "Actual ADV YTD": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
 			          "Current YTD Volume": {
 			            "State": "Suggested",
 			            "Source": {

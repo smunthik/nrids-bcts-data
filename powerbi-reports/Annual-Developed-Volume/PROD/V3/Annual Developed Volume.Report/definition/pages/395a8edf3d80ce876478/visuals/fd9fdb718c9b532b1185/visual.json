@@ -161,6 +161,13 @@
                   "Value": "10D"
                 }
               }
+            },
+            "borderShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
           }
         },

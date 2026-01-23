@@ -25,7 +25,7 @@ table 'bcts_reporting annual_developed_volume'
 
 	measure 'Title Measure' = ```
 			
-			"Annual Developed Volume (ADV) is the total volume of timber for which all required development activities have been completed within the fiscal year."
+			"Annual Developed Volume (ADV) is the total volume of timber for which all development activities and required consultation have been fully completed within the fiscal year."
 			 & UNICHAR(10) &
 			 "A block is included once its Development Completed status is set to Done, indicating the timber is fully prepared and eligible for auction as a Timber Sale Licence."
 			
