@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "6528dd8206d1ba396910",
   "position": {
     "x": 10.650529500756431,
@@ -480,7 +480,7 @@
             "radius": {
               "expr": {
                 "Literal": {
-                  "Value": "19D"
+                  "Value": "0D"
                 }
               }
             },
@@ -500,7 +500,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }
