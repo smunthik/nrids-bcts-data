@@ -1,3 +1,5 @@
+    CREATE OR REPLACE VIEW bcts_staging.qLicenceIssuedUnbilled_Official AS
+    
     WITH auction_with_winner AS
     (
         SELECT

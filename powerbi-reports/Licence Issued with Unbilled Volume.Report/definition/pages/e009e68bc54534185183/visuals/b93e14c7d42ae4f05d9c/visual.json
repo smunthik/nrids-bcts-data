@@ -1,0 +1,486 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "b93e14c7d42ae4f05d9c",
+  "position": {
+    "x": 0,
+    "y": 217.17717717717719,
+    "z": 5000,
+    "height": 472.79279279279285,
+    "width": 1280,
+    "tabOrder": 5000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_with_unbilled_volume_main"
+                    }
+                  },
+                  "Property": "business_area_region_category"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_with_unbilled_volume_main.business_area_region_category",
+              "nativeQueryRef": "business_area_region_category"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_with_unbilled_volume_main"
+                    }
+                  },
+                  "Property": "business_area_region"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_with_unbilled_volume_main.business_area_region",
+              "nativeQueryRef": "business_area_region"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_with_unbilled_volume_main"
+                    }
+                  },
+                  "Property": "business_area"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_with_unbilled_volume_main.business_area",
+              "nativeQueryRef": "business_area"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_with_unbilled_volume_main"
+                    }
+                  },
+                  "Property": "licence_id"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_with_unbilled_volume_main.licence_id",
+              "nativeQueryRef": "licence_id"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_with_unbilled_volume_main"
+                    }
+                  },
+                  "Property": "licn_seq_nbr"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting licence_issued_with_unbilled_volume_main.licn_seq_nbr)",
+              "nativeQueryRef": "licn_seq_nbr"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_with_unbilled_volume_main"
+                    }
+                  },
+                  "Property": "advertised_licence_term"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting licence_issued_with_unbilled_volume_main.advertised_licence_term)",
+              "nativeQueryRef": "advertised_licence_term"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_with_unbilled_volume_main"
+                    }
+                  },
+                  "Property": "current_expiry_fta"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_with_unbilled_volume_main.current_expiry_fta",
+              "nativeQueryRef": "current_expiry_fta"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_with_unbilled_volume_main"
+                    }
+                  },
+                  "Property": "expire_extend_lrm"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_with_unbilled_volume_main.expire_extend_lrm",
+              "nativeQueryRef": "expire_extend_lrm"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_with_unbilled_volume_main"
+                    }
+                  },
+                  "Property": "expiry_fta"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_with_unbilled_volume_main.expiry_fta",
+              "nativeQueryRef": "expiry_fta"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_with_unbilled_volume_main"
+                    }
+                  },
+                  "Property": "extension_term"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting licence_issued_with_unbilled_volume_main.extension_term)",
+              "nativeQueryRef": "extension_term"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_with_unbilled_volume_main"
+                    }
+                  },
+                  "Property": "field_team"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_with_unbilled_volume_main.field_team",
+              "nativeQueryRef": "field_team"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_with_unbilled_volume_main"
+                    }
+                  },
+                  "Property": "fta_file_status"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_with_unbilled_volume_main.fta_file_status",
+              "nativeQueryRef": "fta_file_status"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_with_unbilled_volume_main"
+                    }
+                  },
+                  "Property": "fta_file_status_date"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_with_unbilled_volume_main.fta_file_status_date",
+              "nativeQueryRef": "fta_file_status_date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_with_unbilled_volume_main"
+                    }
+                  },
+                  "Property": "harvesting_status"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_with_unbilled_volume_main.harvesting_status",
+              "nativeQueryRef": "harvesting_status"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_with_unbilled_volume_main"
+                    }
+                  },
+                  "Property": "initial_expiry_fta"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_with_unbilled_volume_main.initial_expiry_fta",
+              "nativeQueryRef": "initial_expiry_fta"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_with_unbilled_volume_main"
+                    }
+                  },
+                  "Property": "issued_done_fiscal_lrm"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_with_unbilled_volume_main.issued_done_fiscal_lrm",
+              "nativeQueryRef": "issued_done_fiscal_lrm"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_with_unbilled_volume_main"
+                    }
+                  },
+                  "Property": "issued_done_lrm"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_with_unbilled_volume_main.issued_done_lrm",
+              "nativeQueryRef": "issued_done_lrm"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_with_unbilled_volume_main"
+                    }
+                  },
+                  "Property": "last_logging_completed_date"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_with_unbilled_volume_main.last_logging_completed_date",
+              "nativeQueryRef": "last_logging_completed_date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_with_unbilled_volume_main"
+                    }
+                  },
+                  "Property": "last_logging_started_date"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_with_unbilled_volume_main.last_logging_started_date",
+              "nativeQueryRef": "last_logging_started_date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_with_unbilled_volume_main"
+                    }
+                  },
+                  "Property": "legal_effective_date_fta"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_with_unbilled_volume_main.legal_effective_date_fta",
+              "nativeQueryRef": "legal_effective_date_fta"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_with_unbilled_volume_main"
+                    }
+                  },
+                  "Property": "legal_effective_fiscal_fta"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_with_unbilled_volume_main.legal_effective_fiscal_fta",
+              "nativeQueryRef": "legal_effective_fiscal_fta"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_with_unbilled_volume_main"
+                    }
+                  },
+                  "Property": "percent_unbilled"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting licence_issued_with_unbilled_volume_main.percent_unbilled)",
+              "nativeQueryRef": "percent_unbilled"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_with_unbilled_volume_main"
+                    }
+                  },
+                  "Property": "report_date"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_with_unbilled_volume_main.report_date",
+              "nativeQueryRef": "report_date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_with_unbilled_volume_main"
+                    }
+                  },
+                  "Property": "sale_volume"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting licence_issued_with_unbilled_volume_main.sale_volume)",
+              "nativeQueryRef": "sale_volume"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_with_unbilled_volume_main"
+                    }
+                  },
+                  "Property": "tenure_type_fta"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_with_unbilled_volume_main.tenure_type_fta",
+              "nativeQueryRef": "tenure_type_fta"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_with_unbilled_volume_main"
+                    }
+                  },
+                  "Property": "total_tenure_term"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting licence_issued_with_unbilled_volume_main.total_tenure_term)",
+              "nativeQueryRef": "total_tenure_term"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_with_unbilled_volume_main"
+                    }
+                  },
+                  "Property": "unbilled_volume"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting licence_issued_with_unbilled_volume_main.unbilled_volume)",
+              "nativeQueryRef": "unbilled_volume"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_with_unbilled_volume_main"
+                    }
+                  },
+                  "Property": "unbilled_volume_expire_in_6_month"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting licence_issued_with_unbilled_volume_main.unbilled_volume_expire_in_6_month)",
+              "nativeQueryRef": "unbilled_volume_expire_in_6_month"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_with_unbilled_volume_main"
+                    }
+                  },
+                  "Property": "unbilled_volume_over_20_month"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting licence_issued_with_unbilled_volume_main.unbilled_volume_over_20_month)",
+              "nativeQueryRef": "unbilled_volume_over_20_month"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_with_unbilled_volume_main"
+                    }
+                  },
+                  "Property": "billed_volume"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting licence_issued_with_unbilled_volume_main.billed_volume)",
+              "nativeQueryRef": "billed_volume"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_with_unbilled_volume_main"
+                    }
+                  },
+                  "Property": "client"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_with_unbilled_volume_main.client",
+              "nativeQueryRef": "client"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_with_unbilled_volume_main"
+                    }
+                  },
+                  "Property": "client_number"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_with_unbilled_volume_main.client_number",
+              "nativeQueryRef": "client_number"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_with_unbilled_volume_main"
+                    }
+                  },
+                  "Property": "cruise_based_ind"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_with_unbilled_volume_main.cruise_based_ind",
+              "nativeQueryRef": "cruise_based_ind"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,83 @@
+table 'bcts_staging dim_business_area'
+	lineageTag: 423f3f99-ad28-4136-bebc-f2a4a8ac2914
+
+	column 'Business Area'
+		dataType: string
+		lineageTag: ea3b6151-ab76-4e62-af06-c6a586427b6d
+		summarizeBy: none
+		sourceColumn: Business Area
+		sortByColumn: business_area_region_cat_number2
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column business_area_region
+		dataType: string
+		lineageTag: 3ea02462-1ee4-4d82-a525-ec944d68aed0
+		summarizeBy: none
+		sourceColumn: business_area_region
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column business_area
+		dataType: string
+		lineageTag: bc2e4f82-3747-4a8c-8416-6d492ebecc99
+		summarizeBy: none
+		sourceColumn: business_area
+		sortByColumn: business_area_region_sort_order
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column business_area_region_sort_order
+		dataType: int64
+		formatString: 0
+		lineageTag: 3004e775-4332-407b-bb31-0935ee18e04c
+		summarizeBy: none
+		sourceColumn: business_area_region_sort_order
+
+		annotation SummarizationSetBy = Automatic
+
+	column business_area_region_cat_number2 =
+			
+			SWITCH(
+			    TRUE(),
+			    'bcts_staging dim_business_area'[business_area_region] IN { "North Interior", "South Interior" }, 1,
+			    2
+			)
+		formatString: 0
+		lineageTag: 6871dda8-4c8a-4129-af87-737d1ed0d011
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'Business Area Hierarchy'
+		lineageTag: 08079edb-55ef-423f-83f0-1ce86a0bcb5f
+
+		level 'Business Area'
+			lineageTag: c12e87a6-9c77-4d8a-a89d-243008fffc6c
+			column: 'Business Area'
+
+		level business_area_region
+			lineageTag: 9c885810-4249-43f5-84ec-b1c2be8c1269
+			column: business_area_region
+
+		level business_area
+			lineageTag: a41a3e32-d450-4808-b34f-93e3d0701d40
+			column: business_area
+
+	partition 'bcts_staging dim_business_area' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("existence.bcgov:5435", "odsprd"),
+				    bcts_staging_dim_business_area = Source{[Schema="bcts_staging",Item="dim_business_area"]}[Data],
+				    #"Renamed Columns" = Table.RenameColumns(bcts_staging_dim_business_area,{{"business_area_region_category", "Business Area"}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Renamed Columns",{"business_area_region_cat_sort_order"})
+				in
+				    #"Removed Columns"
+

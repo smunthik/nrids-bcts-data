@@ -1,0 +1,54 @@
+relationship 513f4618-0cf7-42ea-90d8-e4427ef470b3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'bcts_reporting licence_issued_with_unbilled_volume_main'.fta_file_status_date
+	toColumn: LocalDateTable_bf85cea7-7d6f-4097-ab6f-3593cf8d97b6.Date
+
+relationship d0e59804-cc09-4402-9e71-7a3278eae0e7
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'bcts_reporting licence_issued_with_unbilled_volume_main'.legal_effective_date_fta
+	toColumn: LocalDateTable_8e67860c-8a1a-4f1b-bb95-12183a550a41.Date
+
+relationship 6db565a3-5ad9-4a63-bcae-29a251a79b43
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'bcts_reporting licence_issued_with_unbilled_volume_main'.issued_done_lrm
+	toColumn: LocalDateTable_0412f0cd-0712-45e4-bf32-57fdd9cc96fa.Date
+
+relationship 4ce18e16-c2d2-4887-8224-acefb4ae8e53
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'bcts_reporting licence_issued_with_unbilled_volume_main'.initial_expiry_fta
+	toColumn: LocalDateTable_6cb966f8-4158-4b84-b6bc-91ac07cddf41.Date
+
+relationship ecdc0c67-05e3-410d-9a82-f984485943ef
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'bcts_reporting licence_issued_with_unbilled_volume_main'.current_expiry_fta
+	toColumn: LocalDateTable_8eee1a87-fe4e-44ba-9f9c-0bfdd8e757dd.Date
+
+relationship 5a9dfb87-860a-4774-9da6-3a48db6ec4ac
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'bcts_reporting licence_issued_with_unbilled_volume_main'.expiry_fta
+	toColumn: LocalDateTable_a2e99ad0-c2a6-4ef3-94e6-18dfc089c638.Date
+
+relationship 31c31f58-d764-457d-8086-90715f25b149
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'bcts_reporting licence_issued_with_unbilled_volume_main'.expire_extend_lrm
+	toColumn: LocalDateTable_edf6a5cd-6ac2-4355-ad94-281facc84472.Date
+
+relationship 829989da-b571-42b3-8b5c-1c0c8f9dd5cb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'bcts_reporting licence_issued_with_unbilled_volume_main'.last_logging_started_date
+	toColumn: LocalDateTable_b0b13331-b054-41ac-b0bf-704d382879ac.Date
+
+relationship 7bcad272-1c86-4c61-a2c9-112f4ab713f7
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'bcts_reporting licence_issued_with_unbilled_volume_main'.last_logging_completed_date
+	toColumn: LocalDateTable_fb54d372-be46-4e6d-86cf-f00afe22d33e.Date
+
+relationship d7a9c16a-14b0-4e0a-8ac8-fb3ba4dfa96b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'bcts_reporting licence_issued_with_unbilled_volume_main'.report_date
+	toColumn: LocalDateTable_1815df61-d160-49dc-8bad-92cdda4e572c.Date
+
+relationship AutoDetected_2f96b1c7-896c-487c-86b5-94d41811ae2b
+	fromColumn: 'bcts_reporting licence_issued_with_unbilled_volume_main'.business_area
+	toColumn: 'bcts_staging dim_business_area'.business_area
+

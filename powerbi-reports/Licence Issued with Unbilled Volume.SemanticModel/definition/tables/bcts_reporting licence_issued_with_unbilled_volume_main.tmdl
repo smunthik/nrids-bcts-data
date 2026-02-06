@@ -1,0 +1,403 @@
+table 'bcts_reporting licence_issued_with_unbilled_volume_main'
+	lineageTag: f222f382-4224-4fd4-b74e-7a7dbede35d5
+
+	measure 'Licence Count' = ```
+			
+			COUNT ( 'bcts_reporting licence_issued_with_unbilled_volume_main'[licence_id] )
+			
+			```
+		formatString: 0
+		lineageTag: cb4770d9-1ffc-49b9-93dc-6d01212c21a2
+
+	measure 'Active Harvesting Count' = COUNT('bcts_reporting licence_issued_with_unbilled_volume_main'[harvesting_status])
+		formatString: 0
+		lineageTag: 3865a3d4-d655-48dc-988f-f8076a3e1a07
+
+	measure 'Licence Issued Volume' = SUM('bcts_reporting licence_issued_with_unbilled_volume_main'[sale_volume])
+		lineageTag: b98cf946-a78b-4d9a-94c5-056949431987
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Billed Volume' = SUM('bcts_reporting licence_issued_with_unbilled_volume_main'[billed_volume])
+		lineageTag: 592fa4c1-a0e6-4767-875b-277f70d023fa
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Unbilled Volume' = SUM('bcts_reporting licence_issued_with_unbilled_volume_main'[unbilled_volume])
+		lineageTag: 1fbfd081-265e-4e22-8fb5-3ba23615cf73
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Unbilled Volume expiring within 6 mths' = SUM('bcts_reporting licence_issued_with_unbilled_volume_main'[unbilled_volume_expire_in_6_month])
+		lineageTag: a9bf5348-f42e-43e8-892c-0268c80c5712
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Percent Unbilled' = [Unbilled Volume]/[Licence Issued Volume]
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 67f19b97-2ef6-4d03-ac1d-415350967a5d
+
+	column business_area_region_category
+		dataType: string
+		lineageTag: 94027bc8-317a-4471-9347-7d2b1f024f7e
+		summarizeBy: none
+		sourceColumn: business_area_region_category
+
+		annotation SummarizationSetBy = Automatic
+
+	column business_area_region
+		dataType: string
+		lineageTag: 2ad26328-5a54-4894-bf33-e030dd6f02a8
+		summarizeBy: none
+		sourceColumn: business_area_region
+
+		annotation SummarizationSetBy = Automatic
+
+	column business_area
+		dataType: string
+		lineageTag: 0fd444ac-36c5-457b-85e2-a41cc070e940
+		summarizeBy: none
+		sourceColumn: business_area
+
+		annotation SummarizationSetBy = Automatic
+
+	column field_team
+		dataType: string
+		lineageTag: 969ef56c-d392-400d-b598-1d2afdf74d6a
+		summarizeBy: none
+		sourceColumn: field_team
+
+		annotation SummarizationSetBy = Automatic
+
+	column licence_id
+		dataType: string
+		lineageTag: 1a4c3c39-644c-4ae0-9a0b-2de6cae49618
+		summarizeBy: none
+		sourceColumn: licence_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column tenure_type_fta
+		dataType: string
+		lineageTag: a42d3def-0cd2-47b6-b789-17675bd50edb
+		summarizeBy: none
+		sourceColumn: tenure_type_fta
+
+		annotation SummarizationSetBy = Automatic
+
+	column cruise_based_ind
+		dataType: string
+		lineageTag: 5cefc0d2-732f-40ee-b0e6-bc02cb72c8ce
+		summarizeBy: none
+		sourceColumn: cruise_based_ind
+
+		annotation SummarizationSetBy = Automatic
+
+	column fta_file_status
+		dataType: string
+		lineageTag: a45c1fa5-8ee3-4ca0-b514-eb87da486f58
+		summarizeBy: none
+		sourceColumn: fta_file_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column client_number
+		dataType: string
+		lineageTag: fb338d1a-8b32-4aa1-ba11-2847dec4ab89
+		summarizeBy: none
+		sourceColumn: client_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column client
+		dataType: string
+		lineageTag: 49b5bd6f-b2c7-4e00-8f2e-5f14bc09d4b8
+		summarizeBy: none
+		sourceColumn: client
+
+		annotation SummarizationSetBy = Automatic
+
+	column fta_file_status_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 7df5edae-a1d2-4658-986c-8562fadbc24f
+		summarizeBy: none
+		sourceColumn: fta_file_status_date
+
+		variation Variation
+			isDefault
+			relationship: 513f4618-0cf7-42ea-90d8-e4427ef470b3
+			defaultHierarchy: LocalDateTable_bf85cea7-7d6f-4097-ab6f-3593cf8d97b6.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column legal_effective_date_fta
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3a306d8e-a995-4664-993c-1ab6f0c5c9ae
+		summarizeBy: none
+		sourceColumn: legal_effective_date_fta
+
+		variation Variation
+			isDefault
+			relationship: d0e59804-cc09-4402-9e71-7a3278eae0e7
+			defaultHierarchy: LocalDateTable_8e67860c-8a1a-4f1b-bb95-12183a550a41.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column legal_effective_fiscal_fta
+		dataType: string
+		lineageTag: b8cd29c7-b5f0-495b-bfb1-bc17c7ef1e34
+		summarizeBy: none
+		sourceColumn: legal_effective_fiscal_fta
+
+		annotation SummarizationSetBy = Automatic
+
+	column issued_done_lrm
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 7319c16f-1476-4008-a564-72ac9ffe563b
+		summarizeBy: none
+		sourceColumn: issued_done_lrm
+
+		variation Variation
+			isDefault
+			relationship: 6db565a3-5ad9-4a63-bcae-29a251a79b43
+			defaultHierarchy: LocalDateTable_0412f0cd-0712-45e4-bf32-57fdd9cc96fa.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column issued_done_fiscal_lrm
+		dataType: string
+		lineageTag: 0c2b23fc-7cbd-42ba-8b31-c248cd814747
+		summarizeBy: none
+		sourceColumn: issued_done_fiscal_lrm
+
+		annotation SummarizationSetBy = Automatic
+
+	column initial_expiry_fta
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 9d69e909-0ec2-4e0b-9a14-9f20316cc19d
+		summarizeBy: none
+		sourceColumn: initial_expiry_fta
+
+		variation Variation
+			isDefault
+			relationship: 4ce18e16-c2d2-4887-8224-acefb4ae8e53
+			defaultHierarchy: LocalDateTable_6cb966f8-4158-4b84-b6bc-91ac07cddf41.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column current_expiry_fta
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d4a06e27-4d6a-4b83-8c8d-ab407f221c93
+		summarizeBy: none
+		sourceColumn: current_expiry_fta
+
+		variation Variation
+			isDefault
+			relationship: ecdc0c67-05e3-410d-9a82-f984485943ef
+			defaultHierarchy: LocalDateTable_8eee1a87-fe4e-44ba-9f9c-0bfdd8e757dd.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column expiry_fta
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: c0817e57-9403-40bb-ba7a-12ae710ace17
+		summarizeBy: none
+		sourceColumn: expiry_fta
+
+		variation Variation
+			isDefault
+			relationship: 5a9dfb87-860a-4774-9da6-3a48db6ec4ac
+			defaultHierarchy: LocalDateTable_a2e99ad0-c2a6-4ef3-94e6-18dfc089c638.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column expire_extend_lrm
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 22a371eb-9ba1-4442-bd4a-92834167eb30
+		summarizeBy: none
+		sourceColumn: expire_extend_lrm
+
+		variation Variation
+			isDefault
+			relationship: 31c31f58-d764-457d-8086-90715f25b149
+			defaultHierarchy: LocalDateTable_edf6a5cd-6ac2-4355-ad94-281facc84472.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column advertised_licence_term
+		dataType: int64
+		formatString: 0
+		lineageTag: 9e42900b-cba1-44e3-a3b5-b43814d98671
+		summarizeBy: sum
+		sourceColumn: advertised_licence_term
+
+		annotation SummarizationSetBy = Automatic
+
+	column extension_term
+		dataType: double
+		lineageTag: a0205aba-d979-4678-b997-faa022cb9556
+		summarizeBy: sum
+		sourceColumn: extension_term
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column total_tenure_term
+		dataType: double
+		lineageTag: c06ef651-5b11-4337-9945-f3a34f76ad97
+		summarizeBy: sum
+		sourceColumn: total_tenure_term
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column sale_volume
+		dataType: double
+		lineageTag: 6a234792-b8fc-48b5-9e3f-183682068d68
+		summarizeBy: sum
+		sourceColumn: sale_volume
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column billed_volume
+		dataType: double
+		lineageTag: 0f0c34d9-c4d4-4334-9792-649cf36bea14
+		summarizeBy: sum
+		sourceColumn: billed_volume
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column unbilled_volume
+		dataType: double
+		lineageTag: b3298399-1d52-44ac-8318-91c87a4efd47
+		summarizeBy: sum
+		sourceColumn: unbilled_volume
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column percent_unbilled
+		dataType: double
+		lineageTag: 0ad83790-a32c-4640-8140-f794d833a073
+		summarizeBy: sum
+		sourceColumn: percent_unbilled
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column licn_seq_nbr
+		dataType: double
+		lineageTag: 82fe8257-c977-4f3c-9e1e-47393013366c
+		summarizeBy: sum
+		sourceColumn: licn_seq_nbr
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column last_logging_started_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 9acb3743-9473-4aad-8c78-fc2597152707
+		summarizeBy: none
+		sourceColumn: last_logging_started_date
+
+		variation Variation
+			isDefault
+			relationship: 829989da-b571-42b3-8b5c-1c0c8f9dd5cb
+			defaultHierarchy: LocalDateTable_b0b13331-b054-41ac-b0bf-704d382879ac.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column last_logging_completed_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 19d93373-c003-4365-afa7-80969257abfd
+		summarizeBy: none
+		sourceColumn: last_logging_completed_date
+
+		variation Variation
+			isDefault
+			relationship: 7bcad272-1c86-4c61-a2c9-112f4ab713f7
+			defaultHierarchy: LocalDateTable_fb54d372-be46-4e6d-86cf-f00afe22d33e.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column harvesting_status
+		dataType: string
+		lineageTag: 23e32c19-a7a6-4543-950d-c07773f67c72
+		summarizeBy: none
+		sourceColumn: harvesting_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column report_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: da44dd9d-8965-4765-bc0d-e770d6763908
+		summarizeBy: none
+		sourceColumn: report_date
+
+		variation Variation
+			isDefault
+			relationship: d7a9c16a-14b0-4e0a-8ac8-fb3ba4dfa96b
+			defaultHierarchy: LocalDateTable_1815df61-d160-49dc-8bad-92cdda4e572c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column unbilled_volume_over_20_month
+		dataType: double
+		lineageTag: e5306646-07a3-46e4-8e9b-8f3ff18b6980
+		summarizeBy: sum
+		sourceColumn: unbilled_volume_over_20_month
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column unbilled_volume_expire_in_6_month
+		dataType: double
+		lineageTag: c97ed084-f0f6-46c8-8bdf-943a08f948c3
+		summarizeBy: sum
+		sourceColumn: unbilled_volume_expire_in_6_month
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Fiscal Period Info' = ```
+			
+			"Report Period: Up to " & 
+			FORMAT(MAX('bcts_reporting licence_issued_with_unbilled_volume_main'[report_date]), "MMMM DD, YYYY")
+			```
+		lineageTag: 8dc76423-743b-4de7-94fc-ad3ded0a4b8b
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'bcts_reporting licence_issued_with_unbilled_volume_main' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("existence.bcgov:5435", "odsprd"),
+				    bcts_reporting_licence_issued_with_unbilled_volume_main = Source{[Schema="bcts_reporting",Item="licence_issued_with_unbilled_volume_main"]}[Data]
+				in
+				    bcts_reporting_licence_issued_with_unbilled_volume_main
+
