@@ -11,7 +11,7 @@
         {
           "location": {
             "x": 856,
-            "y": 489
+            "y": 533.5
           },
           "nodeIndex": "bcts_staging dim_business_area",
           "nodeLineageTag": "423f3f99-ad28-4136-bebc-f2a4a8ac2914",
@@ -24,12 +24,24 @@
         {
           "location": {
             "x": 284,
-            "y": 89
+            "y": 133.5
           },
           "nodeIndex": "bcts_reporting licence_issued_with_unbilled_volume_main",
           "nodeLineageTag": "f222f382-4224-4fd4-b74e-7a7dbede35d5",
           "size": {
             "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 856,
+            "y": 308.19561374464178
+          },
+          "nodeIndex": "Measures Table",
+          "size": {
+            "height": 200,
             "width": 234
           },
           "zIndex": 0

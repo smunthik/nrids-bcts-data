@@ -37,6 +37,64 @@ table 'bcts_reporting licence_issued_with_unbilled_volume_main'
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: 67f19b97-2ef6-4d03-ac1d-415350967a5d
 
+	measure 'Unbilled - Active' = ```
+			
+			CALCULATE(
+			    [Unbilled Volume],
+			    'bcts_reporting licence_issued_with_unbilled_volume_main'[Actively Harvested] = "Yes"
+			)
+			
+			```
+		lineageTag: a3a0989f-48ca-4f98-b6ba-e095bc1457b8
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Unbilled - No Activity' = ```
+			
+			CALCULATE(
+			    [Unbilled Volume],
+			    'bcts_reporting licence_issued_with_unbilled_volume_main'[Actively Harvested] = "No"
+			)
+			
+			```
+		lineageTag: e2464c81-22cc-43f7-a6d7-2c999ae937bc
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Unbilled Volume Expiring ≤ 6 Months - No Activity' = ```
+			
+			CALCULATE (
+			    SUM ( 'bcts_reporting licence_issued_with_unbilled_volume_main'[unbilled_volume_expire_in_6_month] ),
+			    'bcts_reporting licence_issued_with_unbilled_volume_main'[harvesting_status] <> "Active_Harvesting"
+			)
+			
+			```
+		lineageTag: 20f5853b-00d2-4688-ab95-4a43e81a5505
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Unbilled Volume Expiring > 6 Months' = ```
+			
+			[Unbilled Volume]
+			    - [Unbilled Volume expiring within 6 mths]
+			
+			```
+		lineageTag: 4e24f175-adcc-4215-8689-e41d362d3be4
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Unbilled Volume Expiring > 6 Months - No Activity' = ```
+			
+			CALCULATE (
+			    [Unbilled Volume Expiring > 6 Months],
+			    'bcts_reporting licence_issued_with_unbilled_volume_main'[harvesting_status] <> "Active_Harvesting"
+			)
+			
+			```
+		lineageTag: f9a5beff-fed2-40b0-8155-c80fb6162519
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column business_area_region_category
 		dataType: string
 		lineageTag: 94027bc8-317a-4471-9347-7d2b1f024f7e
@@ -388,6 +446,18 @@ table 'bcts_reporting licence_issued_with_unbilled_volume_main'
 			FORMAT(MAX('bcts_reporting licence_issued_with_unbilled_volume_main'[report_date]), "MMMM DD, YYYY")
 			```
 		lineageTag: 8dc76423-743b-4de7-94fc-ad3ded0a4b8b
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Actively Harvested' =
+			
+			IF (
+			    'bcts_reporting licence_issued_with_unbilled_volume_main'[harvesting_status] = "Active_Harvesting",
+			    "Yes",
+			    "No"
+			)
+		lineageTag: a78c9a2e-5ac7-409b-9b5b-4c60a3b638e6
 		summarizeBy: none
 
 		annotation SummarizationSetBy = Automatic

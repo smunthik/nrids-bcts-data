@@ -4,10 +4,10 @@
   "position": {
     "x": 0,
     "y": 77.777777777777771,
-    "z": 4000,
+    "z": 2000,
     "height": 63,
     "width": 1280,
-    "tabOrder": 4000
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "card",
@@ -146,6 +146,13 @@
               "expr": {
                 "Literal": {
                   "Value": "12D"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Licence Issued with Unbilled Volume: Active and unexpired BCTS licences with more than 100 m³ of unbilled standing volume and no substantial completion activity recorded.'"
                 }
               }
             }
@@ -294,7 +301,7 @@
             "top": {
               "expr": {
                 "Literal": {
-                  "Value": "6D"
+                  "Value": "12D"
                 }
               }
             },

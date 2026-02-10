@@ -48,7 +48,8 @@ relationship d7a9c16a-14b0-4e0a-8ac8-fb3ba4dfa96b
 	fromColumn: 'bcts_reporting licence_issued_with_unbilled_volume_main'.report_date
 	toColumn: LocalDateTable_1815df61-d160-49dc-8bad-92cdda4e572c.Date
 
-relationship AutoDetected_2f96b1c7-896c-487c-86b5-94d41811ae2b
+relationship 6497d1c1-1759-bae0-7309-9912f5fdb600
+	crossFilteringBehavior: bothDirections
 	fromColumn: 'bcts_reporting licence_issued_with_unbilled_volume_main'.business_area
 	toColumn: 'bcts_staging dim_business_area'.business_area
 

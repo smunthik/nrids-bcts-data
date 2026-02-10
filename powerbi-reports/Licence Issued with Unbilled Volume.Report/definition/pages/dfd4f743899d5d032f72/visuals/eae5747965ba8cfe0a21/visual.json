@@ -1,67 +1,51 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "a8ff6d789494994aeb68",
+  "name": "eae5747965ba8cfe0a21",
   "position": {
-    "x": 0,
-    "y": 77.777777777777771,
-    "z": 2000,
-    "height": 63,
-    "width": 1280,
-    "tabOrder": 2000
+    "x": 15,
+    "y": 151.25,
+    "z": 7000,
+    "height": 96.25,
+    "width": 272.5,
+    "tabOrder": 7000
   },
   "visual": {
-    "visualType": "card",
+    "visualType": "slicer",
     "query": {
       "queryState": {
         "Values": {
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Column": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "bcts_reporting licence_issued_with_unbilled_volume_main"
-                        }
-                      },
-                      "Property": "Fiscal Period Info"
+                    "SourceRef": {
+                      "Entity": "bcts_staging dim_business_area"
                     }
                   },
-                  "Function": 3
+                  "Property": "business_area_region"
                 }
               },
-              "queryRef": "Min(bcts_reporting licence_issued_with_unbilled_volume_main.Fiscal Period Info)",
-              "nativeQueryRef": "First Fiscal Period Info"
+              "queryRef": "bcts_staging dim_business_area.business_area_region",
+              "nativeQueryRef": "business_area_region",
+              "active": true
             }
           ]
         }
       }
     },
     "objects": {
-      "labels": [
+      "selection": [
         {
           "properties": {
-            "fontSize": {
+            "selectAllCheckboxEnabled": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "true"
                 }
               }
             },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
-            "preserveWhitespace": {
+            "singleSelect": {
               "expr": {
                 "Literal": {
                   "Value": "true"
@@ -71,23 +55,30 @@
           }
         }
       ],
-      "categoryLabels": [
+      "general": [
         {
           "properties": {
-            "show": {
+            "orientation": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "1D"
                 }
               }
             }
           }
         }
       ],
-      "wordWrap": [
+      "data": [
         {
           "properties": {
-            "show": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Dropdown'"
+                }
+              }
+            },
+            "isInvertedSelectionMode": {
               "expr": {
                 "Literal": {
                   "Value": "true"
@@ -96,34 +87,11 @@
             }
           }
         }
-      ]
-    },
-    "visualContainerObjects": {
-      "title": [
+      ],
+      "header": [
         {
           "properties": {
             "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "titleWrap": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'center'"
-                }
-              }
-            },
-            "bold": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -141,58 +109,70 @@
                   }
                 }
               }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "12D"
+            }
+          }
+        }
+      ],
+      "items": [
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
                 }
               }
-            },
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Licence Issued with Unbilled Volume: Active and unexpired BCTS licences with more than 100 m³ of unbilled standing volume and no substantial completion activity recorded.'"
+                  "Value": "'Region'"
                 }
               }
-            }
-          }
-        }
-      ],
-      "divider": [
-        {
-          "properties": {
+            },
             "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "spacing": [
-        {
-          "properties": {
-            "customizeSpacing": {
               "expr": {
                 "Literal": {
                   "Value": "true"
                 }
               }
             },
-            "verticalSpacing": {
+            "titleWrap": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
+                  "Value": "true"
                 }
               }
             },
-            "spaceBelowTitle": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "alignment": {
               "expr": {
                 "Literal": {
-                  "Value": "0D"
+                  "Value": "'center'"
                 }
               }
             }
@@ -205,14 +185,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "transparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "12D"
+                  "Value": "false"
                 }
               }
             },
@@ -221,9 +194,16 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#234075'"
+                      "Value": "'#013366'"
                     }
                   }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
                 }
               }
             }
@@ -245,8 +225,8 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0.6
+                      "ColorId": 0,
+                      "Percent": -0.3
                     }
                   }
                 }
@@ -255,7 +235,7 @@
             "radius": {
               "expr": {
                 "Literal": {
-                  "Value": "15D"
+                  "Value": "14D"
                 }
               }
             },
@@ -278,17 +258,16 @@
                   "Value": "false"
                 }
               }
-            }
-          }
-        }
-      ],
-      "visualHeader": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
                 }
               }
             }
@@ -301,14 +280,7 @@
             "top": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
-                }
-              }
-            },
-            "bottom": {
-              "expr": {
-                "Literal": {
-                  "Value": "14D"
+                  "Value": "15D"
                 }
               }
             }

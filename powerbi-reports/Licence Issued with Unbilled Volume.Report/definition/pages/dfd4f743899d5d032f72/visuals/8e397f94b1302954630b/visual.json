@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "09aba2e78de5135762ba",
+  "name": "8e397f94b1302954630b",
   "position": {
-    "x": 0,
+    "x": 1130,
     "y": 0,
-    "z": 4000,
-    "height": 97.763779527559052,
-    "width": 135.05511811023621,
-    "tabOrder": 4000
+    "z": 1000,
+    "height": 90,
+    "width": 150,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "image",
@@ -20,7 +20,7 @@
                 "ResourcePackageItem": {
                   "PackageName": "RegisteredResources",
                   "PackageType": 1,
-                  "ItemName": "BCTS_CMYK_pos305910991917137.png"
+                  "ItemName": "BCPS_LOGO49519398603932685.jpg"
                 }
               }
             }
@@ -42,16 +42,22 @@
       ]
     },
     "visualContainerObjects": {
+      "lockAspect": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
       "padding": [
         {
           "properties": {
-            "bottom": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            },
             "top": {
               "expr": {
                 "Literal": {
@@ -59,14 +65,21 @@
                 }
               }
             },
-            "left": {
+            "right": {
               "expr": {
                 "Literal": {
                   "Value": "0D"
                 }
               }
             },
-            "right": {
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "left": {
               "expr": {
                 "Literal": {
                   "Value": "0D"

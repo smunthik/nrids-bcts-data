@@ -17,6 +17,7 @@ table 'bcts_staging dim_business_area'
 		lineageTag: 3ea02462-1ee4-4d82-a525-ec944d68aed0
 		summarizeBy: none
 		sourceColumn: business_area_region
+		sortByColumn: business_area_region_sort_order
 
 		changedProperty = SortByColumn
 

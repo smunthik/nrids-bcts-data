@@ -25,6 +25,7 @@ ref table LocalDateTable_edf6a5cd-6ac2-4355-ad94-281facc84472
 ref table LocalDateTable_b0b13331-b054-41ac-b0bf-704d382879ac
 ref table LocalDateTable_fb54d372-be46-4e6d-86cf-f00afe22d33e
 ref table LocalDateTable_1815df61-d160-49dc-8bad-92cdda4e572c
+ref table 'Measures Table'
 
 ref cultureInfo en-CA
 

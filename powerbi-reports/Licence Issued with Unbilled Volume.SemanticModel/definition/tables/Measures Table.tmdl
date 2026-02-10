@@ -1,0 +1,30 @@
+table 'Measures Table'
+	lineageTag: 0efbf515-c843-47c7-b0bb-4c7d38c4707d
+
+	column Measure
+		lineageTag: ae602cad-2f71-4a92-8fb9-ba9c756f79d1
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Measure]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Measures Table' = calculated
+		mode: import
+		source = ```
+				
+				DATATABLE(
+				    "Measure", STRING,
+				    {
+				        {"Licence Issued Volume"},
+				        {"Billed Volume"},
+				        {"Unbilled Volume – Active"},
+				        {"Unbilled Volume – No Activity"},
+				        {"Unbilled Expiring ≤ 6 Months – No Activity"}
+				    }
+				)
+				
+				```
+
+	annotation PBI_Id = c35a9c08cdf9438fa3e0cd3af1698d50
+
