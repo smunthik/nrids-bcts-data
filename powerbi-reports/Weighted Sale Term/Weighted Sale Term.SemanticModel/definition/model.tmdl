@@ -1,0 +1,25 @@
+model Model
+	culture: en-CA
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-CA
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["bcts_staging dim_business_area","bcts_reporting weighted_sale_term"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table 'bcts_staging dim_business_area'
+ref table 'bcts_reporting weighted_sale_term'
+ref table DateTableTemplate_04bc74a4-b3e3-4486-98a8-5d4c5211093f
+ref table LocalDateTable_d59a3796-6357-4e41-8551-e90ad35b55ac
+ref table LocalDateTable_c945d51a-dc2d-4abb-9abf-b57951276360
+ref table LocalDateTable_eaa2cc55-faa8-4b19-ae49-69af40c489f3
+ref table LocalDateTable_f942054c-5dc1-4135-b9fc-7c10b92c0341
+ref table Dim_AwardedVolumeClass
+
+ref cultureInfo en-CA
+

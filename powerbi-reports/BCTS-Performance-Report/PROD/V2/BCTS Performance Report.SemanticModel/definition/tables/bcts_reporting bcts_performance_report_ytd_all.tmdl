@@ -63,13 +63,14 @@ table 'bcts_reporting bcts_performance_report_ytd_all'
 
 	column 'Fiscal Year Licence Issued Target'
 		dataType: double
+		formatString: #,0
 		lineageTag: 13f8b431-72f9-4c0c-bbff-0b9326985343
 		summarizeBy: sum
 		sourceColumn: Fiscal Year Licence Issued Target
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"isDecimal":true}
 
 	column 'Q1 Licence Issued Target: Value Added'
 		dataType: double
@@ -103,13 +104,14 @@ table 'bcts_reporting bcts_performance_report_ytd_all'
 
 	column 'Fiscal Year Licence Issued Target: Value Added'
 		dataType: double
+		formatString: #,0
 		lineageTag: 2ecde36d-e960-4bfa-bbaa-4303c1cdd299
 		summarizeBy: sum
 		sourceColumn: Fiscal Year Licence Issued Target: Value Added
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"isDecimal":true}
 
 	column business_area_region
 		dataType: string

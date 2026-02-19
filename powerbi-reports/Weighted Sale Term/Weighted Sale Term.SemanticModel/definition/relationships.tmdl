@@ -1,0 +1,29 @@
+relationship b9cac742-1c9e-4f62-acc9-de88a8722f10
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'bcts_reporting weighted_sale_term'.report_start_date
+	toColumn: LocalDateTable_d59a3796-6357-4e41-8551-e90ad35b55ac.Date
+
+relationship db151304-8cb2-427e-9e2b-bc7f05a7de8d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'bcts_reporting weighted_sale_term'.report_end_date
+	toColumn: LocalDateTable_c945d51a-dc2d-4abb-9abf-b57951276360.Date
+
+relationship 2030b62e-ce55-47cc-9ddb-25ef789a176f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'bcts_reporting weighted_sale_term'.report_run_date
+	toColumn: LocalDateTable_eaa2cc55-faa8-4b19-ae49-69af40c489f3.Date
+
+relationship 90fce7cf-a931-4341-bdd7-6fdae320ae18
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'bcts_reporting weighted_sale_term'.report_run_timestamp
+	toColumn: LocalDateTable_f942054c-5dc1-4135-b9fc-7c10b92c0341.Date
+
+relationship AutoDetected_a5f0e587-e496-49ad-8a0d-e3f66e92820f
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'bcts_reporting weighted_sale_term'.business_area
+	toColumn: 'bcts_staging dim_business_area'.business_area
+
+relationship da6c5bff-ae36-a7ca-874f-48fe664de2e5
+	fromColumn: 'bcts_reporting weighted_sale_term'.awarded_licence_volume_class
+	toColumn: Dim_AwardedVolumeClass.awarded_volume_licence_class
+

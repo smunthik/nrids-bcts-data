@@ -1,0 +1,9 @@
+-- THE
+tenure_term (bcts_staging.fta_tenure_term)
+bcts_timber_sale (bctsadmin_replication.bcts_timber_sale)
+bcts_category_code (bctsadmin_replication.bcts_category_code)
+prov_forest_use (bcts_staging.fta_prov_forest_use)
+tenure_file_status_code (bcts_staging.fta_tenure_file_status_code)
+org_unit (bcts_staging.fta_org_unit)
+forest_client (mofclient_replication.v_client_public)
+bcts_tenure_bidder (bctsadmin_replication.bcts_tenure_bidder)

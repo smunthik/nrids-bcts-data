@@ -50,7 +50,7 @@ table 'bcts_reporting write_off_forms'
 
 	column validated_date
 		dataType: dateTime
-		formatString: Long Date
+		formatString: yyyy-mm-dd
 		sourceProviderType: date
 		lineageTag: 6444ce2d-0ecf-48cf-ba40-5e2ca7a1e9fb
 		summarizeBy: none
@@ -59,6 +59,8 @@ table 'bcts_reporting write_off_forms'
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
 
 	partition 'bcts_reporting write_off_forms' = m
 		mode: directQuery

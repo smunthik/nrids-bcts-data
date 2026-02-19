@@ -1,0 +1,41 @@
+table Dim_AwardedVolumeClass
+	lineageTag: 3e0ad6f3-6ed9-4e4f-8f7a-445d54373c6d
+
+	column awarded_volume_licence_class
+		lineageTag: 4d49f15f-1f11-4b36-b450-2d66409ae8b1
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [awarded_volume_licence_class]
+		sortByColumn: SortOrder
+
+		annotation SummarizationSetBy = Automatic
+
+	column SortOrder
+		formatString: 0
+		lineageTag: b2d673a1-a37f-4528-a5f7-b09ff1e3e93c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [SortOrder]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_AwardedVolumeClass = calculated
+		mode: import
+		source = ```
+				
+				DATATABLE(
+				    "awarded_volume_licence_class", STRING,
+				    "SortOrder", INTEGER,
+				    {
+				        { "0.0 to 5,000.0 m3", 1 },
+				        { "5,000.1 to 15,000.0 m3", 2 },
+				        { "15,000.1 to 30,000.0 m3", 3 },
+				        { "30,000.1 to 75,000.0 m3", 4 },
+				        { "75,000.1 m3 and above", 5 }
+				    }
+				)
+				
+				```
+
+	annotation PBI_Id = f7e082251fd047d28b8d240a7b59f228
+

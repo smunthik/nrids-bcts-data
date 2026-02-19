@@ -1,0 +1,629 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "8b73c6d9232bfd5ab5ff",
+  "position": {
+    "x": 0,
+    "y": 160.91954022988506,
+    "z": 5000,
+    "height": 548.0459770114943,
+    "width": 1248.7356321839081,
+    "tabOrder": 5000
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "bcts_staging dim_business_area"
+                        }
+                      },
+                      "Hierarchy": "Business Area Hierarchy"
+                    }
+                  },
+                  "Level": "Business Area"
+                }
+              },
+              "queryRef": "bcts_staging dim_business_area.Business Area Hierarchy.Business Area",
+              "nativeQueryRef": "Business Area Hierarchy Business Area",
+              "active": true
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "bcts_staging dim_business_area"
+                        }
+                      },
+                      "Hierarchy": "Business Area Hierarchy"
+                    }
+                  },
+                  "Level": "business_area_region"
+                }
+              },
+              "queryRef": "bcts_staging dim_business_area.Business Area Hierarchy.business_area_region",
+              "nativeQueryRef": "Business Area Hierarchy business_area_region",
+              "active": true
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "bcts_staging dim_business_area"
+                        }
+                      },
+                      "Hierarchy": "Business Area Hierarchy"
+                    }
+                  },
+                  "Level": "business_area"
+                }
+              },
+              "queryRef": "bcts_staging dim_business_area.Business Area Hierarchy.business_area",
+              "nativeQueryRef": "Business Area Hierarchy business_area",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_with_unbilled_volume_main"
+                    }
+                  },
+                  "Property": "Licence Count"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_with_unbilled_volume_main.Licence Count",
+              "nativeQueryRef": "Licence Count"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_with_unbilled_volume_main"
+                    }
+                  },
+                  "Property": "Active Harvesting Count"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_with_unbilled_volume_main.Active Harvesting Count",
+              "nativeQueryRef": "Active Harvesting Count"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_with_unbilled_volume_main"
+                    }
+                  },
+                  "Property": "Licence Issued Volume"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_with_unbilled_volume_main.Licence Issued Volume",
+              "nativeQueryRef": "Licence Issued Volume (m³)",
+              "displayName": "Licence Issued Volume (m³)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_with_unbilled_volume_main"
+                    }
+                  },
+                  "Property": "Billed Volume"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_with_unbilled_volume_main.Billed Volume",
+              "nativeQueryRef": "Billed Volume (m³)",
+              "displayName": "Billed Volume (m³)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_with_unbilled_volume_main"
+                    }
+                  },
+                  "Property": "Unbilled Volume"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_with_unbilled_volume_main.Unbilled Volume",
+              "nativeQueryRef": "Unbilled Volume (m³)",
+              "displayName": "Unbilled Volume (m³)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_with_unbilled_volume_main"
+                    }
+                  },
+                  "Property": "Percent Unbilled"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_with_unbilled_volume_main.Percent Unbilled",
+              "nativeQueryRef": "Percent Unbilled"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_with_unbilled_volume_main"
+                    }
+                  },
+                  "Property": "Unbilled Volume expiring within 6 mths"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_with_unbilled_volume_main.Unbilled Volume expiring within 6 mths",
+              "nativeQueryRef": "Unbilled Volume Expiring ≤6 Months (m³)",
+              "displayName": "Unbilled Volume Expiring ≤6 Months (m³)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_with_unbilled_volume_main"
+                    }
+                  },
+                  "Property": "Unbilled Volume Expiring ≤ 6 Months - No Activity"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_with_unbilled_volume_main.Unbilled Volume Expiring ≤ 6 Months - No Activity",
+              "nativeQueryRef": "Unbilled Volume Expiring ≤ 6 Months - No Activity"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_with_unbilled_volume_main"
+                    }
+                  },
+                  "Property": "Percent Unbilled Expiring ≤ 6 Months - No Activity"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_with_unbilled_volume_main.Percent Unbilled Expiring ≤ 6 Months - No Activity",
+              "nativeQueryRef": "Percent Unbilled Expiring ≤ 6 Months - No Activity"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "bcts_reporting licence_issued_with_unbilled_volume_main"
+                  }
+                },
+                "Property": "Percent Unbilled Expiring ≤ 6 Months - No Activity"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "expansionStates": [
+      {
+        "roles": [
+          "Rows"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "bcts_staging dim_business_area.Business Area Hierarchy.Business Area"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_staging dim_business_area"
+                    }
+                  },
+                  "Property": "Business Area"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "bcts_staging dim_business_area.Business Area Hierarchy.business_area_region"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_staging dim_business_area"
+                    }
+                  },
+                  "Property": "business_area_region"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "bcts_staging dim_business_area.Business Area Hierarchy.business_area"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          }
+        ],
+        "root": {
+          "children": [
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'Interior'"
+                  }
+                }
+              ],
+              "isToggled": true,
+              "children": [
+                {
+                  "identityValues": [
+                    {
+                      "Literal": {
+                        "Value": "'North Interior'"
+                      }
+                    }
+                  ],
+                  "isToggled": true
+                },
+                {
+                  "identityValues": [
+                    {
+                      "Literal": {
+                        "Value": "'South Interior'"
+                      }
+                    }
+                  ],
+                  "isToggled": true
+                }
+              ]
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'Coast'"
+                  }
+                }
+              ],
+              "isToggled": true,
+              "children": [
+                {
+                  "identityValues": [
+                    {
+                      "Literal": {
+                        "Value": "'Coast'"
+                      }
+                    }
+                  ],
+                  "isToggled": true
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "rowHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "114.10993015673931D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "bcts_reporting licence_issued_with_unbilled_volume_main.Unbilled Volume expiring within 6 mths"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "95.47178905573668D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "bcts_reporting licence_issued_with_unbilled_volume_main.Active Harvesting Count"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "110.5394884699935D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "bcts_reporting licence_issued_with_unbilled_volume_main.Licence Issued Volume"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "104.78595777969474D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "bcts_reporting licence_issued_with_unbilled_volume_main.Unbilled Volume"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "150.53366008543705D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "bcts_reporting licence_issued_with_unbilled_volume_main.Percent Unbilled Expiring ≤ 6 Months - No Activity"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "252.55264313553232D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "bcts_staging dim_business_area.Business Area Hierarchy.Business Area"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "78.6666720489548D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "bcts_reporting licence_issued_with_unbilled_volume_main.Licence Count"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "110.74809560354001D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "bcts_reporting licence_issued_with_unbilled_volume_main.Billed Volume"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "74.99699976194688D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "bcts_reporting licence_issued_with_unbilled_volume_main.Percent Unbilled"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "137.317394800217D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "bcts_reporting licence_issued_with_unbilled_volume_main.Unbilled Volume Expiring ≤ 6 Months - No Activity"
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "gridHorizontal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "gridHorizontalWeight": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "gridVerticalColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#013366'"
+                    }
+                  }
+                }
+              }
+            },
+            "outlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#013366'"
+                    }
+                  }
+                }
+              }
+            },
+            "outlineWeight": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
+                }
+              }
+            },
+            "gridVerticalWeight": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Licence Issued wth Unbilled Volume: Unbilled Inventory by Business Area'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

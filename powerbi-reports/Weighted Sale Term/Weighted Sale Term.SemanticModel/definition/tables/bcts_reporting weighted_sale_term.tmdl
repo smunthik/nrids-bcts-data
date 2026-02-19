@@ -1,0 +1,214 @@
+table 'bcts_reporting weighted_sale_term'
+	lineageTag: f95a3635-81e3-46be-ae79-02db261b4d91
+
+	measure 'Weighted Sale Terms (Months)' =
+			
+			COALESCE(
+			    DIVIDE(
+			        SUM('bcts_reporting weighted_sale_term'[sum_awarded_licence_volume_x_tenure_term]),
+			        SUM('bcts_reporting weighted_sale_term'[sum_awarded_licence_volume]),
+			        0
+			    ),
+			    0
+			)
+		lineageTag: b275a082-7a2e-4db5-809f-2ea4cea0a4a9
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column business_area_region_category
+		dataType: string
+		lineageTag: 9b43e796-d6df-4769-89fa-93e50c7e51d3
+		summarizeBy: none
+		sourceColumn: business_area_region_category
+
+		annotation SummarizationSetBy = Automatic
+
+	column business_area_region
+		dataType: string
+		lineageTag: 4210f430-2c02-404c-8897-374e3e3e6187
+		summarizeBy: none
+		sourceColumn: business_area_region
+
+		annotation SummarizationSetBy = Automatic
+
+	column business_area
+		dataType: string
+		lineageTag: d4e96bd0-d3b8-49bb-b65c-f4b1e8b9ef30
+		summarizeBy: none
+		sourceColumn: business_area
+
+		annotation SummarizationSetBy = Automatic
+
+	column auction_fiscal
+		dataType: double
+		formatString: 0
+		lineageTag: 949969b6-7848-4d43-8959-27d8c962d408
+		summarizeBy: sum
+		sourceColumn: auction_fiscal
+
+		annotation SummarizationSetBy = Automatic
+
+	column awarded_licence_volume_class
+		dataType: string
+		lineageTag: 667b697b-8bee-4e19-a4cc-cf8cc6e3048b
+		summarizeBy: none
+		sourceColumn: awarded_licence_volume_class
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column sum_awarded_licence_volume
+		dataType: double
+		lineageTag: 8353d08f-bb78-436b-bdd6-286d7c16fcc4
+		summarizeBy: sum
+		sourceColumn: sum_awarded_licence_volume
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column sum_awarded_licence_volume_x_tenure_term
+		dataType: double
+		lineageTag: 2b4a9eb7-dd0e-406c-b207-01916522cdd0
+		summarizeBy: sum
+		sourceColumn: sum_awarded_licence_volume_x_tenure_term
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column weighted_tenure_term
+		dataType: double
+		lineageTag: 70759208-21e4-451b-ae41-82bcbfb4ef5e
+		summarizeBy: sum
+		sourceColumn: weighted_tenure_term
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column count_awarded_licences
+		dataType: int64
+		formatString: 0
+		lineageTag: 6398ad3c-d74e-412d-bbec-57b23a8f002d
+		summarizeBy: sum
+		sourceColumn: count_awarded_licences
+
+		annotation SummarizationSetBy = Automatic
+
+	column report_start_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 03458e4a-d2b3-4034-bd53-a70d29170c89
+		summarizeBy: none
+		sourceColumn: report_start_date
+
+		variation Variation
+			isDefault
+			relationship: b9cac742-1c9e-4f62-acc9-de88a8722f10
+			defaultHierarchy: LocalDateTable_d59a3796-6357-4e41-8551-e90ad35b55ac.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column report_end_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: e56916a3-fbda-4b52-b5cf-a3b4d478ed3e
+		summarizeBy: none
+		sourceColumn: report_end_date
+
+		variation Variation
+			isDefault
+			relationship: db151304-8cb2-427e-9e2b-bc7f05a7de8d
+			defaultHierarchy: LocalDateTable_c945d51a-dc2d-4abb-9abf-b57951276360.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column report_run_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: f07e7cb7-2137-4734-a213-6864de2474c0
+		summarizeBy: none
+		sourceColumn: report_run_date
+
+		variation Variation
+			isDefault
+			relationship: 2030b62e-ce55-47cc-9ddb-25ef789a176f
+			defaultHierarchy: LocalDateTable_eaa2cc55-faa8-4b19-ae49-69af40c489f3.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column report_run_timestamp
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 4891de0a-6cb0-406c-9dfe-e8376aafc9a6
+		summarizeBy: none
+		sourceColumn: report_run_timestamp
+
+		variation Variation
+			isDefault
+			relationship: 90fce7cf-a931-4341-bdd7-6fdae320ae18
+			defaultHierarchy: LocalDateTable_f942054c-5dc1-4135-b9fc-7c10b92c0341.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Auction Fiscal Year' = ```
+			
+			VAR FYEnd = 'bcts_reporting weighted_sale_term'[auction_fiscal]
+			RETURN
+			IF(
+			    ISBLANK(FYEnd),
+			    BLANK(),
+			    FORMAT(FYEnd - 1, "0000") & "-" & RIGHT(FORMAT(FYEnd, "0000"), 2)
+			)
+			
+			```
+		lineageTag: b6b79fbf-829e-4c5c-8447-d285c1bdb4fb
+		summarizeBy: none
+		sortByColumn: auction_fiscal
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fiscal Period Info' = ```
+			
+			"Data shown reflects period from "
+			    & FORMAT(
+			        MAX('bcts_reporting weighted_sale_term'[report_start_date]),
+			        "MMMM dd, yyyy"
+			      )
+			    & " to "
+			    & FORMAT(
+			        MAX('bcts_reporting weighted_sale_term'[report_end_date]),
+			        "MMMM dd, yyyy"
+			      )
+			    & " (Data refreshed on "
+			    & FORMAT(
+			        MAX('bcts_reporting weighted_sale_term'[report_run_timestamp]),
+			        "MMMM dd, yyyy hh:mm AM/PM"
+			      )
+			    & ")"
+			
+			```
+		lineageTag: 65c6c9a2-c308-4ffd-b7b5-c37cbdeee4f7
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'bcts_reporting weighted_sale_term' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("existence.bcgov:5435", "odsprd"),
+				    bcts_reporting_weighted_sale_term = Source{[Schema="bcts_reporting",Item="weighted_sale_term"]}[Data]
+				in
+				    bcts_reporting_weighted_sale_term
+
