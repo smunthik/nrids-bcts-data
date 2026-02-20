@@ -1,0 +1,206 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "c92eea3a15dbcdbc7ff3",
+  "position": {
+    "x": 0,
+    "y": 163.87543252595157,
+    "z": 4001,
+    "height": 539.23875432525949,
+    "width": 1280,
+    "tabOrder": 4001
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting weighted_sale_term"
+                    }
+                  },
+                  "Property": "auction_fiscal"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting weighted_sale_term.auction_fiscal)",
+              "nativeQueryRef": "auction_fiscal"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting weighted_sale_term"
+                    }
+                  },
+                  "Property": "awarded_licence_volume_class"
+                }
+              },
+              "queryRef": "bcts_reporting weighted_sale_term.awarded_licence_volume_class",
+              "nativeQueryRef": "awarded_licence_volume_class"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting weighted_sale_term"
+                    }
+                  },
+                  "Property": "business_area"
+                }
+              },
+              "queryRef": "bcts_reporting weighted_sale_term.business_area",
+              "nativeQueryRef": "business_area"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting weighted_sale_term"
+                    }
+                  },
+                  "Property": "business_area_region"
+                }
+              },
+              "queryRef": "bcts_reporting weighted_sale_term.business_area_region",
+              "nativeQueryRef": "business_area_region"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting weighted_sale_term"
+                    }
+                  },
+                  "Property": "business_area_region_category"
+                }
+              },
+              "queryRef": "bcts_reporting weighted_sale_term.business_area_region_category",
+              "nativeQueryRef": "business_area_region_category"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting weighted_sale_term"
+                    }
+                  },
+                  "Property": "count_awarded_licences"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting weighted_sale_term.count_awarded_licences)",
+              "nativeQueryRef": "count_awarded_licences"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting weighted_sale_term"
+                    }
+                  },
+                  "Property": "report_end_date"
+                }
+              },
+              "queryRef": "bcts_reporting weighted_sale_term.report_end_date",
+              "nativeQueryRef": "report_end_date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting weighted_sale_term"
+                    }
+                  },
+                  "Property": "report_run_date"
+                }
+              },
+              "queryRef": "bcts_reporting weighted_sale_term.report_run_date",
+              "nativeQueryRef": "report_run_date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting weighted_sale_term"
+                    }
+                  },
+                  "Property": "report_run_timestamp"
+                }
+              },
+              "queryRef": "bcts_reporting weighted_sale_term.report_run_timestamp",
+              "nativeQueryRef": "report_run_timestamp"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting weighted_sale_term"
+                    }
+                  },
+                  "Property": "report_start_date"
+                }
+              },
+              "queryRef": "bcts_reporting weighted_sale_term.report_start_date",
+              "nativeQueryRef": "report_start_date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting weighted_sale_term"
+                    }
+                  },
+                  "Property": "sum_awarded_licence_volume"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting weighted_sale_term.sum_awarded_licence_volume)",
+              "nativeQueryRef": "sum_awarded_licence_volume"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting weighted_sale_term"
+                    }
+                  },
+                  "Property": "sum_awarded_licence_volume_x_tenure_term"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting weighted_sale_term.sum_awarded_licence_volume_x_tenure_term)",
+              "nativeQueryRef": "sum_awarded_licence_volume_x_tenure_term"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting weighted_sale_term"
+                    }
+                  },
+                  "Property": "weighted_tenure_term"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting weighted_sale_term.weighted_tenure_term)",
+              "nativeQueryRef": "weighted_tenure_term"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
