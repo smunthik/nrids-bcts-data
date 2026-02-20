@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "2a6cec68cd7dca646264",
+  "name": "38abaf5c565b1b0ada86",
   "position": {
-    "x": 17.716262975778548,
-    "y": 241.3840830449827,
-    "z": 7001,
-    "height": 467.26643598615919,
-    "width": 1247.8892733564014,
-    "tabOrder": 7001
+    "x": 235.55555555555554,
+    "y": 151.11111111111111,
+    "z": 5000,
+    "height": 375.55555555555554,
+    "width": 1036.6666666666667,
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -17,62 +17,17 @@
           "projections": [
             {
               "field": {
-                "HierarchyLevel": {
+                "Column": {
                   "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "bcts_staging dim_business_area"
-                        }
-                      },
-                      "Hierarchy": "Business Area Hierarchy"
+                    "SourceRef": {
+                      "Entity": "bcts_reporting weighted_sale_term"
                     }
                   },
-                  "Level": "Business Area"
+                  "Property": "Auction Fiscal Year"
                 }
               },
-              "queryRef": "bcts_staging dim_business_area.Business Area Hierarchy.Business Area",
-              "nativeQueryRef": "Business Area Hierarchy Business Area",
-              "active": true
-            },
-            {
-              "field": {
-                "HierarchyLevel": {
-                  "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "bcts_staging dim_business_area"
-                        }
-                      },
-                      "Hierarchy": "Business Area Hierarchy"
-                    }
-                  },
-                  "Level": "business_area_region"
-                }
-              },
-              "queryRef": "bcts_staging dim_business_area.Business Area Hierarchy.business_area_region",
-              "nativeQueryRef": "Business Area Hierarchy business_area_region",
-              "active": true
-            },
-            {
-              "field": {
-                "HierarchyLevel": {
-                  "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "bcts_staging dim_business_area"
-                        }
-                      },
-                      "Hierarchy": "Business Area Hierarchy"
-                    }
-                  },
-                  "Level": "business_area"
-                }
-              },
-              "queryRef": "bcts_staging dim_business_area.Business Area Hierarchy.business_area",
-              "nativeQueryRef": "Business Area Hierarchy business_area",
+              "queryRef": "bcts_reporting weighted_sale_term.Auction Fiscal Year",
+              "nativeQueryRef": "Auction Fiscal Year",
               "active": true
             }
           ]
@@ -105,14 +60,31 @@
                       "Entity": "bcts_reporting weighted_sale_term"
                     }
                   },
-                  "Property": "Weighted Sale Terms (Months)"
+                  "Property": "Licence Count"
                 }
               },
-              "queryRef": "bcts_reporting weighted_sale_term.Weighted Sale Terms (Months)",
-              "nativeQueryRef": "Weighted Sale Terms (Months)"
+              "queryRef": "bcts_reporting weighted_sale_term.Licence Count",
+              "nativeQueryRef": "Licence Count"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "bcts_reporting weighted_sale_term"
+                  }
+                },
+                "Property": "Auction Fiscal Year"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
       }
     },
     "objects": {
@@ -418,7 +390,7 @@
             "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "'Business Area'"
+                  "Value": "'Fiscal Year'"
                 }
               }
             }
@@ -443,7 +415,7 @@
             "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "'Volume‑Weighted Sale Term (Months)'"
+                  "Value": "'Licence Count'"
                 }
               }
             }
@@ -476,7 +448,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Volume‑Weighted Sale Term: By Business Area'"
+                  "Value": "'Volume‑Weighted Licence Term: Licence Count by Fiscal Year'"
                 }
               }
             }
@@ -507,6 +479,11 @@
               }
             }
           }
+        }
+      ],
+      "background": [
+        {
+          "properties": {}
         }
       ]
     },

@@ -152,7 +152,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Weighted Sale Term: '"
+                  "Value": "'Volume‑Weighted Licence Term:  Average licence term length (in months), adjusted for the relative volume of each licence '"
                 }
               }
             }
@@ -221,7 +221,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#234075'"
+                      "Value": "'#013366'"
                     }
                   }
                 }

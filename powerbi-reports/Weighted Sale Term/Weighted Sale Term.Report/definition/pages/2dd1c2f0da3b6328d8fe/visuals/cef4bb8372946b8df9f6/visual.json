@@ -20,16 +20,15 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Dim_AwardedVolumeClass"
+                      "Entity": "bcts_reporting weighted_sale_term"
                     }
                   },
-                  "Property": "awarded_volume_licence_class"
+                  "Property": "Volume Class"
                 }
               },
-              "queryRef": "Dim_AwardedVolumeClass.awarded_volume_licence_class",
+              "queryRef": "bcts_reporting weighted_sale_term.Volume Class",
               "nativeQueryRef": "Volume Class",
-              "active": true,
-              "displayName": "Volume Class"
+              "active": true
             }
           ]
         },
@@ -225,6 +224,26 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTotals": [
+        {
+          "properties": {
+            "columnSubtotals": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "rowSubtotals": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }

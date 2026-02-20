@@ -15,6 +15,10 @@ table 'bcts_reporting weighted_sale_term'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure 'Licence Count' = COALESCE(SUM('bcts_reporting weighted_sale_term'[count_awarded_licences]), 0)
+		formatString: 0
+		lineageTag: 367353e5-460a-49e3-9d3e-5e417ab7b209
+
 	column business_area_region_category
 		dataType: string
 		lineageTag: 9b43e796-d6df-4769-89fa-93e50c7e51d3
@@ -111,8 +115,6 @@ table 'bcts_reporting weighted_sale_term'
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation UnderlyingDateTimeDataType = Date
-
 	column report_end_date
 		dataType: dateTime
 		formatString: Long Date
@@ -127,8 +129,6 @@ table 'bcts_reporting weighted_sale_term'
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation UnderlyingDateTimeDataType = Date
-
 	column report_run_date
 		dataType: dateTime
 		formatString: Long Date
@@ -142,8 +142,6 @@ table 'bcts_reporting weighted_sale_term'
 			defaultHierarchy: LocalDateTable_eaa2cc55-faa8-4b19-ae49-69af40c489f3.'Date Hierarchy'
 
 		annotation SummarizationSetBy = Automatic
-
-		annotation UnderlyingDateTimeDataType = Date
 
 	column report_run_timestamp
 		dataType: dateTime
@@ -172,7 +170,7 @@ table 'bcts_reporting weighted_sale_term'
 			```
 		lineageTag: b6b79fbf-829e-4c5c-8447-d285c1bdb4fb
 		summarizeBy: none
-		sortByColumn: auction_fiscal
+		sortByColumn: fiscal_year_sort
 
 		changedProperty = SortByColumn
 
@@ -203,12 +201,44 @@ table 'bcts_reporting weighted_sale_term'
 
 		annotation SummarizationSetBy = Automatic
 
+	column fiscal_year_sort
+		dataType: int64
+		formatString: 0
+		lineageTag: e7da3467-c805-4e97-96d3-045df7a8b57e
+		summarizeBy: sum
+		sourceColumn: fiscal_year_sort
+
+		annotation SummarizationSetBy = Automatic
+
+	column awarded_licence_volume_class_sort
+		dataType: int64
+		formatString: 0
+		lineageTag: 4ba0ed9b-146b-407e-b20a-63d7c3b04005
+		summarizeBy: sum
+		sourceColumn: awarded_licence_volume_class_sort
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Volume Class'
+		dataType: string
+		lineageTag: 0349d67a-f323-4a06-8933-e239748c814d
+		summarizeBy: none
+		sourceColumn: Volume Class
+		sortByColumn: awarded_licence_volume_class_sort
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 'bcts_reporting weighted_sale_term' = m
 		mode: import
 		source =
 				let
-				    Source = PostgreSQL.Database("existence.bcgov:5435", "odsprd"),
-				    bcts_reporting_weighted_sale_term = Source{[Schema="bcts_reporting",Item="weighted_sale_term"]}[Data]
+				    Source = Value.NativeQuery(PostgreSQL.Database("existence.bcgov:5435", "odsprd"), "SELECT#(lf)    *,#(lf)    DENSE_RANK() OVER (ORDER BY auction_fiscal DESC) AS fiscal_year_sort,#(lf)#(lf)    -- Format m3 -> m³ for display#(lf)    REPLACE(awarded_licence_volume_class, ' m3', ' m³') AS ""Volume Class"",#(lf)#(lf)    -- Sort key for volume class (low -> high)#(lf)    CASE#(lf)        WHEN awarded_licence_volume_class = '0.0 to 5,000.0 m3' THEN 1#(lf)        WHEN awarded_licence_volume_class = '5,000.1 to 15,000.0 m3' THEN 2#(lf)        WHEN awarded_licence_volume_class = '15,000.1 to 30,000.0 m3' THEN 3#(lf)        WHEN awarded_licence_volume_class = '30,000.1 to 75,000.0 m3' THEN 4#(lf)        WHEN awarded_licence_volume_class = '75,000.1 m3 and above' THEN 5#(lf)        ELSE NULL#(lf)    END AS awarded_licence_volume_class_sort#(lf)FROM bcts_reporting.weighted_sale_term#(lf)WHERE auction_fiscal > 2015", null, [EnableFolding=true])
 				in
-				    bcts_reporting_weighted_sale_term
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
 

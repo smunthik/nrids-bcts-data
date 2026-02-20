@@ -1,39 +1,50 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "f7bc59c1db70d63c22c3",
+  "name": "ed689b59dce29ac04969",
   "position": {
-    "x": 1130,
-    "y": 0,
-    "z": 1000,
-    "height": 90,
-    "width": 150,
-    "tabOrder": 1000
+    "x": 14.444444444444445,
+    "y": 151.11111111111111,
+    "z": 8000,
+    "height": 561.11111111111109,
+    "width": 212.22222222222223,
+    "tabOrder": 9000
   },
   "visual": {
-    "visualType": "image",
+    "visualType": "shape",
     "objects": {
-      "general": [
+      "shape": [
         {
           "properties": {
-            "imageUrl": {
+            "tileShape": {
               "expr": {
-                "ResourcePackageItem": {
-                  "PackageName": "RegisteredResources",
-                  "PackageType": 1,
-                  "ItemName": "BCPS_LOGO49519398603932685.jpg"
+                "Literal": {
+                  "Value": "'rectangle'"
                 }
               }
             }
           }
         }
       ],
-      "imageScaling": [
+      "rotation": [
         {
           "properties": {
-            "imageScalingType": {
+            "shapeAngle": {
               "expr": {
                 "Literal": {
-                  "Value": "'Normal'"
+                  "Value": "0L"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "fill": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -42,7 +53,7 @@
       ]
     },
     "visualContainerObjects": {
-      "lockAspect": [
+      "background": [
         {
           "properties": {
             "show": {
@@ -51,38 +62,22 @@
                   "Value": "true"
                 }
               }
-            }
-          }
-        }
-      ],
-      "padding": [
-        {
-          "properties": {
-            "top": {
+            },
+            "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "0D"
+                  "Value": "12D"
                 }
               }
             },
-            "right": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            },
-            "bottom": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            },
-            "left": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#013366'"
+                    }
+                  }
                 }
               }
             }

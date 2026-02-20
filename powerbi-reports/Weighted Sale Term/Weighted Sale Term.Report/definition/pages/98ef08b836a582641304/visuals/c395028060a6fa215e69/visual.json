@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "c395028060a6fa215e69",
   "position": {
-    "x": 9.9653979238754324,
-    "y": 253.56401384083046,
+    "x": 235.55555555555554,
+    "y": 151.11111111111111,
     "z": 5000,
-    "height": 449.55017301038066,
-    "width": 1260.0692041522491,
+    "height": 375.55555555555554,
+    "width": 1036.6666666666667,
     "tabOrder": 5000
   },
   "visual": {
@@ -39,15 +39,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Dim_AwardedVolumeClass"
+                      "Entity": "bcts_reporting weighted_sale_term"
                     }
                   },
-                  "Property": "awarded_volume_licence_class"
+                  "Property": "Volume Class"
                 }
               },
-              "queryRef": "Dim_AwardedVolumeClass.awarded_volume_licence_class",
-              "nativeQueryRef": "Volume Class",
-              "displayName": "Volume Class"
+              "queryRef": "bcts_reporting weighted_sale_term.Volume Class",
+              "nativeQueryRef": "Volume Class"
             }
           ]
         },
@@ -69,23 +68,6 @@
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "bcts_reporting weighted_sale_term"
-                  }
-                },
-                "Property": "Auction Fiscal Year"
-              }
-            },
-            "direction": "Descending"
-          }
-        ]
       }
     },
     "objects": {
@@ -416,7 +398,14 @@
             "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "'Weighted Sale Term (Months)'"
+                  "Value": "'Volume‑Weighted Licence Term (Months)'"
+                }
+              }
+            },
+            "titleFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
                 }
               }
             }
@@ -449,7 +438,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Weightd Sale Term: By Fiscal Year'"
+                  "Value": "'Volume‑Weighted Licence Term: By Fiscal Year'"
                 }
               }
             }

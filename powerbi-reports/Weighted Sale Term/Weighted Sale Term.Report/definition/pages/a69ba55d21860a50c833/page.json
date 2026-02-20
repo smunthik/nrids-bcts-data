@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
-  "name": "d52253d3e8dbbcc6a5b4",
-  "displayName": "Duplicate of Weighted Sale Term - By Fiscal Year (Table)",
+  "name": "a69ba55d21860a50c833",
+  "displayName": "Number of TSL Issued - By Volume Class and Fiscal Year",
   "displayOption": "FitToPage",
   "height": 720,
   "width": 1280
