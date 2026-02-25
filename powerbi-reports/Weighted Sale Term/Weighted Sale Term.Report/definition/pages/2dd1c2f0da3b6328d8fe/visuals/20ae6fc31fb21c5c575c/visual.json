@@ -151,7 +151,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Weighted Sale Term'"
+                  "Value": "'Volume‑Weighted Sale Term'"
                 }
               }
             },

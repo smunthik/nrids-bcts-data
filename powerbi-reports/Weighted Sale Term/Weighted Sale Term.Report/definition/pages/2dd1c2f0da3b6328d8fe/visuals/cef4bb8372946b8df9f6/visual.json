@@ -258,11 +258,18 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Weightd Sale Term: By Business Area'"
+                  "Value": "'Volume‑Weighted Sale Term: By Business Area'"
                 }
               }
             },
             "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "show": {
               "expr": {
                 "Literal": {
                   "Value": "true"

@@ -438,7 +438,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Volume‑Weighted Licence Term: By Fiscal Year'"
+                  "Value": "'Volume‑Weighted Sale Term: By Fiscal Year'"
                 }
               }
             }
