@@ -522,6 +522,14 @@ table 'bcts_reporting licence_issued_with_unbilled_volume_main'
 			
 			"Report Period: Up to " & 
 			FORMAT(MAX('bcts_reporting licence_issued_with_unbilled_volume_main'[report_date]), "MMMM DD, YYYY")
+			& " (Data refreshed on "
+			    & FORMAT(
+			        MAX('bcts_reporting licence_issued_with_unbilled_volume_hist'[report_run_timestamp]),
+			        "MMMM dd, yyyy hh:mm AM/PM"
+			      )
+			    & ")"
+			
+			
 			```
 		lineageTag: 8dc76423-743b-4de7-94fc-ad3ded0a4b8b
 		summarizeBy: none

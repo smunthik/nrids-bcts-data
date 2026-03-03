@@ -33,3 +33,8 @@ relationship cef89b45-6cfe-4139-99c4-7ea3f5e5b7da
 	fromColumn: 'bcts_reporting licence_transfer'.report_run_date
 	toColumn: LocalDateTable_0c5f26fa-2b10-4a88-996e-0a9dc0a55974.Date
 
+relationship 73736bec-6d7c-4b84-8bb7-674bca33f2bf
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'bcts_reporting licence_transfer'.report_run_timestamp
+	toColumn: LocalDateTable_9a46058e-1bfe-4362-bd91-91cf703038d9.Date
+

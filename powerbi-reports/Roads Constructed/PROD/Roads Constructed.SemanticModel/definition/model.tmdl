@@ -10,8 +10,6 @@ annotation PBI_QueryOrder = ["bcts_reporting roads_constructed","bcts_reporting 
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBIDesktopVersion = 2.144.1378.0 (25.06)+cba1e61f16ea36d44901f06fa446299040122394
-
 annotation PBI_ProTooling = ["DevMode"]
 
 ref table 'bcts_reporting roads_constructed'
@@ -25,6 +23,8 @@ ref table LocalDateTable_13e4fbcc-07ff-4890-a11d-09937effac9f
 ref table LocalDateTable_0e2c6e86-87d9-4584-a30d-5b37cbbdf1f3
 ref table LocalDateTable_d78d16e9-499a-4832-b91d-42f4f61687ac
 ref table LocalDateTable_76f0a34a-301a-48a9-85ab-d279f2c8811e
+ref table LocalDateTable_a3ec42a2-0875-47bf-8503-ba7dde973308
+ref table LocalDateTable_620114ab-dd00-43ce-a76c-c2026cf95124
 
 ref cultureInfo en-CA
 

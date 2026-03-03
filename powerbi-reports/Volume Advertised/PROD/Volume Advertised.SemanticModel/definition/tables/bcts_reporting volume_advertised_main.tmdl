@@ -499,6 +499,13 @@ table 'bcts_reporting volume_advertised_main'
 			FORMAT(MAX('bcts_reporting volume_advertised_main'[report_start_date]), "MMMM DD, YYYY") & 
 			" to " & 
 			FORMAT(MAX('bcts_reporting volume_advertised_main'[report_end_date]), "MMMM DD, YYYY")
+			& " (Data refreshed on "
+			    & FORMAT(
+			        MAX('bcts_reporting volume_advertised_main'[report_run_timestamp]),
+			        "MMMM dd, yyyy hh:mm AM/PM"
+			      )
+			    & ")"
+			
 			
 			```
 		lineageTag: c6d7b293-9d80-40cd-9a17-45f8afdb6983
@@ -516,6 +523,20 @@ table 'bcts_reporting volume_advertised_main'
 		formatString: 0
 		lineageTag: f10f7be6-13c8-44a3-950f-a1c832dff7c7
 		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column report_run_timestamp
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f63ea767-f503-4082-b271-529d35780f3b
+		summarizeBy: none
+		sourceColumn: report_run_timestamp
+
+		variation Variation
+			isDefault
+			relationship: fded050b-4490-49d2-99f3-40bc7ee3d4f4
+			defaultHierarchy: LocalDateTable_80b5b65d-b7ea-41e5-a1b2-a61dfa748344.'Date Hierarchy'
 
 		annotation SummarizationSetBy = Automatic
 

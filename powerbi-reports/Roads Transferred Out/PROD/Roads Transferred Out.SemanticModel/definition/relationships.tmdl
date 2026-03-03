@@ -38,3 +38,13 @@ relationship fe60fbb6-6738-4170-9af3-6a2e22461843
 	fromColumn: 'bcts_reporting roads_transferred_out_hist'.report_run_date
 	toColumn: LocalDateTable_1025749d-5364-4818-9452-d861eea7ebfd.Date
 
+relationship f8794f14-33e6-4390-9855-ad94e2341fdf
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'bcts_reporting roads_transferred_out'.report_run_timestamp
+	toColumn: LocalDateTable_e7837849-4e48-4606-9e32-bf24e189c84d.Date
+
+relationship 88d99a6c-71ce-46fc-896f-35164a777f88
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'bcts_reporting roads_transferred_out_hist'.report_run_timestamp
+	toColumn: LocalDateTable_52c0e785-3116-4539-a95f-4b5534f1a356.Date
+

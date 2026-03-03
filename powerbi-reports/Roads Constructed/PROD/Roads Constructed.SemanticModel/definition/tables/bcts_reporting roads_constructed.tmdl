@@ -194,6 +194,13 @@ table 'bcts_reporting roads_constructed'
 			FORMAT(MAX('bcts_reporting roads_constructed'[fiscal_year_start_date]), "MMMM DD, YYYY") & 
 			" to " & 
 			FORMAT(MAX('bcts_reporting roads_constructed'[report_end_date]), "MMMM DD, YYYY")
+			& " (Data refreshed on "
+			    & FORMAT(
+			        MAX('bcts_reporting roads_constructed'[report_run_timestamp]),
+			        "MMMM dd, yyyy hh:mm AM/PM"
+			      )
+			    & ")"
+			
 			
 			```
 		lineageTag: 1f601a40-9d64-4ee9-935c-eeeec0b3ea60
@@ -213,6 +220,20 @@ table 'bcts_reporting roads_constructed'
 		formatString: 0
 		lineageTag: be3b2872-a091-46e6-873b-306c4e31dcef
 		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column report_run_timestamp
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: c36a9c00-df2d-4a2d-b05d-0f792c3a396f
+		summarizeBy: none
+		sourceColumn: report_run_timestamp
+
+		variation Variation
+			isDefault
+			relationship: 496d9063-26d3-40cb-a1c7-4e687814847c
+			defaultHierarchy: LocalDateTable_a3ec42a2-0875-47bf-8503-ba7dde973308.'Date Hierarchy'
 
 		annotation SummarizationSetBy = Automatic
 

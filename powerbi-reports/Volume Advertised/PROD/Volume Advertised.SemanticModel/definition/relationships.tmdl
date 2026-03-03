@@ -68,3 +68,13 @@ relationship 243e29de-8e62-4f50-a289-0f5b1172140e
 	fromColumn: 'bcts_reporting volume_advertised_main_hist'.report_run_date
 	toColumn: LocalDateTable_8f734d3e-02a8-42a9-b6d0-7646c56790d7.Date
 
+relationship fded050b-4490-49d2-99f3-40bc7ee3d4f4
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'bcts_reporting volume_advertised_main'.report_run_timestamp
+	toColumn: LocalDateTable_80b5b65d-b7ea-41e5-a1b2-a61dfa748344.Date
+
+relationship 2e568ce5-c580-4043-8a29-3cbc0e054dcc
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'bcts_reporting volume_advertised_main_hist'.report_run_timestamp
+	toColumn: LocalDateTable_fe3179ed-695e-4105-97c0-580ce22370b0.Date
+

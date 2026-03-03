@@ -1,0 +1,302 @@
+table 'bcts_reporting tsl_summary_main_hist'
+	lineageTag: afdfa729-9b69-472a-892f-3c9c70b8efc1
+
+	column business_area_region_category
+		dataType: string
+		lineageTag: 4c901d99-9818-4c52-9735-7d1bc81bba84
+		summarizeBy: none
+		sourceColumn: business_area_region_category
+
+		annotation SummarizationSetBy = Automatic
+
+	column business_area_region
+		dataType: string
+		lineageTag: eb08d06f-d0f2-43f5-86c6-ae766214944c
+		summarizeBy: none
+		sourceColumn: business_area_region
+		sortByColumn: business_area_region_sort_order
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column business_area_code
+		dataType: string
+		lineageTag: 5914df55-f92b-49f4-bc0f-184c9c5df07d
+		summarizeBy: none
+		sourceColumn: business_area_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column business_area
+		dataType: string
+		lineageTag: fd073e9d-2bb0-4cd9-b210-8e650e99655e
+		summarizeBy: none
+		sourceColumn: business_area
+
+		annotation SummarizationSetBy = Automatic
+
+	column licence_number
+		dataType: string
+		lineageTag: 376e000f-9f12-460e-b13c-7c9f16ba3103
+		summarizeBy: none
+		sourceColumn: licence_number
+
+		annotation SummarizationSetBy = Automatic
+
+	column geographic_location
+		dataType: string
+		lineageTag: dd7bd3db-aba6-4211-8994-0c337e81f4bd
+		summarizeBy: none
+		sourceColumn: geographic_location
+
+		annotation SummarizationSetBy = Automatic
+
+	column field_team
+		dataType: string
+		lineageTag: 33efcd53-879d-4cd5-8963-b0521ac9b367
+		summarizeBy: none
+		sourceColumn: field_team
+
+		annotation SummarizationSetBy = Automatic
+
+	column species
+		dataType: string
+		lineageTag: 0a39d4ae-6599-4bb6-bc4f-5c8102e20e07
+		summarizeBy: none
+		sourceColumn: species
+
+		annotation SummarizationSetBy = Automatic
+
+	column volume_advertised_m3
+		dataType: double
+		formatString: 0
+		lineageTag: 15638ce4-a6e1-4cc0-907e-bb6b54b744ff
+		summarizeBy: sum
+		sourceColumn: volume_advertised_m3
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column volume_readvertised_m3
+		dataType: double
+		formatString: 0
+		lineageTag: 124c59ff-65a6-48da-a831-088968e70024
+		summarizeBy: sum
+		sourceColumn: volume_readvertised_m3
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column auctioned_bcts_category_code
+		dataType: string
+		lineageTag: 054a056b-642d-4d92-b559-ba8c89fe67ad
+		summarizeBy: none
+		sourceColumn: auctioned_bcts_category_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_auction_count
+		dataType: int64
+		formatString: 0
+		lineageTag: de48e805-8a8f-4311-807f-a237d018fdf2
+		summarizeBy: sum
+		sourceColumn: total_auction_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column readvertised_auction
+		dataType: string
+		lineageTag: 4bdfa56f-6cba-4b04-b6fb-758b4dcf899c
+		summarizeBy: none
+		sourceColumn: readvertised_auction
+
+		annotation SummarizationSetBy = Automatic
+
+	column auction_closing_date
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: b090b698-d2fb-48a4-9c68-5de6d964c4e1
+		summarizeBy: none
+		sourceColumn: auction_closing_date
+
+		variation Variation
+			isDefault
+			relationship: a20f6b26-2749-469e-9a58-7befbee35fb6
+			defaultHierarchy: LocalDateTable_6c929600-c8fd-4445-af88-431d20d8da68.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column number_of_bidders
+		dataType: string
+		lineageTag: 656c2790-cfd2-4040-a358-7016aff4ccf5
+		summarizeBy: none
+		sourceColumn: number_of_bidders
+
+		annotation SummarizationSetBy = Automatic
+
+	column no_bid
+		dataType: string
+		lineageTag: 2fabe679-a540-464a-9f66-132b762b6e71
+		summarizeBy: none
+		sourceColumn: no_bid
+
+		annotation SummarizationSetBy = Automatic
+
+	column upset_rate_or_upset_value
+		dataType: double
+		lineageTag: 1c284f05-61f0-4c5f-b569-995dd53a78c3
+		summarizeBy: sum
+		sourceColumn: upset_rate_or_upset_value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column bonus_bid_or_bonus_value
+		dataType: double
+		lineageTag: 9e6c20cc-d604-4880-96e3-e5d82e4fd58e
+		summarizeBy: sum
+		sourceColumn: bonus_bid_or_bonus_value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column total_stumpage_or_total_stumpage_value
+		dataType: double
+		lineageTag: 0f0fc880-f9b3-47e0-ad1d-a38ac0aefef7
+		summarizeBy: sum
+		sourceColumn: total_stumpage_or_total_stumpage_value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column no_bid_info
+		dataType: string
+		lineageTag: 790cc94e-7e3f-4904-a8fe-e4ba7e6da923
+		summarizeBy: none
+		sourceColumn: no_bid_info
+
+		annotation SummarizationSetBy = Automatic
+
+	column report_start_date
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: c6c0c20a-7608-4de8-9d54-d494392bbc02
+		summarizeBy: none
+		sourceColumn: report_start_date
+
+		variation Variation
+			isDefault
+			relationship: 08aeaef9-c584-491d-8170-c2325b7da468
+			defaultHierarchy: LocalDateTable_ea99d4fc-9634-47e7-9d85-ca5dc346172d.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column report_end_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 599b3028-aee9-4ea2-bc7a-da3000a74bf2
+		summarizeBy: none
+		sourceColumn: report_end_date
+
+		variation Variation
+			isDefault
+			relationship: 976f3a4b-5dfb-4acc-8b1a-1b112745e1ce
+			defaultHierarchy: LocalDateTable_cdc9dc2b-9524-4cf4-87e6-ad3d0e4e869c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column report_run_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 091055d6-0ff7-4a8e-90dc-5d6dbacbdc57
+		summarizeBy: none
+		sourceColumn: report_run_date
+
+		variation Variation
+			isDefault
+			relationship: 6ff780d0-ec90-4d57-9b32-ccf4ab1e514f
+			defaultHierarchy: LocalDateTable_7135c19f-aacf-4d73-8871-35a069bd3953.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column report_run_timestamp
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d6f84dda-d618-4069-93ea-e57f5cd0ff7a
+		summarizeBy: none
+		sourceColumn: report_run_timestamp
+
+		variation Variation
+			isDefault
+			relationship: db24f651-2312-435c-96eb-a5b0a89eedc3
+			defaultHierarchy: LocalDateTable_c4d48571-3a3b-409e-b684-32c6786d811a.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column business_area_region_sort_order
+		dataType: int64
+		formatString: 0
+		lineageTag: 403d9f52-43f3-4f2b-831f-de772f67a06a
+		summarizeBy: sum
+		sourceColumn: business_area_region_sort_order
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'FYTD Period Info' = ```
+			
+			"Data shown reflects period from " & 
+			FORMAT(MIN('bcts_reporting tsl_summary_main_hist'[report_start_date]), "MMMM DD, YYYY") & 
+			" to " & 
+			FORMAT(MAX('bcts_reporting tsl_summary_main_hist'[report_end_date]), "MMMM DD, YYYY")
+			& " (Data refreshed on "
+			    & FORMAT(
+			        MAX('bcts_reporting tsl_summary_main_hist'[report_run_timestamp]),
+			        "MMMM dd, yyyy hh:mm AM/PM"
+			      )
+			    & ")"
+			
+			```
+		lineageTag: d975ede0-611c-48dd-ac03-0d7869ae43b9
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column RegionDateSort = 'bcts_reporting tsl_summary_main_hist'[business_area_region] & FORMAT('bcts_reporting tsl_summary_main_hist'[report_start_date], "yyyy-mm-dd")
+		lineageTag: d0c6a8cb-92d3-476d-9761-aefcc9aac15c
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column client_name
+		dataType: string
+		lineageTag: 0cb25696-b861-4622-b036-65c81c07abf8
+		summarizeBy: none
+		sourceColumn: client_name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'bcts_reporting tsl_summary_main_hist' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("existence.bcgov:5435", "odsprd"),
+				    bcts_reporting_tsl_summary_main_hist = Source{[Schema="bcts_reporting",Item="tsl_summary_main_hist"]}[Data]
+				in
+				    bcts_reporting_tsl_summary_main_hist
+

@@ -302,3 +302,13 @@ relationship 332849af-dad5-4829-a467-c4ebce9cdc82
 	fromColumn: 'bcts_reporting timber_inventory_development_in_progress_hist'.fg_date
 	toColumn: LocalDateTable_ca0bf6a8-f3d2-4485-ac40-a906a781f42f.Date
 
+relationship 521dafba-e990-4b46-871c-b32a53cca565
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'bcts_reporting timber_inventory_development_in_progress'.report_run_timestamp
+	toColumn: LocalDateTable_b1a7ef67-2542-4f0b-b42f-6ea7fd55ec87.Date
+
+relationship 33bca082-65fb-417c-a3c4-8ec6521ec7aa
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'bcts_reporting timber_inventory_development_in_progress_hist'.report_run_timestamp
+	toColumn: LocalDateTable_c83b0ac3-1ee4-4981-8962-0f0859a15d59.Date
+

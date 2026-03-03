@@ -490,6 +490,20 @@ table 'bcts_reporting volume_advertised_main_hist'
 
 		annotation UnderlyingDateTimeDataType = Date
 
+	column report_run_timestamp
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 829f0dc7-8a8c-4aca-88ae-c5b9c5758e18
+		summarizeBy: none
+		sourceColumn: report_run_timestamp
+
+		variation Variation
+			isDefault
+			relationship: 2e568ce5-c580-4043-8a29-3cbc0e054dcc
+			defaultHierarchy: LocalDateTable_fe3179ed-695e-4105-97c0-580ce22370b0.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 'bcts_reporting volume_advertised_main_hist' = m
 		mode: import
 		source =

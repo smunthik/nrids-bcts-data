@@ -185,6 +185,20 @@ table 'bcts_reporting roads_transferred_out_hist'
 
 		annotation UnderlyingDateTimeDataType = Date
 
+	column report_run_timestamp
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 85c38d85-88cb-4290-b081-4326167703af
+		summarizeBy: none
+		sourceColumn: report_run_timestamp
+
+		variation Variation
+			isDefault
+			relationship: 88d99a6c-71ce-46fc-896f-35164a777f88
+			defaultHierarchy: LocalDateTable_52c0e785-3116-4539-a95f-4b5534f1a356.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 'bcts_reporting roads_transferred_out_hist' = m
 		mode: import
 		source =

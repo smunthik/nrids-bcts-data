@@ -191,6 +191,20 @@ table 'bcts_reporting roads_deactivated_hist'
 
 		annotation SummarizationSetBy = Automatic
 
+	column report_run_timestamp
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f84419d4-8bf9-4c3a-81ef-f2a4d0e38ddf
+		summarizeBy: none
+		sourceColumn: report_run_timestamp
+
+		variation Variation
+			isDefault
+			relationship: 9e42eae7-400e-48a6-8fed-b088982b9ca8
+			defaultHierarchy: LocalDateTable_fdef89a6-e512-4d1d-b285-2949e9c31387.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 'bcts_reporting roads_deactivated_hist' = m
 		mode: import
 		source =

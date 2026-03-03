@@ -6,7 +6,7 @@ model Model
 		legacyRedirects
 		returnErrorValuesAsNull
 
-annotation PBI_QueryOrder = ["bcts_reporting v_tsl_summary","bcts_reporting tsl_summary_main"]
+annotation PBI_QueryOrder = ["bcts_reporting v_tsl_summary","bcts_reporting tsl_summary_main","bcts_reporting tsl_summary_main_hist"]
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
@@ -19,6 +19,13 @@ ref table LocalDateTable_1b31c76a-282c-4205-93f6-3b6293f0fa9d
 ref table LocalDateTable_221228b8-2772-4933-937b-d2d6f999417a
 ref table LocalDateTable_4982a84c-b273-4498-96bd-fba3ec34067f
 ref table LocalDateTable_380a1a1b-ef31-404c-bce1-d67f97c4e1a8
+ref table 'bcts_reporting tsl_summary_main_hist'
+ref table LocalDateTable_6c929600-c8fd-4445-af88-431d20d8da68
+ref table LocalDateTable_ea99d4fc-9634-47e7-9d85-ca5dc346172d
+ref table LocalDateTable_cdc9dc2b-9524-4cf4-87e6-ad3d0e4e869c
+ref table LocalDateTable_7135c19f-aacf-4d73-8871-35a069bd3953
+ref table LocalDateTable_c4d48571-3a3b-409e-b684-32c6786d811a
+ref table LocalDateTable_50fc9e1f-f450-4755-bec8-1874b105d1df
 
 ref cultureInfo en-CA
 

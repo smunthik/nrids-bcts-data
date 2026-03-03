@@ -5,6 +5,13 @@ table 'bcts_reporting timber_inventory_ready_to_develop'
 			
 			"Report Period: Up to " & 
 			FORMAT(MAX('bcts_reporting timber_inventory_ready_to_develop'[report_end_date]), "MMMM DD, YYYY")
+			& " (Data refreshed on "
+			    & FORMAT(
+			        MAX('bcts_reporting timber_inventory_ready_to_develop'[report_run_timestamp]),
+			        "MMMM dd, yyyy hh:mm AM/PM"
+			      )
+			    & ")"
+			
 			```
 		lineageTag: 7385d5c9-7912-409e-b0a7-e7d4a107cd3e
 
@@ -883,6 +890,20 @@ table 'bcts_reporting timber_inventory_ready_to_develop'
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
+
+	column report_run_timestamp
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: bca6077b-ed09-41c6-8614-3fefaa737064
+		summarizeBy: none
+		sourceColumn: report_run_timestamp
+
+		variation Variation
+			isDefault
+			relationship: 0feb89e9-93fd-4bf3-a7f7-0c10e73245a5
+			defaultHierarchy: LocalDateTable_a9f8acc3-e785-4b97-a842-46138a60cdb4.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
 
 	hierarchy 'business_area_region_category Hierarchy'
 		lineageTag: b30d3dde-d6f2-4fe6-bd44-b1c8e5bee86c

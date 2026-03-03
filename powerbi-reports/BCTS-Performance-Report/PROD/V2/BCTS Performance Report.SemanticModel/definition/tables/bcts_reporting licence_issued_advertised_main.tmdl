@@ -593,11 +593,12 @@ table 'bcts_reporting licence_issued_advertised_main'
 			FORMAT(MAX('bcts_reporting licence_issued_advertised_main'[report_start_date]), "MMMM DD, YYYY") & 
 			" to " & 
 			FORMAT(MAX('bcts_reporting licence_issued_advertised_main'[report_end_date]), "MMMM DD, YYYY")& 
-			" | " & 
-			"Report Run Date: " & 
-			FORMAT(MAX('bcts_reporting licence_issued_advertised_main'[report_run_date]), "MMMM DD, YYYY")
-			
-			
+			" (Data refreshed on "
+			    & FORMAT(
+			        MAX('bcts_reporting licence_issued_advertised_main'[report_run_timestamp]),
+			        "MMMM dd, yyyy hh:mm AM/PM"
+			      )
+			    & ")"
 			
 			```
 		lineageTag: 576681b7-c8a0-4932-80fb-fa09302132fd
@@ -635,9 +636,12 @@ table 'bcts_reporting licence_issued_advertised_main'
 			FORMAT(MAX('bcts_reporting licence_issued_advertised_main'[semi_monthly_report_start_date]), "MMMM DD, YYYY") & 
 			" to " & 
 			FORMAT(MAX('bcts_reporting licence_issued_advertised_main'[report_end_date]), "MMMM DD, YYYY") & 
-			" | " & 
-			"Report Run Date: " & 
-			FORMAT(MAX('bcts_reporting licence_issued_advertised_main'[report_run_date]), "MMMM DD, YYYY")
+			" (Data refreshed on "
+			    & FORMAT(
+			        MAX('bcts_reporting licence_issued_advertised_main'[report_run_timestamp]),
+			        "MMMM dd, yyyy hh:mm AM/PM"
+			      )
+			    & ")"
 			
 			
 			
@@ -669,6 +673,20 @@ table 'bcts_reporting licence_issued_advertised_main'
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column report_run_timestamp
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b4b319ec-bdeb-4419-96e0-ae74b78c3730
+		summarizeBy: none
+		sourceColumn: report_run_timestamp
+
+		variation Variation
+			isDefault
+			relationship: f94c2444-7fb8-46f1-ae56-4a512a95531f
+			defaultHierarchy: LocalDateTable_8ff2b103-e03b-4998-9f6e-e8654a971d75.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
 
 	hierarchy 'business_area_region_category Hierarchy'
 		lineageTag: da09932c-2915-4810-a8c2-f53fdc4c23d1

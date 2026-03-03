@@ -31,6 +31,7 @@ ref table LocalDateTable_4474cb75-be81-42a8-9f67-63f64f4e58d1
 ref table LocalDateTable_87a6cc1b-29be-4912-92f9-951899eab970
 ref table ADV_Targets
 ref table 'bcts_staging dim_business_area'
+ref table LocalDateTable_6ad879d0-0640-49c4-a38b-35740e876a2d
 
 ref cultureInfo en-CA
 

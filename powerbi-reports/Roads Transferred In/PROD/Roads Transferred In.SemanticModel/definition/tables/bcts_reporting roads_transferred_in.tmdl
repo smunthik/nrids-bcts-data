@@ -170,6 +170,13 @@ table 'bcts_reporting roads_transferred_in'
 			FORMAT(MAX('bcts_reporting roads_transferred_in'[fiscal_year_start_date]), "MMMM DD, YYYY") & 
 			" to " & 
 			FORMAT(MAX('bcts_reporting roads_transferred_in'[report_end_date]), "MMMM DD, YYYY")
+			& " (Data refreshed on "
+			    & FORMAT(
+			        MAX('bcts_reporting roads_transferred_in'[report_run_timestamp]),
+			        "MMMM dd, yyyy hh:mm AM/PM"
+			      )
+			    & ")"
+			
 			
 			```
 		lineageTag: 506fd010-198c-4a90-86b7-f33cdea300d4
@@ -239,6 +246,20 @@ table 'bcts_reporting roads_transferred_in'
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
+
+	column report_run_timestamp
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 883a9331-8348-4928-9fc1-86e0509470d2
+		summarizeBy: none
+		sourceColumn: report_run_timestamp
+
+		variation Variation
+			isDefault
+			relationship: d27eb044-a3e6-4cf5-864c-642ceebc93ed
+			defaultHierarchy: LocalDateTable_c0e0d029-5d7e-4885-9d9b-d8eb1808bee0.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
 
 	hierarchy 'business_area_region_category Hierarchy'
 		lineageTag: fecfd106-0028-4f98-8574-0525f226428f

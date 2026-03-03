@@ -22,3 +22,33 @@ relationship AutoDetected_1747f8ac-af93-4850-a602-8e3511b1f080
 	fromColumn: 'bcts_reporting tsl_summary_main'.business_area
 	toColumn: 'bcts_reporting v_tsl_summary'.business_area
 
+relationship a20f6b26-2749-469e-9a58-7befbee35fb6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'bcts_reporting tsl_summary_main_hist'.auction_closing_date
+	toColumn: LocalDateTable_6c929600-c8fd-4445-af88-431d20d8da68.Date
+
+relationship 08aeaef9-c584-491d-8170-c2325b7da468
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'bcts_reporting tsl_summary_main_hist'.report_start_date
+	toColumn: LocalDateTable_ea99d4fc-9634-47e7-9d85-ca5dc346172d.Date
+
+relationship 976f3a4b-5dfb-4acc-8b1a-1b112745e1ce
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'bcts_reporting tsl_summary_main_hist'.report_end_date
+	toColumn: LocalDateTable_cdc9dc2b-9524-4cf4-87e6-ad3d0e4e869c.Date
+
+relationship 6ff780d0-ec90-4d57-9b32-ccf4ab1e514f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'bcts_reporting tsl_summary_main_hist'.report_run_date
+	toColumn: LocalDateTable_7135c19f-aacf-4d73-8871-35a069bd3953.Date
+
+relationship db24f651-2312-435c-96eb-a5b0a89eedc3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'bcts_reporting tsl_summary_main_hist'.report_run_timestamp
+	toColumn: LocalDateTable_c4d48571-3a3b-409e-b684-32c6786d811a.Date
+
+relationship 4c33f807-365f-4e50-9c3d-27a56a77af2e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'bcts_reporting tsl_summary_main'.report_run_timestamp
+	toColumn: LocalDateTable_50fc9e1f-f450-4755-bec8-1874b105d1df.Date
+

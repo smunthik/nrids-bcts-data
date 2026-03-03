@@ -4,7 +4,15 @@ table 'bcts_reporting timber_inventory_development_in_progress'
 	measure 'Fiscal Period Info' = ```
 			
 			"Report Period: Up to " & 
-			FORMAT(MAX('bcts_reporting timber_inventory_development_in_progress'[report_end_date]), "MMMM DD, YYYY")
+			FORMAT(MAX('bcts_reporting timber_inventory_development_in_progress'[report_end_date]), "MMMM DD, YYYY") 
+			& " (Data refreshed on "
+			    & FORMAT(
+			        MAX('bcts_reporting timber_inventory_development_in_progress'[report_run_timestamp]),
+			        "MMMM dd, yyyy hh:mm AM/PM"
+			      )
+			    & ")"
+			
+			
 			```
 		lineageTag: 30e95337-92eb-4d08-a2bc-a21e2d905bcf
 
@@ -1261,6 +1269,9 @@ table 'bcts_reporting timber_inventory_development_in_progress'
 			```
 		lineageTag: 7c68a489-5b62-4558-9d72-54db254586c6
 		summarizeBy: none
+		sortByColumn: dvc_status
+
+		changedProperty = SortByColumn
 
 		annotation SummarizationSetBy = Automatic
 
@@ -1269,6 +1280,20 @@ table 'bcts_reporting timber_inventory_development_in_progress'
 		lineageTag: 6ac8bc43-dfc2-4867-88d9-d7ec29d53cbf
 		summarizeBy: none
 		sourceColumn: remnant
+
+		annotation SummarizationSetBy = Automatic
+
+	column report_run_timestamp
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: efa79a03-e51d-4614-ae51-12ecd69d75bb
+		summarizeBy: none
+		sourceColumn: report_run_timestamp
+
+		variation Variation
+			isDefault
+			relationship: 521dafba-e990-4b46-871c-b32a53cca565
+			defaultHierarchy: LocalDateTable_b1a7ef67-2542-4f0b-b42f-6ea7fd55ec87.'Date Hierarchy'
 
 		annotation SummarizationSetBy = Automatic
 

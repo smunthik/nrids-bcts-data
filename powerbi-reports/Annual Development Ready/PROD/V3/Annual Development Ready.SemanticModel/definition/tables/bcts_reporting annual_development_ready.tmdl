@@ -7,6 +7,13 @@ table 'bcts_reporting annual_development_ready'
 			FORMAT(MAX('bcts_reporting annual_development_ready'[fiscal_year_start_date]), "MMMM DD, YYYY") & 
 			" to " & 
 			FORMAT(MAX('bcts_reporting annual_development_ready'[report_end_date]), "MMMM DD, YYYY")
+			& " (Data refreshed on "
+			    & FORMAT(
+			        MAX('bcts_reporting annual_development_ready'[report_run_timestamp]),
+			        "MMMM dd, yyyy hh:mm AM/PM"
+			      )
+			    & ")"
+			
 			```
 		lineageTag: 98b545ce-19be-4fd0-aea5-82c211b225cc
 
@@ -324,6 +331,20 @@ table 'bcts_reporting annual_development_ready'
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
+
+	column report_run_timestamp
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 7ad5d323-480c-43d5-bdf0-f0a3ff5c9be2
+		summarizeBy: none
+		sourceColumn: report_run_timestamp
+
+		variation Variation
+			isDefault
+			relationship: 32682189-0021-401f-9d7b-90a7176d6940
+			defaultHierarchy: LocalDateTable_be202e65-3a42-413f-a0a3-e17bf7de9737.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
 
 	hierarchy 'business_area_region_category Hierarchy'
 		lineageTag: ed4c5ff1-5c57-4d64-8110-5727e58efd49

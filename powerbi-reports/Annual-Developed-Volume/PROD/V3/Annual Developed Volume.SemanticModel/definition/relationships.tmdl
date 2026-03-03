@@ -82,3 +82,8 @@ relationship 6e1629e4-0b18-460b-5be5-d047862f409c
 	fromColumn: 'bcts_reporting annual_developed_volume_hist'.business_area
 	toColumn: 'bcts_staging dim_business_area'.business_area
 
+relationship a0cbc46d-b134-401a-b3a2-d22199aa9661
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'bcts_reporting annual_developed_volume'.report_run_timestamp
+	toColumn: LocalDateTable_6ad879d0-0640-49c4-a38b-35740e876a2d.Date
+

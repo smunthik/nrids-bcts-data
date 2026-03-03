@@ -290,6 +290,20 @@ table 'bcts_reporting annual_development_ready_hist'
 
 		annotation UnderlyingDateTimeDataType = Date
 
+	column report_run_timestamp
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: acb1c968-681d-48a2-9590-0c8b65e15e81
+		summarizeBy: none
+		sourceColumn: report_run_timestamp
+
+		variation Variation
+			isDefault
+			relationship: 7fd38153-530f-4138-b132-2912dd97dff9
+			defaultHierarchy: LocalDateTable_271eda92-e0cf-4aaa-982e-0453ca6af36e.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 'bcts_reporting annual_development_ready_hist' = m
 		mode: import
 		source =

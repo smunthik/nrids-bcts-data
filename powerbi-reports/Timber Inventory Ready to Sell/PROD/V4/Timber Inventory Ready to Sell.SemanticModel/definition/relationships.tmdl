@@ -252,3 +252,13 @@ relationship 73969af5-eedc-46e8-b575-bb3a32371cab
 	fromColumn: 'bcts_reporting timber_inventory_ready_to_sell_hist'.report_run_date
 	toColumn: LocalDateTable_1902b7b7-8dea-4e18-bfd1-3193c08b75e3.Date
 
+relationship cb202101-e19e-4d75-9cbf-e816a988962d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'bcts_reporting timber_inventory_ready_to_sell'.report_run_timestamp
+	toColumn: LocalDateTable_e7171802-1c0d-4ef7-9019-857d20ca12c0.Date
+
+relationship 92444176-c9d2-4c28-84b6-a33aa47d594a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'bcts_reporting timber_inventory_ready_to_sell_hist'.report_run_timestamp
+	toColumn: LocalDateTable_20d2b735-4fa8-4878-913f-f39498b90efc.Date
+

@@ -38,3 +38,13 @@ relationship 22ca99dd-0a5f-43a0-9a3a-cc5e134eaf1f
 	fromColumn: 'bcts_reporting roads_constructed_hist'.report_run_date
 	toColumn: LocalDateTable_76f0a34a-301a-48a9-85ab-d279f2c8811e.Date
 
+relationship 496d9063-26d3-40cb-a1c7-4e687814847c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'bcts_reporting roads_constructed'.report_run_timestamp
+	toColumn: LocalDateTable_a3ec42a2-0875-47bf-8503-ba7dde973308.Date
+
+relationship bc40b0e6-13c7-4dcc-9e9c-c51d33911a56
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'bcts_reporting roads_constructed_hist'.report_run_timestamp
+	toColumn: LocalDateTable_620114ab-dd00-43ce-a76c-c2026cf95124.Date
+

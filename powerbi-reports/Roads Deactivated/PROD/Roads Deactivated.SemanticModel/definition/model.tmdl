@@ -10,8 +10,6 @@ annotation PBI_QueryOrder = ["bcts_reporting roads_deactivated","bcts_reporting 
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBIDesktopVersion = 2.144.1378.0 (25.06)+cba1e61f16ea36d44901f06fa446299040122394
-
 annotation PBI_ProTooling = ["DevMode"]
 
 ref table 'bcts_reporting roads_deactivated'
@@ -25,6 +23,8 @@ ref table LocalDateTable_d78d16e9-499a-4832-b91d-42f4f61687ac
 ref table LocalDateTable_76f0a34a-301a-48a9-85ab-d279f2c8811e
 ref table LocalDateTable_5a41c502-8ce9-444d-a045-b621fe38abc9
 ref table LocalDateTable_c3d853b5-180b-460b-8fd2-8bffea259495
+ref table LocalDateTable_25059e10-25eb-43e3-a32d-6b22de7616d8
+ref table LocalDateTable_fdef89a6-e512-4d1d-b285-2949e9c31387
 
 ref cultureInfo en-CA
 

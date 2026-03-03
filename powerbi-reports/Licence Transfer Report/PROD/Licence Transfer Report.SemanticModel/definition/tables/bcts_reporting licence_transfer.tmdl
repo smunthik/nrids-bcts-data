@@ -249,13 +249,31 @@ table 'bcts_reporting licence_transfer'
 			"Data shown reflects period from " & 
 			FORMAT(MAX('bcts_reporting licence_transfer'[report_start_date]), "MMMM DD, YYYY") & 
 			" to " & 
-			FORMAT(MAX('bcts_reporting licence_transfer'[report_end_date]), "MMMM DD, YYYY") &
-			" | " & 
-			"Report Run Date: " & 
-			FORMAT(MAX('bcts_reporting licence_transfer'[report_run_date]), "MMMM DD, YYYY")
+			FORMAT(MAX('bcts_reporting licence_transfer'[report_end_date]), "MMMM DD, YYYY") 
+			& " (Data refreshed on "
+			    & FORMAT(
+			        MAX('bcts_reporting licence_transfer'[report_run_timestamp]),
+			        "MMMM dd, yyyy hh:mm AM/PM"
+			      )
+			    & ")"
+			
 			```
 		lineageTag: fab082c4-1eb5-46fc-83f8-9ac7e868d69d
 		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column report_run_timestamp
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 47485646-5925-4dda-aac3-c4ff15544133
+		summarizeBy: none
+		sourceColumn: report_run_timestamp
+
+		variation Variation
+			isDefault
+			relationship: 73736bec-6d7c-4b84-8bb7-674bca33f2bf
+			defaultHierarchy: LocalDateTable_9a46058e-1bfe-4362-bd91-91cf703038d9.'Date Hierarchy'
 
 		annotation SummarizationSetBy = Automatic
 

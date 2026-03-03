@@ -768,6 +768,20 @@ table 'bcts_reporting timber_inventory_ready_to_develop_hist'
 
 		annotation UnderlyingDateTimeDataType = Date
 
+	column report_run_timestamp
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d2bfec34-68f2-419a-b2fd-396ea1d6c82b
+		summarizeBy: none
+		sourceColumn: report_run_timestamp
+
+		variation Variation
+			isDefault
+			relationship: 0dd21f26-8766-495d-8b4d-6fd00e7a7c43
+			defaultHierarchy: LocalDateTable_772630b0-c058-4df9-a33a-ce9fbe565fd5.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 'bcts_reporting timber_inventory_ready_to_develop_hist' = m
 		mode: import
 		source =

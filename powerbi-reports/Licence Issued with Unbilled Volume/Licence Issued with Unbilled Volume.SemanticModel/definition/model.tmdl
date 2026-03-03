@@ -6,7 +6,7 @@ model Model
 		legacyRedirects
 		returnErrorValuesAsNull
 
-annotation PBI_QueryOrder = ["bcts_staging dim_business_area","bcts_reporting licence_issued_with_unbilled_volume_main"]
+annotation PBI_QueryOrder = ["bcts_staging dim_business_area","bcts_reporting licence_issued_with_unbilled_volume_main","bcts_reporting licence_issued_with_unbilled_volume_hist"]
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
@@ -25,6 +25,19 @@ ref table LocalDateTable_edf6a5cd-6ac2-4355-ad94-281facc84472
 ref table LocalDateTable_b0b13331-b054-41ac-b0bf-704d382879ac
 ref table LocalDateTable_fb54d372-be46-4e6d-86cf-f00afe22d33e
 ref table LocalDateTable_1815df61-d160-49dc-8bad-92cdda4e572c
+ref table 'bcts_reporting licence_issued_with_unbilled_volume_hist'
+ref table LocalDateTable_bf758822-cc47-43e8-a264-f829659d65af
+ref table LocalDateTable_c54c7889-8253-4ea9-b4d1-bd2a8a2e6431
+ref table LocalDateTable_4092ac58-2910-4310-a3d5-ff12d8e8fe32
+ref table LocalDateTable_c0d8a3fc-71ce-4da0-b7e8-7a707cb9e68b
+ref table LocalDateTable_7e1b9189-d3a3-4936-9f7a-8c79c2e6f6a6
+ref table LocalDateTable_33138a14-fffd-4f9a-870c-0c381c718beb
+ref table LocalDateTable_71427f4a-9011-40a9-98d6-812daa3f8664
+ref table LocalDateTable_2d7436a3-0ae8-4249-9c16-17836728b946
+ref table LocalDateTable_5021456b-65e9-4c08-9903-663514ee7978
+ref table LocalDateTable_6077ef7f-50f2-453f-89a5-520c134d0c14
+ref table LocalDateTable_06a7d48c-2c1b-44d3-9225-93a5d1135d49
+ref table LocalDateTable_73403901-94c5-461f-9b80-4e59a5b3141a
 
 ref cultureInfo en-CA
 

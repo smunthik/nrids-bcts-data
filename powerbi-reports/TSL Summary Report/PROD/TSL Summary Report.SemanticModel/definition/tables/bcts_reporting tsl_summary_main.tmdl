@@ -233,12 +233,19 @@ table 'bcts_reporting tsl_summary_main'
 
 		annotation UnderlyingDateTimeDataType = Date
 
-	column 'Fiscal Period Info' = ```
+	column 'FYTD Period Info' = ```
 			
 			"Data shown reflects period from " & 
 			FORMAT(MAX('bcts_reporting tsl_summary_main'[report_start_date]), "MMMM DD, YYYY") & 
 			" to " & 
 			FORMAT(MAX('bcts_reporting tsl_summary_main'[report_end_date]), "MMMM DD, YYYY")
+			& " (Data refreshed on "
+			    & FORMAT(
+			        MAX('bcts_reporting tsl_summary_main'[report_run_timestamp]),
+			        "MMMM dd, yyyy hh:mm AM/PM"
+			      )
+			    & ")"
+			
 			```
 		lineageTag: 2f48e404-980c-41f5-a994-d07af41e7e2d
 		summarizeBy: none
@@ -251,6 +258,28 @@ table 'bcts_reporting tsl_summary_main'
 		lineageTag: 43c76f31-9712-4698-ac81-b7199b87e2a9
 		summarizeBy: sum
 		sourceColumn: business_area_region_sort_order
+
+		annotation SummarizationSetBy = Automatic
+
+	column report_run_timestamp
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b0b7ae41-2eee-470a-89b8-e3db1e6bcb99
+		summarizeBy: none
+		sourceColumn: report_run_timestamp
+
+		variation Variation
+			isDefault
+			relationship: 4c33f807-365f-4e50-9c3d-27a56a77af2e
+			defaultHierarchy: LocalDateTable_50fc9e1f-f450-4755-bec8-1874b105d1df.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column client_name
+		dataType: string
+		lineageTag: d5404a9b-1474-4c63-9ed5-dc4e8b679a24
+		summarizeBy: none
+		sourceColumn: client_name
 
 		annotation SummarizationSetBy = Automatic
 

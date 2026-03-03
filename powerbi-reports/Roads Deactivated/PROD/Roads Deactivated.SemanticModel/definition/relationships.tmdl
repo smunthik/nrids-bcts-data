@@ -38,3 +38,13 @@ relationship 1c96b39e-8d29-4cca-9c0a-b1ed17274c47
 	fromColumn: 'bcts_reporting roads_deactivated_hist'.deac_end_date
 	toColumn: LocalDateTable_c3d853b5-180b-460b-8fd2-8bffea259495.Date
 
+relationship e5a6c520-2cb6-4c37-9733-b259e4c06cde
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'bcts_reporting roads_deactivated'.report_run_timestamp
+	toColumn: LocalDateTable_25059e10-25eb-43e3-a32d-6b22de7616d8.Date
+
+relationship 9e42eae7-400e-48a6-8fed-b088982b9ca8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'bcts_reporting roads_deactivated_hist'.report_run_timestamp
+	toColumn: LocalDateTable_fdef89a6-e512-4d1d-b285-2949e9c31387.Date
+

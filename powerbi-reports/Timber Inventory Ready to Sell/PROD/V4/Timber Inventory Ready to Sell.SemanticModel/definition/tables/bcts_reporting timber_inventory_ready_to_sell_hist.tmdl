@@ -770,6 +770,20 @@ table 'bcts_reporting timber_inventory_ready_to_sell_hist'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column report_run_timestamp
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 47df6a4e-6fd0-4a88-a288-32cb893e056e
+		summarizeBy: none
+		sourceColumn: report_run_timestamp
+
+		variation Variation
+			isDefault
+			relationship: 92444176-c9d2-4c28-84b6-a33aa47d594a
+			defaultHierarchy: LocalDateTable_20d2b735-4fa8-4878-913f-f39498b90efc.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 'bcts_reporting timber_inventory_ready_to_sell_hist' = m
 		mode: import
 		source =

@@ -162,6 +162,13 @@ table 'bcts_reporting roads_deactivated'
 			FORMAT(MAX('bcts_reporting roads_deactivated'[fiscal_year_start_date]), "MMMM DD, YYYY") & 
 			" to " & 
 			FORMAT(MAX('bcts_reporting roads_deactivated'[report_end_date]), "MMMM DD, YYYY")
+			& " (Data refreshed on "
+			    & FORMAT(
+			        MAX('bcts_reporting roads_deactivated'[report_run_timestamp]),
+			        "MMMM dd, yyyy hh:mm AM/PM"
+			      )
+			    & ")"
+			
 			
 			```
 		lineageTag: 1f601a40-9d64-4ee9-935c-eeeec0b3ea60
@@ -221,6 +228,20 @@ table 'bcts_reporting roads_deactivated'
 		lineageTag: facec001-6498-4051-be66-ec644f9e7774
 		summarizeBy: none
 		sourceColumn: deac_method_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column report_run_timestamp
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 9bd5701c-223d-4b34-b275-6f3900d3e88f
+		summarizeBy: none
+		sourceColumn: report_run_timestamp
+
+		variation Variation
+			isDefault
+			relationship: e5a6c520-2cb6-4c37-9733-b259e4c06cde
+			defaultHierarchy: LocalDateTable_25059e10-25eb-43e3-a32d-6b22de7616d8.'Date Hierarchy'
 
 		annotation SummarizationSetBy = Automatic
 
