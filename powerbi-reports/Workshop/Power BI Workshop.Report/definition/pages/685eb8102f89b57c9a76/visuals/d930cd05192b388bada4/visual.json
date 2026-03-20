@@ -1,0 +1,361 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "d930cd05192b388bada4",
+  "position": {
+    "x": 268.82067851373182,
+    "y": 112.69789983844912,
+    "z": 3000,
+    "height": 345.33117932148627,
+    "width": 999.80613893376415,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "bcts_staging dim_business_area"
+                        }
+                      },
+                      "Hierarchy": "business_area_region_category Hierarchy"
+                    }
+                  },
+                  "Level": "business_area_region_category"
+                }
+              },
+              "queryRef": "bcts_staging dim_business_area.business_area_region_category Hierarchy.business_area_region_category",
+              "nativeQueryRef": "business_area_region_category Hierarchy business_area_region_category",
+              "active": true
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "bcts_staging dim_business_area"
+                        }
+                      },
+                      "Hierarchy": "business_area_region_category Hierarchy"
+                    }
+                  },
+                  "Level": "business_area_region"
+                }
+              },
+              "queryRef": "bcts_staging dim_business_area.business_area_region_category Hierarchy.business_area_region",
+              "nativeQueryRef": "business_area_region_category Hierarchy business_area_region",
+              "active": true
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "bcts_staging dim_business_area"
+                        }
+                      },
+                      "Hierarchy": "business_area_region_category Hierarchy"
+                    }
+                  },
+                  "Level": "business_area"
+                }
+              },
+              "queryRef": "bcts_staging dim_business_area.business_area_region_category Hierarchy.business_area",
+              "nativeQueryRef": "business_area_region_category Hierarchy business_area",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main_hist"
+                    }
+                  },
+                  "Property": "Issued Volume Current YTD"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_advertised_main_hist.Licence Issued Volume Current YTD",
+              "nativeQueryRef": "Issued Volume Current YTD"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main_hist"
+                    }
+                  },
+                  "Property": "Issued Volume Previous YTD"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_advertised_main_hist.Licence Issued Volume Previous YTD",
+              "nativeQueryRef": "Issued Volume Previous YTD"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "HierarchyLevel": {
+                "Expression": {
+                  "Hierarchy": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "bcts_staging dim_business_area"
+                      }
+                    },
+                    "Hierarchy": "business_area_region_category Hierarchy"
+                  }
+                },
+                "Level": "business_area_region_category"
+              }
+            },
+            "direction": "Ascending"
+          },
+          {
+            "field": {
+              "HierarchyLevel": {
+                "Expression": {
+                  "Hierarchy": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "bcts_staging dim_business_area"
+                      }
+                    },
+                    "Hierarchy": "business_area_region_category Hierarchy"
+                  }
+                },
+                "Level": "business_area_region"
+              }
+            },
+            "direction": "Ascending"
+          },
+          {
+            "field": {
+              "HierarchyLevel": {
+                "Expression": {
+                  "Hierarchy": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "bcts_staging dim_business_area"
+                      }
+                    },
+                    "Hierarchy": "business_area_region_category Hierarchy"
+                  }
+                },
+                "Level": "business_area"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#234075'"
+                    }
+                  }
+                }
+              }
+            },
+            "fillTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "bcts_reporting licence_issued_advertised_main_hist.Licence Issued Volume Current YTD"
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#E3A82B'"
+                    }
+                  }
+                }
+              }
+            },
+            "fillTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "bcts_reporting licence_issued_advertised_main_hist.Licence Issued Volume Previous YTD"
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Issued Licence Volume (m³)'"
+                }
+              }
+            },
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Business Area'"
+                }
+              }
+            },
+            "titleFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "8d79b84c0641aed739db",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "bcts_reporting licence_issued_advertised_main_hist"
+              }
+            },
+            "Property": "Issued Volume Current YTD"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "0475fdc029ae7a51f126",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "bcts_reporting licence_issued_advertised_main_hist"
+              }
+            },
+            "Property": "Issued Volume Previous YTD"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

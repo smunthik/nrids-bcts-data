@@ -1,0 +1,200 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "46a8036f459c5142854a",
+  "position": {
+    "x": 264.31307243963363,
+    "y": 479.60033305578685,
+    "z": 1,
+    "height": 240.86594504579517,
+    "width": 1005.0291423813489,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "bcts_staging dim_business_area"
+                        }
+                      },
+                      "Hierarchy": "business_area_region_category Hierarchy"
+                    }
+                  },
+                  "Level": "business_area_region_category"
+                }
+              },
+              "queryRef": "bcts_staging dim_business_area.business_area_region_category Hierarchy.business_area_region_category",
+              "nativeQueryRef": "business_area_region_category Hierarchy business_area_region_category",
+              "active": true
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "bcts_staging dim_business_area"
+                        }
+                      },
+                      "Hierarchy": "business_area_region_category Hierarchy"
+                    }
+                  },
+                  "Level": "business_area_region"
+                }
+              },
+              "queryRef": "bcts_staging dim_business_area.business_area_region_category Hierarchy.business_area_region",
+              "nativeQueryRef": "business_area_region_category Hierarchy business_area_region",
+              "active": true
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "bcts_staging dim_business_area"
+                        }
+                      },
+                      "Hierarchy": "business_area_region_category Hierarchy"
+                    }
+                  },
+                  "Level": "business_area"
+                }
+              },
+              "queryRef": "bcts_staging dim_business_area.business_area_region_category Hierarchy.business_area",
+              "nativeQueryRef": "business_area_region_category Hierarchy business_area",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main_hist"
+                    }
+                  },
+                  "Property": "Total Volume"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_advertised_main_hist.Total Volume",
+              "nativeQueryRef": "Total Volume"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "HierarchyLevel": {
+                "Expression": {
+                  "Hierarchy": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "bcts_staging dim_business_area"
+                      }
+                    },
+                    "Hierarchy": "business_area_region_category Hierarchy"
+                  }
+                },
+                "Level": "business_area_region_category"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "4cb051b1d7a537ea38a3",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "bcts_staging dim_business_area"
+                  }
+                },
+                "Hierarchy": "business_area_region_category Hierarchy"
+              }
+            },
+            "Level": "business_area_region_category"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "ff6e199f3842123fd152",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "bcts_staging dim_business_area"
+                  }
+                },
+                "Hierarchy": "business_area_region_category Hierarchy"
+              }
+            },
+            "Level": "business_area_region"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "9d98eb21aa20fbb7f780",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "bcts_staging dim_business_area"
+                  }
+                },
+                "Hierarchy": "business_area_region_category Hierarchy"
+              }
+            },
+            "Level": "business_area"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

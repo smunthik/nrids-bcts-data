@@ -1,0 +1,61 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 632,
+            "y": 12
+          },
+          "nodeIndex": "bcts_reporting dim_date",
+          "nodeLineageTag": "2cb1a108-54a0-4d4e-8593-3d22a063628c",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 319,
+            "y": 386
+          },
+          "nodeIndex": "bcts_reporting licence_issued_advertised_main_hist",
+          "nodeLineageTag": "04cf616d-9c64-4174-97d7-0694fb0e37d9",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": 25
+          },
+          "nodeIndex": "bcts_staging dim_business_area",
+          "nodeLineageTag": "53f699f1-bdc9-49f8-9000-1f6e64f41935",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

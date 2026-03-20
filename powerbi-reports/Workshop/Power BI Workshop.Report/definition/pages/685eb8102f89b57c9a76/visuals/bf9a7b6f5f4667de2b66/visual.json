@@ -1,0 +1,56 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "bf9a7b6f5f4667de2b66",
+  "position": {
+    "x": 0,
+    "y": 218.1583198707593,
+    "z": 5000,
+    "height": 133.37641357027465,
+    "width": 268.82067851373182,
+    "tabOrder": 3
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main_hist"
+                    }
+                  },
+                  "Property": "Issued Volume Previous YTD"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_advertised_main_hist.Issued Volume Previous YTD",
+              "nativeQueryRef": "Issued Volume Previous YTD"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "bcts_reporting licence_issued_advertised_main_hist"
+                  }
+                },
+                "Property": "Issued Volume Previous YTD"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

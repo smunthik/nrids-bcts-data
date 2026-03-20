@@ -324,8 +324,7 @@ from (
         and ts.auction_date = awarded_sale_info.auction_date (+)
 
         and sold_licence_bid_info.sold_licence_client_number = fc_sold.client_number (+)
-        and awarded_sale_info.awarded_licence_client_number = fc_awarded.client_number (+)
-        and (
+        and awarded_sale_info.awarded_licence_client_number = fc_awarded.client_number (+)        and (
             /* Criteria for Licences Sold in reporting period*/
             (
                 ts.no_sale_rationale_code is null

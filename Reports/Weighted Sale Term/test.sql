@@ -238,6 +238,7 @@
                 OR ts.auction_date BETWEEN To_Date('{start_date}', 'YYYY-MM-DD') AND To_Date('{end_date}', 'YYYY-MM-DD')
             
     ) 
+        )
     select
         Business_Area_Region_Category,
         Business_Area_Region,
