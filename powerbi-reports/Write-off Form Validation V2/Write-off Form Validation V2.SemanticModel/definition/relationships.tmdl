@@ -1,0 +1,5 @@
+relationship 028fa8f5-6be2-4215-b9d6-c49c86aa62c1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'bcts_reporting write_off_forms_v2'.validated_date
+	toColumn: LocalDateTable_175b459b-03b6-4b58-90d2-287a147ef06f.Date
+

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "name": "e7a7f013314db980190d",
+  "position": {
+    "x": 7,
+    "y": 1209,
+    "z": 2000,
+    "height": 1165,
+    "width": 1273,
+    "tabOrder": 17001
+  },
+  "visualGroup": {
+    "displayName": "ytd_section",
+    "groupMode": "ScaleMode"
+  }
+}

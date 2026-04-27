@@ -1,0 +1,75 @@
+table 'bcts_staging dim_business_area'
+	lineageTag: adf6c8bd-1a02-43ff-baf6-7405d62611f0
+
+	column business_area_region_category
+		dataType: string
+		lineageTag: 886881f0-9c77-44df-b239-bbebb413478e
+		summarizeBy: none
+		sourceColumn: business_area_region_category
+		sortByColumn: business_area_region_cat_sort_order
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column business_area_region
+		dataType: string
+		lineageTag: 7153b92e-5f54-4ba1-9f75-905f18891717
+		summarizeBy: none
+		sourceColumn: business_area_region
+		sortByColumn: business_area_region_sort_order
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column business_area
+		dataType: string
+		lineageTag: 57be74c8-fed1-4cf1-966c-2998e81dd7b6
+		summarizeBy: none
+		sourceColumn: business_area
+
+		annotation SummarizationSetBy = Automatic
+
+	column business_area_region_sort_order
+		dataType: int64
+		formatString: 0
+		lineageTag: 2aba6e25-6633-43f9-ad47-33de8acc1217
+		summarizeBy: sum
+		sourceColumn: business_area_region_sort_order
+
+		annotation SummarizationSetBy = Automatic
+
+	column business_area_region_cat_sort_order
+		dataType: int64
+		formatString: 0
+		lineageTag: 2103ea0e-5bc8-4eed-9266-d0f377d77a82
+		summarizeBy: sum
+		sourceColumn: business_area_region_cat_sort_order
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'business_area_region_category Hierarchy'
+		lineageTag: e97b3c5b-7902-4a1b-8025-80723cf3c0a9
+
+		level business_area_region_category
+			lineageTag: f632024a-1517-4cac-84c6-9170b2b89530
+			column: business_area_region_category
+
+		level business_area_region
+			lineageTag: 61b1794e-1061-46fe-816f-54f37a401916
+			column: business_area_region
+
+		level business_area
+			lineageTag: 9f81ecac-f7b8-4a85-8ecb-51711f06bfe3
+			column: business_area
+
+	partition 'bcts_staging dim_business_area' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("existence.bcgov:5435", "odsprd"),
+				    bcts_staging_dim_business_area = Source{[Schema="bcts_staging",Item="dim_business_area"]}[Data]
+				in
+				    bcts_staging_dim_business_area
+

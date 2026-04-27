@@ -1,0 +1,199 @@
+table 'bcts_reporting licence_issued_ra_apportionment'
+	lineageTag: 3307b4ae-44f5-4198-971d-6717818e8dee
+
+	measure 'Actual FTE Count (paid absence incl.)' = ```
+			
+			VAR CurrentFY =
+			    [Current FY Start Year] - 1
+			RETURN
+			CALCULATE (
+			    SUM ( 'bcts_reporting licence_issued_ra_apportionment'[actual_fte_count] ),
+			    'bcts_reporting licence_issued_ra_apportionment'[FY Start Year] <= CurrentFY
+			)
+			
+			```
+		lineageTag: f2718727-2c3b-4dfa-a0d8-2a23dfdbbc80
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Licence Issued (No Future)' = ```
+			
+			VAR CurrentFY =
+			    [Current FY Start Year] - 1
+			RETURN
+			CALCULATE (
+			    SUM('bcts_reporting licence_issued_ra_apportionment'[licence_issued]),
+			    'bcts_reporting licence_issued_ra_apportionment'[FY Start Year] <= CurrentFY
+			)
+			
+			```
+		lineageTag: 20fe77a6-ab88-47c6-8db2-566894c85782
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Rationalized Apportionment (No Future)' = ```
+			
+			VAR CurrentFY =
+			    [Current FY Start Year] - 1
+			RETURN
+			CALCULATE (
+			    SUM ( 'bcts_reporting licence_issued_ra_apportionment'[ra] ),
+			    'bcts_reporting licence_issued_ra_apportionment'[FY Start Year] <= CurrentFY
+			)
+			
+			```
+		lineageTag: e0c8528e-03b8-49c6-b498-a45fae4c77a0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Full Apportionment (No Future)' = ```
+			
+			VAR CurrentFY =
+			    [Current FY Start Year] - 1
+			RETURN
+			CALCULATE (
+			    SUM ( 'bcts_reporting licence_issued_ra_apportionment'[full_apportionment] ),
+			    'bcts_reporting licence_issued_ra_apportionment'[FY Start Year] <= CurrentFY
+			)
+			
+			```
+		lineageTag: af5d951f-6fe4-48b7-8a4c-b038598f57bd
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Annual Developed Volume (No Future)' = ```
+			
+			VAR CurrentFY =
+			    [Current FY Start Year] - 1
+			RETURN
+			CALCULATE (
+			    SUM ( 'bcts_reporting licence_issued_ra_apportionment'[annual_developed_volume] ),
+			    'bcts_reporting licence_issued_ra_apportionment'[FY Start Year] <= CurrentFY
+			)
+			
+			```
+		lineageTag: 1ef7de36-ae13-4653-9567-50ed51a23eaf
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Volume Harvested (No Future)' = ```
+			
+			VAR CurrentFY =
+			    [Current FY Start Year] - 1
+			RETURN
+			CALCULATE (
+			    SUM ( 'bcts_reporting licence_issued_ra_apportionment'[volume_harvested] ),
+			    'bcts_reporting licence_issued_ra_apportionment'[FY Start Year] <= CurrentFY
+			)
+			
+			```
+		lineageTag: 0a104667-a560-4e0d-a366-afaa2e29b326
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Current FY Start Year' = ```
+			
+			VAR TodayDate = TODAY()
+			VAR YearNum = YEAR(TodayDate)
+			VAR MonthNum = MONTH(TodayDate)
+			RETURN
+			IF (
+			    MonthNum >= 4,
+			    YearNum,
+			    YearNum - 1
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 2f4eaec9-f975-4656-94c6-e11754b9bfb7
+
+	column fiscal_year
+		dataType: string
+		lineageTag: 38135103-1ac7-4e2b-83f8-852959e8b92b
+		summarizeBy: none
+		sourceColumn: fiscal_year
+
+		annotation SummarizationSetBy = Automatic
+
+	column licence_issued
+		dataType: double
+		lineageTag: 6b8123e1-ecc1-4030-8ee7-dbdbdabfe5de
+		summarizeBy: sum
+		sourceColumn: licence_issued
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ra
+		dataType: double
+		lineageTag: a82ba56e-26ee-429d-ad31-59596f690b68
+		summarizeBy: sum
+		sourceColumn: ra
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column full_apportionment
+		dataType: double
+		lineageTag: 0b4005e2-1c6a-4633-9e8d-07c8d2dbae4c
+		summarizeBy: sum
+		sourceColumn: full_apportionment
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column actual_fte_count
+		dataType: double
+		formatString: 0
+		lineageTag: bffd4bad-ac45-460f-a840-6d4eea6f5ff4
+		summarizeBy: sum
+		sourceColumn: actual_fte_count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column annual_developed_volume
+		dataType: double
+		lineageTag: 2c7a82ed-2757-4904-a59e-45de6ba9098c
+		summarizeBy: sum
+		sourceColumn: annual_developed_volume
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column volume_harvested
+		dataType: double
+		lineageTag: 5e2d84e5-1dd6-4949-b0f3-693048768c0d
+		summarizeBy: sum
+		sourceColumn: volume_harvested
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'FY Start Year' = ```
+			
+			2000 + VALUE(LEFT('bcts_reporting licence_issued_ra_apportionment'[fiscal_year], 2))
+			
+			```
+		lineageTag: a7738122-d788-4319-8dcf-e8cd698910ba
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'bcts_reporting licence_issued_ra_apportionment' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("existence.bcgov:5435", "odsprd"),
+				    bcts_reporting_licence_issued_ra_apportionment = Source{[Schema="bcts_reporting",Item="licence_issued_ra_apportionment"]}[Data]
+				in
+				    bcts_reporting_licence_issued_ra_apportionment
+

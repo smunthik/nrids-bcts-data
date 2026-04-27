@@ -18010,6 +18010,16 @@ cultureInfo en-CA
 			            },
 			            "Weight": 0.482
 			          }
+			        },
+			        {
+			          "Fire Salvage": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -19203,6 +19213,16 @@ cultureInfo en-CA
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "Fire Salvage": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -21700,9 +21720,901 @@ cultureInfo en-CA
 			          }
 			        }
 			      ]
+			    },
+			    "bcts_reporting_licence_issued_advertised_main.report_run_timestamp": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bcts_reporting licence_issued_advertised_main",
+			          "ConceptualProperty": "report_run_timestamp"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "report run timestamp": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "report_run_timestamp": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "timestamp": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "run timestamp": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "information run timestamp": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "commentary run timestamp": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "description run timestamp": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "presentation run timestamp": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "statement run timestamp": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "forecast run timestamp": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "account run timestamp": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "article run timestamp": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "narrative run timestamp": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "paper run timestamp": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "bcts_reporting_licence_issued_advertised_main.report_run_timestamp.date_hierarchy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bcts_reporting licence_issued_advertised_main",
+			          "VariationSource": "report_run_timestamp",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "report run timestamp date hierarchy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "timestamp date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "run timestamp date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "bcts_reporting_licence_issued_advertised_main.report_run_timestamp.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bcts_reporting licence_issued_advertised_main",
+			          "VariationSource": "report_run_timestamp",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "report run timestamp year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "timestamp year": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "run timestamp year": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "report run timestamp yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "run timestamp yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "timestamp yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "information run timestamp year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "commentary run timestamp year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "description run timestamp year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "presentation run timestamp year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "statement run timestamp year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "forecast run timestamp year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "bcts_reporting_licence_issued_advertised_main.report_run_timestamp.quarter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bcts_reporting licence_issued_advertised_main",
+			          "VariationSource": "report_run_timestamp",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Quarter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "report run timestamp quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "timestamp quarter": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "run timestamp quarter": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "report run timestamp qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.857
+			          }
+			        },
+			        {
+			          "run timestamp qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.846
+			          }
+			        },
+			        {
+			          "timestamp qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.833
+			          }
+			        },
+			        {
+			          "qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.818
+			          }
+			        },
+			        {
+			          "information run timestamp quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "commentary run timestamp quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "description run timestamp quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "presentation run timestamp quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "statement run timestamp quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "forecast run timestamp quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "bcts_reporting_licence_issued_advertised_main.report_run_timestamp.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bcts_reporting licence_issued_advertised_main",
+			          "VariationSource": "report_run_timestamp",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "report run timestamp month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "timestamp month": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "run timestamp month": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "report run timestamp mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "run timestamp mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "timestamp mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "information run timestamp month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "commentary run timestamp month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "description run timestamp month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "presentation run timestamp month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "statement run timestamp month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "forecast run timestamp month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "bcts_reporting_licence_issued_advertised_main.report_run_timestamp.day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "bcts_reporting licence_issued_advertised_main",
+			          "VariationSource": "report_run_timestamp",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Day"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "report run timestamp day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "timestamp day": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "run timestamp day": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "information run timestamp day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "commentary run timestamp day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "description run timestamp day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "presentation run timestamp day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "statement run timestamp day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "forecast run timestamp day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "account run timestamp day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "article run timestamp day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "narrative run timestamp day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "paper run timestamp day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
 			    }
 			  },
 			  "Relationships": {
+			    "bcts_reporting_bcts_performance_report_not_awarded_detail_auction_has_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "bcts_reporting bcts_performance_report_not_awarded_details"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bcts_reporting_bcts_performance_report_not_awarded_detail.auction": {
+			          "Target": {
+			            "Entity": "bcts_reporting_bcts_performance_report_not_awarded_detail.auction"
+			          }
+			        },
+			        "bcts_reporting_bcts_performance_report_not_awarded_detail.auction.date_hierarchy": {
+			          "Target": {
+			            "Entity": "bcts_reporting_bcts_performance_report_not_awarded_detail.auction.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bcts_reporting_bcts_performance_report_not_awarded_detail.auction"
+			            },
+			            "Object": {
+			              "Role": "bcts_reporting_bcts_performance_report_not_awarded_detail.auction.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "auctions_have_auction_date_hierarchies"
+			        }
+			      ]
+			    },
+			    "bcts_reporting_bcts_performance_report_licence_issued_detail_issued_date_hierarchy_has_bcts_reporting_bcts_performance_report_licence_issued_detail_issued_day": {
+			      "Binding": {
+			        "ConceptualEntity": "bcts_reporting bcts_performance_report_licence_issued_details"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.date_hierarchy": {
+			          "Target": {
+			            "Entity": "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.date_hierarchy"
+			          }
+			        },
+			        "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.day": {
+			          "Target": {
+			            "Entity": "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "issued_date_hierarchies_have_issued_days"
+			        }
+			      ]
+			    },
+			    "bcts_reporting_bcts_performance_report_licence_issued_detail_issued_date_hierarchy_has_bcts_reporting_bcts_performance_report_licence_issued_detail_issued_month": {
+			      "Binding": {
+			        "ConceptualEntity": "bcts_reporting bcts_performance_report_licence_issued_details"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.date_hierarchy": {
+			          "Target": {
+			            "Entity": "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.date_hierarchy"
+			          }
+			        },
+			        "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.month": {
+			          "Target": {
+			            "Entity": "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "issued_date_hierarchies_have_issued_months"
+			        }
+			      ]
+			    },
+			    "bcts_reporting_bcts_performance_report_licence_issued_detail_issued_date_hierarchy_has_bcts_reporting_bcts_performance_report_licence_issued_detail_issued_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "bcts_reporting bcts_performance_report_licence_issued_details"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.date_hierarchy": {
+			          "Target": {
+			            "Entity": "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.date_hierarchy"
+			          }
+			        },
+			        "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.quarter": {
+			          "Target": {
+			            "Entity": "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "issued_date_hierarchies_have_issued_quarters"
+			        }
+			      ]
+			    },
+			    "bcts_reporting_bcts_performance_report_licence_issued_detail_issued_date_hierarchy_has_bcts_reporting_bcts_performance_report_licence_issued_detail_issued_year": {
+			      "Binding": {
+			        "ConceptualEntity": "bcts_reporting bcts_performance_report_licence_issued_details"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.date_hierarchy": {
+			          "Target": {
+			            "Entity": "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.date_hierarchy"
+			          }
+			        },
+			        "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.year": {
+			          "Target": {
+			            "Entity": "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "issued_date_hierarchies_have_issued_years"
+			        }
+			      ]
+			    },
 			    "bcts_reporting_bcts_performance_report_licence_issued_detail_issued_has_date_hierarchy": {
 			      "Binding": {
 			        "ConceptualEntity": "bcts_reporting bcts_performance_report_licence_issued_details"
@@ -24043,6 +24955,39 @@ cultureInfo en-CA
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "bcts_reporting_bcts_performance_report_ytd_alls_have_bcts_reporting_bcts_performance_report_current_prev_ytd_issued_lic_volumes"
+			        }
+			      ]
+			    },
+			    "bcts_reporting_licence_issued_advertised_main_has_report_run_timestamp": {
+			      "Binding": {
+			        "ConceptualEntity": "bcts_reporting licence_issued_advertised_main"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bcts_reporting_licence_issued_advertised_main": {
+			          "Target": {
+			            "Entity": "bcts_reporting_licence_issued_advertised_main"
+			          }
+			        },
+			        "bcts_reporting_licence_issued_advertised_main.report_run_timestamp": {
+			          "Target": {
+			            "Entity": "bcts_reporting_licence_issued_advertised_main.report_run_timestamp"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bcts_reporting_licence_issued_advertised_main"
+			            },
+			            "Object": {
+			              "Role": "bcts_reporting_licence_issued_advertised_main.report_run_timestamp"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "bcts_reporting_licence_issued_advertised_mains_have_report_run_timestamps"
 			        }
 			      ]
 			    },
@@ -31094,171 +32039,6 @@ cultureInfo en-CA
 			        }
 			      ]
 			    },
-			    "bcts_reporting_bcts_performance_report_licence_issued_detail_issued_date_hierarchy_has_bcts_reporting_bcts_performance_report_licence_issued_detail_issued_year": {
-			      "Binding": {
-			        "ConceptualEntity": "bcts_reporting bcts_performance_report_licence_issued_details"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.date_hierarchy": {
-			          "Target": {
-			            "Entity": "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.date_hierarchy"
-			          }
-			        },
-			        "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.year": {
-			          "Target": {
-			            "Entity": "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.year"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.year"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "issued_date_hierarchies_have_issued_years"
-			        }
-			      ]
-			    },
-			    "bcts_reporting_bcts_performance_report_licence_issued_detail_issued_date_hierarchy_has_bcts_reporting_bcts_performance_report_licence_issued_detail_issued_quarter": {
-			      "Binding": {
-			        "ConceptualEntity": "bcts_reporting bcts_performance_report_licence_issued_details"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.date_hierarchy": {
-			          "Target": {
-			            "Entity": "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.date_hierarchy"
-			          }
-			        },
-			        "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.quarter": {
-			          "Target": {
-			            "Entity": "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.quarter"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.quarter"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "issued_date_hierarchies_have_issued_quarters"
-			        }
-			      ]
-			    },
-			    "bcts_reporting_bcts_performance_report_licence_issued_detail_issued_date_hierarchy_has_bcts_reporting_bcts_performance_report_licence_issued_detail_issued_month": {
-			      "Binding": {
-			        "ConceptualEntity": "bcts_reporting bcts_performance_report_licence_issued_details"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.date_hierarchy": {
-			          "Target": {
-			            "Entity": "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.date_hierarchy"
-			          }
-			        },
-			        "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.month": {
-			          "Target": {
-			            "Entity": "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.month"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.month"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "issued_date_hierarchies_have_issued_months"
-			        }
-			      ]
-			    },
-			    "bcts_reporting_bcts_performance_report_licence_issued_detail_issued_date_hierarchy_has_bcts_reporting_bcts_performance_report_licence_issued_detail_issued_day": {
-			      "Binding": {
-			        "ConceptualEntity": "bcts_reporting bcts_performance_report_licence_issued_details"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.date_hierarchy": {
-			          "Target": {
-			            "Entity": "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.date_hierarchy"
-			          }
-			        },
-			        "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.day": {
-			          "Target": {
-			            "Entity": "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.day"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "bcts_reporting_bcts_performance_report_licence_issued_detail.issued.day"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "issued_date_hierarchies_have_issued_days"
-			        }
-			      ]
-			    },
-			    "bcts_reporting_bcts_performance_report_not_awarded_detail_auction_has_date_hierarchy": {
-			      "Binding": {
-			        "ConceptualEntity": "bcts_reporting bcts_performance_report_not_awarded_details"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "bcts_reporting_bcts_performance_report_not_awarded_detail.auction": {
-			          "Target": {
-			            "Entity": "bcts_reporting_bcts_performance_report_not_awarded_detail.auction"
-			          }
-			        },
-			        "bcts_reporting_bcts_performance_report_not_awarded_detail.auction.date_hierarchy": {
-			          "Target": {
-			            "Entity": "bcts_reporting_bcts_performance_report_not_awarded_detail.auction.date_hierarchy"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "bcts_reporting_bcts_performance_report_not_awarded_detail.auction"
-			            },
-			            "Object": {
-			              "Role": "bcts_reporting_bcts_performance_report_not_awarded_detail.auction.date_hierarchy"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "auctions_have_auction_date_hierarchies"
-			        }
-			      ]
-			    },
 			    "bcts_reporting_bcts_performance_report_not_awarded_detail_auction_date_hierarchy_has_bcts_reporting_bcts_performance_report_not_awarded_detail_auction_year": {
 			      "Binding": {
 			        "ConceptualEntity": "bcts_reporting bcts_performance_report_not_awarded_details"
@@ -31619,6 +32399,171 @@ cultureInfo en-CA
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "business_areas_are_in_business_area_regions3"
+			        }
+			      ]
+			    },
+			    "bcts_reporting_licence_issued_advertised_main_report_run_timestamp_has_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "bcts_reporting licence_issued_advertised_main"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bcts_reporting_licence_issued_advertised_main.report_run_timestamp": {
+			          "Target": {
+			            "Entity": "bcts_reporting_licence_issued_advertised_main.report_run_timestamp"
+			          }
+			        },
+			        "bcts_reporting_licence_issued_advertised_main.report_run_timestamp.date_hierarchy": {
+			          "Target": {
+			            "Entity": "bcts_reporting_licence_issued_advertised_main.report_run_timestamp.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bcts_reporting_licence_issued_advertised_main.report_run_timestamp"
+			            },
+			            "Object": {
+			              "Role": "bcts_reporting_licence_issued_advertised_main.report_run_timestamp.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "report_run_timestamps_have_report_run_timestamp_date_hierarchies"
+			        }
+			      ]
+			    },
+			    "bcts_reporting_licence_issued_advertised_main_report_run_timestamp_date_hierarchy_has_bcts_reporting_licence_issued_advertised_main_report_run_timestamp_year": {
+			      "Binding": {
+			        "ConceptualEntity": "bcts_reporting licence_issued_advertised_main"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bcts_reporting_licence_issued_advertised_main.report_run_timestamp.date_hierarchy": {
+			          "Target": {
+			            "Entity": "bcts_reporting_licence_issued_advertised_main.report_run_timestamp.date_hierarchy"
+			          }
+			        },
+			        "bcts_reporting_licence_issued_advertised_main.report_run_timestamp.year": {
+			          "Target": {
+			            "Entity": "bcts_reporting_licence_issued_advertised_main.report_run_timestamp.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bcts_reporting_licence_issued_advertised_main.report_run_timestamp.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "bcts_reporting_licence_issued_advertised_main.report_run_timestamp.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "report_run_timestamp_date_hierarchies_have_report_run_timestamp_years"
+			        }
+			      ]
+			    },
+			    "bcts_reporting_licence_issued_advertised_main_report_run_timestamp_date_hierarchy_has_bcts_reporting_licence_issued_advertised_main_report_run_timestamp_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "bcts_reporting licence_issued_advertised_main"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bcts_reporting_licence_issued_advertised_main.report_run_timestamp.date_hierarchy": {
+			          "Target": {
+			            "Entity": "bcts_reporting_licence_issued_advertised_main.report_run_timestamp.date_hierarchy"
+			          }
+			        },
+			        "bcts_reporting_licence_issued_advertised_main.report_run_timestamp.quarter": {
+			          "Target": {
+			            "Entity": "bcts_reporting_licence_issued_advertised_main.report_run_timestamp.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bcts_reporting_licence_issued_advertised_main.report_run_timestamp.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "bcts_reporting_licence_issued_advertised_main.report_run_timestamp.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "report_run_timestamp_date_hierarchies_have_report_run_timestamp_quarters"
+			        }
+			      ]
+			    },
+			    "bcts_reporting_licence_issued_advertised_main_report_run_timestamp_date_hierarchy_has_bcts_reporting_licence_issued_advertised_main_report_run_timestamp_month": {
+			      "Binding": {
+			        "ConceptualEntity": "bcts_reporting licence_issued_advertised_main"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bcts_reporting_licence_issued_advertised_main.report_run_timestamp.date_hierarchy": {
+			          "Target": {
+			            "Entity": "bcts_reporting_licence_issued_advertised_main.report_run_timestamp.date_hierarchy"
+			          }
+			        },
+			        "bcts_reporting_licence_issued_advertised_main.report_run_timestamp.month": {
+			          "Target": {
+			            "Entity": "bcts_reporting_licence_issued_advertised_main.report_run_timestamp.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bcts_reporting_licence_issued_advertised_main.report_run_timestamp.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "bcts_reporting_licence_issued_advertised_main.report_run_timestamp.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "report_run_timestamp_date_hierarchies_have_report_run_timestamp_months"
+			        }
+			      ]
+			    },
+			    "bcts_reporting_licence_issued_advertised_main_report_run_timestamp_date_hierarchy_has_bcts_reporting_licence_issued_advertised_main_report_run_timestamp_day": {
+			      "Binding": {
+			        "ConceptualEntity": "bcts_reporting licence_issued_advertised_main"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "bcts_reporting_licence_issued_advertised_main.report_run_timestamp.date_hierarchy": {
+			          "Target": {
+			            "Entity": "bcts_reporting_licence_issued_advertised_main.report_run_timestamp.date_hierarchy"
+			          }
+			        },
+			        "bcts_reporting_licence_issued_advertised_main.report_run_timestamp.day": {
+			          "Target": {
+			            "Entity": "bcts_reporting_licence_issued_advertised_main.report_run_timestamp.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "bcts_reporting_licence_issued_advertised_main.report_run_timestamp.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "bcts_reporting_licence_issued_advertised_main.report_run_timestamp.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "report_run_timestamp_date_hierarchies_have_report_run_timestamp_days"
 			        }
 			      ]
 			    }

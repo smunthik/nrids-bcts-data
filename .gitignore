@@ -1,4 +1,5 @@
 .env
+*.env
 # Ignore logs
 ./logs
 logs/*
@@ -14,4 +15,3 @@ __pycache__/
 **/*.ppt
 **/*.txt
 
-Local/*

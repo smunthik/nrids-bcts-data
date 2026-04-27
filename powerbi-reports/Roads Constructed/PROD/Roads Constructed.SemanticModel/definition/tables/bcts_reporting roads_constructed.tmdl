@@ -237,6 +237,14 @@ table 'bcts_reporting roads_constructed'
 
 		annotation SummarizationSetBy = Automatic
 
+	column field_team_desc
+		dataType: string
+		lineageTag: 2d3a2aa9-5a76-4227-b1a5-a66ea532a47c
+		summarizeBy: none
+		sourceColumn: field_team_desc
+
+		annotation SummarizationSetBy = Automatic
+
 	hierarchy 'business_area_region_category Hierarchy'
 		lineageTag: 81e16888-6312-4dee-8b53-52cb7a309fc7
 

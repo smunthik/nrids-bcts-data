@@ -6,7 +6,7 @@ model Model
 		legacyRedirects
 		returnErrorValuesAsNull
 
-annotation PBI_QueryOrder = ["bcts_reporting vw_silviliability_main","bcts_reporting vw_silviliability_main_pbi"]
+annotation PBI_QueryOrder = ["bcts_reporting vw_silviliability_main","bcts_reporting vw_silviliability_main_pbi","bcts_staging dim_business_area"]
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
@@ -26,6 +26,7 @@ ref table LocalDateTable_db87946e-e0d9-46fc-bdbe-c1d887abdaf6
 ref table LocalDateTable_a61d5587-421a-4bb7-9082-50b3e1dcc237
 ref table LocalDateTable_07bb4098-4380-46b1-87e2-b0c72ac5f870
 ref table 'bcts_reporting vw_silviliability_main_pbi'
+ref table 'bcts_staging dim_business_area'
 
 ref cultureInfo en-CA
 

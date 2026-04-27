@@ -1,0 +1,8 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "23989ed14056726a9726",
+  "displayName": "Export Dataset",
+  "displayOption": "FitToPage",
+  "height": 800,
+  "width": 1280
+}

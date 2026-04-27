@@ -1,0 +1,25 @@
+model Model
+	culture: en-CA
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-CA
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["bcts_reporting roads_planned_deactivation","bcts_staging dim_business_area"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table DateTableTemplate_8b5bff52-60b1-4241-bbb8-d78539328e72
+ref table 'bcts_reporting roads_planned_deactivation'
+ref table LocalDateTable_64578438-d267-4b65-b44d-89c4a7257955
+ref table LocalDateTable_cab1d2b8-bf97-407a-bbd4-b645c6319d66
+ref table LocalDateTable_bd064d04-0534-4394-93e5-085dee164998
+ref table LocalDateTable_3f19f839-2da0-47b0-b00f-df3a84709157
+ref table LocalDateTable_9d6d7296-6c01-4046-ae88-d001ef71fc41
+ref table 'bcts_staging dim_business_area'
+
+ref cultureInfo en-CA
+

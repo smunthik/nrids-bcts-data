@@ -57,3 +57,9 @@ relationship AutoDetected_5f022439-acc6-4afc-b640-3dad1dc8424b
 	fromColumn: 'bcts_reporting vw_silviliability_main'.business_area
 	toColumn: 'bcts_reporting vw_silviliability_main_pbi'.business_area
 
+relationship AutoDetected_30814482-da19-4737-9990-63ff9fc58115
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'bcts_staging dim_business_area'.business_area
+	toColumn: 'bcts_reporting vw_silviliability_main_pbi'.business_area
+

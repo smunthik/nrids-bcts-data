@@ -1,0 +1,402 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "781d824b3bd0685db2ac",
+  "position": {
+    "x": 0,
+    "y": 217.20508166969145,
+    "z": 4001,
+    "height": 583.08529945553539,
+    "width": 1280,
+    "tabOrder": 4001
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting roads_planned_deactivation"
+                    }
+                  },
+                  "Property": "business_area"
+                }
+              },
+              "queryRef": "bcts_reporting roads_planned_deactivation.business_area",
+              "nativeQueryRef": "business_area"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting roads_planned_deactivation"
+                    }
+                  },
+                  "Property": "business_area_code"
+                }
+              },
+              "queryRef": "bcts_reporting roads_planned_deactivation.business_area_code",
+              "nativeQueryRef": "business_area_code"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting roads_planned_deactivation"
+                    }
+                  },
+                  "Property": "business_area_region"
+                }
+              },
+              "queryRef": "bcts_reporting roads_planned_deactivation.business_area_region",
+              "nativeQueryRef": "business_area_region"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting roads_planned_deactivation"
+                    }
+                  },
+                  "Property": "business_area_region_category"
+                }
+              },
+              "queryRef": "bcts_reporting roads_planned_deactivation.business_area_region_category",
+              "nativeQueryRef": "business_area_region_category"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting roads_planned_deactivation"
+                    }
+                  },
+                  "Property": "deac_budgeted_cost"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting roads_planned_deactivation.deac_budgeted_cost)",
+              "nativeQueryRef": "deac_budgeted_cost"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting roads_planned_deactivation"
+                    }
+                  },
+                  "Property": "deac_budgeted_item_cost"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting roads_planned_deactivation.deac_budgeted_item_cost)",
+              "nativeQueryRef": "deac_budgeted_item_cost"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting roads_planned_deactivation"
+                    }
+                  },
+                  "Property": "deac_end_date"
+                }
+              },
+              "queryRef": "bcts_reporting roads_planned_deactivation.deac_end_date",
+              "nativeQueryRef": "deac_end_date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting roads_planned_deactivation"
+                    }
+                  },
+                  "Property": "deac_level_type"
+                }
+              },
+              "queryRef": "bcts_reporting roads_planned_deactivation.deac_level_type",
+              "nativeQueryRef": "deac_level_type"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting roads_planned_deactivation"
+                    }
+                  },
+                  "Property": "Deactivation Method Type"
+                }
+              },
+              "queryRef": "bcts_reporting roads_planned_deactivation.deac_method_type",
+              "nativeQueryRef": "deac_method_type"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting roads_planned_deactivation"
+                    }
+                  },
+                  "Property": "deac_planned_date"
+                }
+              },
+              "queryRef": "bcts_reporting roads_planned_deactivation.deac_planned_date",
+              "nativeQueryRef": "deac_planned_date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting roads_planned_deactivation"
+                    }
+                  },
+                  "Property": "deac_seq_nbr"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting roads_planned_deactivation.deac_seq_nbr)",
+              "nativeQueryRef": "deac_seq_nbr"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting roads_planned_deactivation"
+                    }
+                  },
+                  "Property": "effective_planned_cost"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting roads_planned_deactivation.effective_planned_cost)",
+              "nativeQueryRef": "effective_planned_cost"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting roads_planned_deactivation"
+                    }
+                  },
+                  "Property": "field_team_desc"
+                }
+              },
+              "queryRef": "bcts_reporting roads_planned_deactivation.field_team_desc",
+              "nativeQueryRef": "field_team_desc"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting roads_planned_deactivation"
+                    }
+                  },
+                  "Property": "fiscal"
+                }
+              },
+              "queryRef": "bcts_reporting roads_planned_deactivation.fiscal",
+              "nativeQueryRef": "fiscal"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting roads_planned_deactivation"
+                    }
+                  },
+                  "Property": "fiscal_year"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting roads_planned_deactivation.fiscal_year)",
+              "nativeQueryRef": "fiscal_year"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting roads_planned_deactivation"
+                    }
+                  },
+                  "Property": "Fiscal Period Info"
+                }
+              },
+              "queryRef": "bcts_reporting roads_planned_deactivation.Fiscal Period Info",
+              "nativeQueryRef": "Fiscal Period Info"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting roads_planned_deactivation"
+                    }
+                  },
+                  "Property": "poc"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting roads_planned_deactivation.poc)",
+              "nativeQueryRef": "poc"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting roads_planned_deactivation"
+                    }
+                  },
+                  "Property": "pot"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting roads_planned_deactivation.pot)",
+              "nativeQueryRef": "pot"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting roads_planned_deactivation"
+                    }
+                  },
+                  "Property": "rdst_steward_name"
+                }
+              },
+              "queryRef": "bcts_reporting roads_planned_deactivation.rdst_steward_name",
+              "nativeQueryRef": "rdst_steward_name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting roads_planned_deactivation"
+                    }
+                  },
+                  "Property": "report_end_date"
+                }
+              },
+              "queryRef": "bcts_reporting roads_planned_deactivation.report_end_date",
+              "nativeQueryRef": "report_end_date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting roads_planned_deactivation"
+                    }
+                  },
+                  "Property": "report_run_date"
+                }
+              },
+              "queryRef": "bcts_reporting roads_planned_deactivation.report_run_date",
+              "nativeQueryRef": "report_run_date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting roads_planned_deactivation"
+                    }
+                  },
+                  "Property": "report_run_timestamp"
+                }
+              },
+              "queryRef": "bcts_reporting roads_planned_deactivation.report_run_timestamp",
+              "nativeQueryRef": "report_run_timestamp"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting roads_planned_deactivation"
+                    }
+                  },
+                  "Property": "RLS Accounting Type"
+                }
+              },
+              "queryRef": "bcts_reporting roads_planned_deactivation.RLS Accounting Type",
+              "nativeQueryRef": "RLS Accounting Type"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting roads_planned_deactivation"
+                    }
+                  },
+                  "Property": "road_road_name"
+                }
+              },
+              "queryRef": "bcts_reporting roads_planned_deactivation.road_road_name",
+              "nativeQueryRef": "road_road_name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting roads_planned_deactivation"
+                    }
+                  },
+                  "Property": "road_seq_nbr"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting roads_planned_deactivation.road_seq_nbr)",
+              "nativeQueryRef": "road_seq_nbr"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting roads_planned_deactivation"
+                    }
+                  },
+                  "Property": "total_length"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting roads_planned_deactivation.total_length)",
+              "nativeQueryRef": "total_length"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting roads_planned_deactivation"
+                    }
+                  },
+                  "Property": "uri"
+                }
+              },
+              "queryRef": "bcts_reporting roads_planned_deactivation.uri",
+              "nativeQueryRef": "uri"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

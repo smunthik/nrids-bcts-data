@@ -1,0 +1,315 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "adb41026569d34fe17e4",
+  "position": {
+    "x": 13.938294010889292,
+    "y": 310.12704174228674,
+    "z": 4000,
+    "height": 393.75680580762247,
+    "width": 1248.6388384754991,
+    "tabOrder": 4000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting write_off_forms_v2"
+                    }
+                  },
+                  "Property": "field_name"
+                }
+              },
+              "queryRef": "bcts_reporting write_off_forms_v2.field_name",
+              "nativeQueryRef": "Field Name",
+              "displayName": "Field Name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting write_off_forms_v2"
+                    }
+                  },
+                  "Property": "expected_value"
+                }
+              },
+              "queryRef": "bcts_reporting write_off_forms_v2.expected_value",
+              "nativeQueryRef": "Expected Value",
+              "displayName": "Expected Value"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting write_off_forms_v2"
+                    }
+                  },
+                  "Property": "filled_value"
+                }
+              },
+              "queryRef": "bcts_reporting write_off_forms_v2.filled_value",
+              "nativeQueryRef": "Filled Value",
+              "displayName": "Filled Value"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting write_off_forms_v2"
+                    }
+                  },
+                  "Property": "match"
+                }
+              },
+              "queryRef": "bcts_reporting write_off_forms_v2.match",
+              "nativeQueryRef": "Match",
+              "displayName": "Match"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting write_off_forms_v2"
+                    }
+                  },
+                  "Property": "validated_date"
+                }
+              },
+              "queryRef": "bcts_reporting write_off_forms_v2.validated_date",
+              "nativeQueryRef": "Validated Date",
+              "displayName": "Validated Date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting write_off_forms_v2"
+                    }
+                  },
+                  "Property": "form"
+                }
+              },
+              "queryRef": "bcts_reporting write_off_forms_v2.form",
+              "nativeQueryRef": "Form",
+              "displayName": "Form"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "keepLayerOrder": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.6
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "9a057ca0490ecac63709",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "bcts_reporting write_off_forms_v2"
+              }
+            },
+            "Property": "expected_value"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "0544f507822d436b38b6",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "bcts_reporting write_off_forms_v2"
+              }
+            },
+            "Property": "filled_value"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "0d85c587704e95ba9873",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "bcts_reporting write_off_forms_v2"
+              }
+            },
+            "Property": "match"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "8fd92828033da266bd6b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "bcts_reporting write_off_forms_v2"
+              }
+            },
+            "Property": "validated_date"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "1737674d70949a401d06",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "bcts_reporting write_off_forms_v2"
+              }
+            },
+            "Property": "field_name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "aae36fb65999ac473005",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "bcts_reporting write_off_forms_v2"
+              }
+            },
+            "Property": "form"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

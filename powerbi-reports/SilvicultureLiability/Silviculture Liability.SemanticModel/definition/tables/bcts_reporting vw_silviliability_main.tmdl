@@ -1,6 +1,11 @@
 table 'bcts_reporting vw_silviliability_main'
 	lineageTag: c61c3815-a035-413f-8d9b-866f23aae6ee
 
+	measure Defintions = ```
+			"Net Area to be Reforested (NAR) is the area identified in the Site Plan that represents the legal obligation to establish a free‑growing stand." 
+			```
+		lineageTag: 3cad044d-5fc7-4b85-b371-a92a755a776b
+
 	column business_area_region_category
 		dataType: string
 		lineageTag: 4cb11d5f-ba41-4fb7-b0be-45b5648af48f
@@ -860,10 +865,11 @@ table 'bcts_reporting vw_silviliability_main'
 
 	column 'Fiscal Period Info' = ```
 			
-			"All charts in this dashboard use data for which FG Done falls within  " & 
+			"All charts in this dashboard use data for which Free Growing (FG) Done falls within  " & 
 			FORMAT(MAX('bcts_reporting vw_silviliability_main'[fiscal_year_start_date]), "MMMM DD, YYYY") & 
 			" and " & 
-			FORMAT(MAX('bcts_reporting vw_silviliability_main'[report_run_date]), "MMMM DD, YYYY")
+			FORMAT(MAX('bcts_reporting vw_silviliability_main'[report_run_date]), "MMMM DD, YYYY") 
+			
 			
 			```
 		lineageTag: bd463fd9-651e-4d69-a225-c6828f997def

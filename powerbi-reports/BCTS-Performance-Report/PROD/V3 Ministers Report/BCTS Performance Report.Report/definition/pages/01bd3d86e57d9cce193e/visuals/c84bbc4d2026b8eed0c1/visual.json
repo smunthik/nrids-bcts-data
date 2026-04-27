@@ -1,0 +1,492 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "name": "c84bbc4d2026b8eed0c1",
+  "position": {
+    "x": 52,
+    "y": 1657,
+    "z": 21500,
+    "height": 150,
+    "width": 880,
+    "tabOrder": 9000
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Columns": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting bcts_performance_report_current_prev_ytd_issued_lic_volume"
+                    }
+                  },
+                  "Property": "business_area"
+                }
+              },
+              "queryRef": "bcts_reporting bcts_performance_report_current_prev_ytd_issued_lic_volume.business_area",
+              "nativeQueryRef": "business_area",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting bcts_performance_report_current_prev_ytd_issued_lic_volume"
+                    }
+                  },
+                  "Property": "Total Current YTD Licence Issued"
+                }
+              },
+              "queryRef": "bcts_reporting bcts_performance_report_current_prev_ytd_issued_lic_volume.Total Current YTD Licence Issued",
+              "nativeQueryRef": "Total Current YTD Licence Issued"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting bcts_performance_report_current_prev_ytd_issued_lic_volume"
+                    }
+                  },
+                  "Property": "Total Current YTD Licence Issued: Value Added"
+                }
+              },
+              "queryRef": "bcts_reporting bcts_performance_report_current_prev_ytd_issued_lic_volume.Total Current YTD Licence Issued: Value Added",
+              "nativeQueryRef": "Total Current YTD Licence Issued: Value Added"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting bcts_performance_report_current_prev_ytd_issued_lic_volume"
+                    }
+                  },
+                  "Property": "Total Previous YTD Licence Issued"
+                }
+              },
+              "queryRef": "bcts_reporting bcts_performance_report_current_prev_ytd_issued_lic_volume.Total Previous YTD Licence Issued",
+              "nativeQueryRef": "Total Previous YTD Licence Issued"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting bcts_performance_report_current_prev_ytd_issued_lic_volume"
+                    }
+                  },
+                  "Property": "Total Previous YTD Licence Issued: Value Added"
+                }
+              },
+              "queryRef": "bcts_reporting bcts_performance_report_current_prev_ytd_issued_lic_volume.Total Previous YTD Licence Issued: Value Added",
+              "nativeQueryRef": "Total Previous YTD Licence Issued: Value Added"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "bcts_reporting bcts_performance_report_current_prev_ytd_issued_lic_volume"
+                  }
+                },
+                "Property": "business_area"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "outlineStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "7D"
+                }
+              }
+            },
+            "valuesOnRow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTotals": [
+        {
+          "properties": {
+            "columnSubtotals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "rowSubtotals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "outlineStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
+            },
+            "outlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#013366'"
+                    }
+                  }
+                }
+              }
+            },
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "gridVerticalColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#013366'"
+                    }
+                  }
+                }
+              }
+            },
+            "gridHorizontal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "gridHorizontalColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#013366'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "outlineStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "rowHeaders": [
+        {
+          "properties": {
+            "outlineStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "336D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "bcts_reporting bcts_performance_report_current_prev_ytd_issued_lic_volume.Total Current YTD Licence Issued"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "158D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "bcts_reporting bcts_performance_report_current_prev_ytd_issued_lic_volume"
+                          }
+                        },
+                        "Property": "business_area"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Chinook (TCH)'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "191D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "bcts_reporting bcts_performance_report_current_prev_ytd_issued_lic_volume"
+                          }
+                        },
+                        "Property": "business_area"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Strait of Georgia (TSG)'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "179D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "bcts_reporting bcts_performance_report_current_prev_ytd_issued_lic_volume"
+                          }
+                        },
+                        "Property": "business_area"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Seaward-Tlasta (TST)'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'current_prev_ytd_coast_table'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "5eefcbbd9631dde914cd",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "e7fabec09c0d511c967c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "bcts_reporting bcts_performance_report_current_prev_ytd_issued_lic_volume"
+              }
+            },
+            "Property": "business_area_region"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "b",
+              "Entity": "bcts_reporting bcts_performance_report_current_prev_ytd_issued_lic_volume",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "b"
+                          }
+                        },
+                        "Property": "business_area_region"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Coast'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User",
+        "objects": {
+          "general": [
+            {
+              "properties": {}
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

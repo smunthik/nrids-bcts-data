@@ -1,0 +1,301 @@
+table 'bcts_reporting roads_planned_deactivation'
+	lineageTag: b0c2d1d4-58c9-49c8-8d38-df0947f66309
+
+	measure 'Total Length (km)' = SUM('bcts_reporting roads_planned_deactivation'[total_length])
+		formatString: 0
+		lineageTag: 0fa5bf81-02ad-4ba8-96ce-545b597bd62b
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Total Liability ($)' = SUM('bcts_reporting roads_planned_deactivation'[effective_planned_cost])
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: be79e50b-e6f7-4f9f-8f99-4dbb6cf77d3e
+
+	column business_area_region_category
+		dataType: string
+		lineageTag: 452f42f1-7266-450b-99fb-7f29a4b995ea
+		summarizeBy: none
+		sourceColumn: business_area_region_category
+
+		annotation SummarizationSetBy = Automatic
+
+	column business_area_region
+		dataType: string
+		lineageTag: 6033b900-1ee7-4d22-ad38-8b77c4ec7279
+		summarizeBy: none
+		sourceColumn: business_area_region
+
+		annotation SummarizationSetBy = Automatic
+
+	column business_area
+		dataType: string
+		lineageTag: aeb05eba-0e5a-4df6-877f-cc5e3ad73747
+		summarizeBy: none
+		sourceColumn: business_area
+
+		annotation SummarizationSetBy = Automatic
+
+	column business_area_code
+		dataType: string
+		lineageTag: 27dc385b-8b9d-4eeb-ab19-461cc3ffabf4
+		summarizeBy: none
+		sourceColumn: business_area_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column road_seq_nbr
+		dataType: double
+		lineageTag: 6ff38c79-0710-48e1-b9f0-03812b7e00c0
+		summarizeBy: sum
+		sourceColumn: road_seq_nbr
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column deac_seq_nbr
+		dataType: double
+		lineageTag: 7274d4f5-d504-4df3-b673-d0efe5adfe95
+		summarizeBy: sum
+		sourceColumn: deac_seq_nbr
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column uri
+		dataType: string
+		lineageTag: c8e1bf39-7217-487b-9d5c-bd25c782f9c1
+		summarizeBy: none
+		sourceColumn: uri
+
+		annotation SummarizationSetBy = Automatic
+
+	column road_road_name
+		dataType: string
+		lineageTag: 67509918-6c5c-4ac2-bfdd-308b8de5c32f
+		summarizeBy: none
+		sourceColumn: road_road_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column field_team_desc
+		dataType: string
+		lineageTag: 6fef066a-bd82-43ef-b22a-8b18aad15acc
+		summarizeBy: none
+		sourceColumn: field_team_desc
+
+		annotation SummarizationSetBy = Automatic
+
+	column poc
+		dataType: double
+		lineageTag: d31c5243-54bf-4429-aee3-791f89cb735c
+		summarizeBy: sum
+		sourceColumn: poc
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pot
+		dataType: double
+		lineageTag: c9949a11-afdc-4a5c-b6ad-991ca488beba
+		summarizeBy: sum
+		sourceColumn: pot
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column total_length
+		dataType: double
+		lineageTag: 0dcd18f1-5434-407a-bddb-a7a1ca5cd3d8
+		summarizeBy: sum
+		sourceColumn: total_length
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column effective_planned_cost
+		dataType: double
+		lineageTag: 85fb4467-64d7-48b3-8bd7-a5f3790fd35a
+		summarizeBy: sum
+		sourceColumn: effective_planned_cost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column deac_budgeted_cost
+		dataType: double
+		lineageTag: 72678112-a0cc-4b5b-9bbd-e2044ce060c1
+		summarizeBy: sum
+		sourceColumn: deac_budgeted_cost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column deac_budgeted_item_cost
+		dataType: double
+		lineageTag: 534d4bd7-97f4-4468-a82f-f281057668ea
+		summarizeBy: sum
+		sourceColumn: deac_budgeted_item_cost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'RLS Accounting Type'
+		dataType: string
+		lineageTag: 11b147c3-65b3-405f-a9be-6128bb5913dc
+		summarizeBy: none
+		sourceColumn: RLS Accounting Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column rdst_steward_name
+		dataType: string
+		lineageTag: dac9642f-f8b9-470a-bfd0-41de756a72e1
+		summarizeBy: none
+		sourceColumn: rdst_steward_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column deac_planned_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: cf97c08e-5836-44bf-ab47-6cab016e6fc1
+		summarizeBy: none
+		sourceColumn: deac_planned_date
+
+		variation Variation
+			isDefault
+			relationship: 01b4606b-9bd1-4349-8a0f-1433bb16484a
+			defaultHierarchy: LocalDateTable_64578438-d267-4b65-b44d-89c4a7257955.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column deac_end_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f26148c8-b0d0-4d91-9442-3d79c3853d99
+		summarizeBy: none
+		sourceColumn: deac_end_date
+
+		variation Variation
+			isDefault
+			relationship: f58781c6-50a6-4c9a-9acc-a3f9227af909
+			defaultHierarchy: LocalDateTable_cab1d2b8-bf97-407a-bbd4-b645c6319d66.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Deactivation Method Type'
+		dataType: string
+		lineageTag: ce62ab82-758a-4e7f-a0bf-0ed33dc79ea4
+		summarizeBy: none
+		sourceColumn: Deactivation Method Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column deac_level_type
+		dataType: string
+		lineageTag: 832ee733-be52-4c80-a2a2-2849db2182ec
+		summarizeBy: none
+		sourceColumn: deac_level_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column fiscal_year
+		dataType: double
+		lineageTag: 4e685330-c682-45e7-8058-7d7dddefb239
+		summarizeBy: sum
+		sourceColumn: fiscal_year
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column fiscal
+		dataType: string
+		lineageTag: 2dd68bb5-d9ab-46e7-9b35-7b6217f0adac
+		summarizeBy: none
+		sourceColumn: fiscal
+
+		annotation SummarizationSetBy = Automatic
+
+	column report_end_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 3ffc7ea1-eeca-4afa-a349-aff7df6d4999
+		summarizeBy: none
+		sourceColumn: report_end_date
+
+		variation Variation
+			isDefault
+			relationship: f49dcad6-a3a5-4af2-afa3-3889b38c7811
+			defaultHierarchy: LocalDateTable_bd064d04-0534-4394-93e5-085dee164998.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column report_run_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 6de92764-8a4b-4cd1-adeb-4a50e47edf05
+		summarizeBy: none
+		sourceColumn: report_run_date
+
+		variation Variation
+			isDefault
+			relationship: 895dd93e-d8c6-4c9e-881e-a096a609aba5
+			defaultHierarchy: LocalDateTable_3f19f839-2da0-47b0-b00f-df3a84709157.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column report_run_timestamp
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: a52933bb-5059-4c40-8ac6-6ba11264e912
+		summarizeBy: none
+		sourceColumn: report_run_timestamp
+
+		variation Variation
+			isDefault
+			relationship: dd8ca01c-89c4-4923-a6fc-7fe21b4dedc0
+			defaultHierarchy: LocalDateTable_9d6d7296-6c01-4046-ae88-d001ef71fc41.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fiscal Period Info' = ```
+			
+			"Data shown reflects period upto " & 
+			FORMAT(MAX('bcts_reporting roads_planned_deactivation'[report_end_date]), "MMMM DD, YYYY") & 
+			" (Data refreshed on "
+			    & FORMAT(
+			        MAX('bcts_reporting roads_planned_deactivation'[report_run_timestamp]),
+			        "MMMM dd, yyyy hh:mm AM/PM"
+			      )
+			    & ")"
+			```
+		lineageTag: 802f85dd-5018-4a9d-979f-fbe0dfb06123
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'bcts_reporting roads_planned_deactivation' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("existence.bcgov:5435", "odsprd"),
+				    bcts_reporting_roads_planned_deactivation = Source{[Schema="bcts_reporting",Item="roads_planned_deactivation"]}[Data],
+				    #"Renamed Columns" = Table.RenameColumns(bcts_reporting_roads_planned_deactivation,{{"rcls_accounting_type", "RLS Accounting Type"}, {"deac_method_type", "Deactivation Method Type"}})
+				in
+				    #"Renamed Columns"
+

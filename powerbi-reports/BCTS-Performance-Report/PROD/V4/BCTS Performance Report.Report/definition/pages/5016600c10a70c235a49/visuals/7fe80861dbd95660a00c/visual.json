@@ -1,0 +1,1336 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "7fe80861dbd95660a00c",
+  "position": {
+    "x": 13.333333333333332,
+    "y": 140,
+    "z": 5000,
+    "height": 568.88888888888891,
+    "width": 1247.7777777777778,
+    "tabOrder": 5000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "business_area_region_category"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_advertised_main.business_area_region_category",
+              "nativeQueryRef": "business_area_region_category"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "business_area_region"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_advertised_main.business_area_region",
+              "nativeQueryRef": "business_area_region"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "business_area"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_advertised_main.business_area",
+              "nativeQueryRef": "business_area"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "district"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_advertised_main.district",
+              "nativeQueryRef": "district"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "category_a_and_1_issued_volume"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting licence_issued_advertised_main.category_a_and_1_issued_volume)",
+              "nativeQueryRef": "category_a_and_1_issued_volume",
+              "format": "#,0"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "category_2_and_4_issued_volume"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting licence_issued_advertised_main.category_2_and_4_issued_volume)",
+              "nativeQueryRef": "category_2_and_4_issued_volume",
+              "format": "0"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "advertised_in_report_period"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_advertised_main.advertised_in_report_period",
+              "nativeQueryRef": "advertised_in_report_period"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "auction_count_all_time_to_report_period_end"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting licence_issued_advertised_main.auction_count_all_time_to_report_period_end)",
+              "nativeQueryRef": "auction_count_all_time_to_report_period_end"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "first_auction_category_2_and_4_volume"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting licence_issued_advertised_main.first_auction_category_2_and_4_volume)",
+              "nativeQueryRef": "first_auction_category_2_and_4_volume",
+              "format": "#,0"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "first_auction_category_2_and_4_volume_is_in_report_period"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting licence_issued_advertised_main.first_auction_category_2_and_4_volume_is_in_report_period)",
+              "nativeQueryRef": "first_auction_category_2_and_4_volume_is_in_report_period",
+              "format": "#,0"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "first_auction_category_a_and_1_volume"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting licence_issued_advertised_main.first_auction_category_a_and_1_volume)",
+              "nativeQueryRef": "first_auction_category_a_and_1_volume",
+              "format": "#,0"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "first_auction_date"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_advertised_main.first_auction_date",
+              "nativeQueryRef": "first_auction_date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "first_auction_fiscal"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_advertised_main.first_auction_fiscal",
+              "nativeQueryRef": "first_auction_fiscal"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "first_auction_quarter"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_advertised_main.first_auction_quarter",
+              "nativeQueryRef": "first_auction_quarter"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "first_auction_volume"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting licence_issued_advertised_main.first_auction_volume)",
+              "nativeQueryRef": "first_auction_volume",
+              "format": "#,0"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "first_auction_volume_is_in_report_period"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting licence_issued_advertised_main.first_auction_volume_is_in_report_period)",
+              "nativeQueryRef": "first_auction_volume_is_in_report_period"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "first_bcts_category_code"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_advertised_main.first_bcts_category_code",
+              "nativeQueryRef": "first_bcts_category_code"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "Fiscal Period Info"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_advertised_main.Fiscal Period Info",
+              "nativeQueryRef": "Fiscal Period Info"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "fiscal_year"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting licence_issued_advertised_main.fiscal_year)",
+              "nativeQueryRef": "fiscal_year"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "fta_file_status"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_advertised_main.fta_file_status",
+              "nativeQueryRef": "fta_file_status"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "fta_file_status_date"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_advertised_main.fta_file_status_date",
+              "nativeQueryRef": "fta_file_status_date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "include_in_semi_monthly_report"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_advertised_main.include_in_semi_monthly_report",
+              "nativeQueryRef": "include_in_semi_monthly_report"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "issued_in_report_period"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_advertised_main.issued_in_report_period",
+              "nativeQueryRef": "issued_in_report_period"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "issued_in_report_period_cat_2_4"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_advertised_main.issued_in_report_period_cat_2_4",
+              "nativeQueryRef": "issued_in_report_period_cat_2_4"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "issued_in_report_period_cat_a"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_advertised_main.issued_in_report_period_cat_a",
+              "nativeQueryRef": "issued_in_report_period_cat_a"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "issued_licence_bcts_category_code"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_advertised_main.issued_licence_bcts_category_code",
+              "nativeQueryRef": "issued_licence_bcts_category_code"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "issued_licence_client_name"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_advertised_main.issued_licence_client_name",
+              "nativeQueryRef": "issued_licence_client_name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "issued_licence_client_number"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_advertised_main.issued_licence_client_number",
+              "nativeQueryRef": "issued_licence_client_number"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "issued_licence_legal_effective_date"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_advertised_main.issued_licence_legal_effective_date",
+              "nativeQueryRef": "issued_licence_legal_effective_date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "issued_licence_legal_effective_fiscal"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_advertised_main.issued_licence_legal_effective_fiscal",
+              "nativeQueryRef": "issued_licence_legal_effective_fiscal"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "issued_licence_legal_effective_quarter"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_advertised_main.issued_licence_legal_effective_quarter",
+              "nativeQueryRef": "issued_licence_legal_effective_quarter"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "issued_licence_maximum_value"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting licence_issued_advertised_main.issued_licence_maximum_value)",
+              "nativeQueryRef": "issued_licence_maximum_value"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "issued_licence_maximum_value_cat_2_4"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting licence_issued_advertised_main.issued_licence_maximum_value_cat_2_4)",
+              "nativeQueryRef": "issued_licence_maximum_value_cat_2_4"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "issued_licence_maximum_value_cat_a"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting licence_issued_advertised_main.issued_licence_maximum_value_cat_a)",
+              "nativeQueryRef": "issued_licence_maximum_value_cat_a"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "issued_licence_volume"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting licence_issued_advertised_main.issued_licence_volume)",
+              "nativeQueryRef": "issued_licence_volume",
+              "format": "#,0"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "last_auction_bcts_category_code"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_advertised_main.last_auction_bcts_category_code",
+              "nativeQueryRef": "last_auction_bcts_category_code"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "last_auction_category_2_and_4_volume"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting licence_issued_advertised_main.last_auction_category_2_and_4_volume)",
+              "nativeQueryRef": "last_auction_category_2_and_4_volume",
+              "format": "#,0"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "last_auction_category_a_and_1_volume"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting licence_issued_advertised_main.last_auction_category_a_and_1_volume)",
+              "nativeQueryRef": "last_auction_category_a_and_1_volume",
+              "format": "#,0"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "last_auction_date"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_advertised_main.last_auction_date",
+              "nativeQueryRef": "last_auction_date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "last_auction_fiscal"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_advertised_main.last_auction_fiscal",
+              "nativeQueryRef": "last_auction_fiscal"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "last_auction_no_sale"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_advertised_main.last_auction_no_sale",
+              "nativeQueryRef": "last_auction_no_sale"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "last_auction_no_sale_cat_2_4"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_advertised_main.last_auction_no_sale_cat_2_4",
+              "nativeQueryRef": "last_auction_no_sale_cat_2_4"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "last_auction_no_sale_cat_a"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_advertised_main.last_auction_no_sale_cat_a",
+              "nativeQueryRef": "last_auction_no_sale_cat_a"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "last_auction_no_sale_category_2_4_volume"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting licence_issued_advertised_main.last_auction_no_sale_category_2_4_volume)",
+              "nativeQueryRef": "last_auction_no_sale_category_2_4_volume",
+              "format": "#,0"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "last_auction_no_sale_category_a_1_volume"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting licence_issued_advertised_main.last_auction_no_sale_category_a_1_volume)",
+              "nativeQueryRef": "last_auction_no_sale_category_a_1_volume",
+              "format": "#,0"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "last_auction_no_sale_rationale"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_advertised_main.last_auction_no_sale_rationale",
+              "nativeQueryRef": "last_auction_no_sale_rationale"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "last_auction_no_sale_volume"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting licence_issued_advertised_main.last_auction_no_sale_volume)",
+              "nativeQueryRef": "last_auction_no_sale_volume",
+              "format": "#,0"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "last_auction_quarter"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_advertised_main.last_auction_quarter",
+              "nativeQueryRef": "last_auction_quarter"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "last_auction_volume"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting licence_issued_advertised_main.last_auction_volume)",
+              "nativeQueryRef": "last_auction_volume",
+              "format": "#,0"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "licence"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_advertised_main.licence",
+              "nativeQueryRef": "licence"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "management_unit"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_advertised_main.management_unit",
+              "nativeQueryRef": "management_unit"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "original_cat_2_and_4_readvertised_cat_a_and_1_volume"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting licence_issued_advertised_main.original_cat_2_and_4_readvertised_cat_a_and_1_volume)",
+              "nativeQueryRef": "original_cat_2_and_4_readvertised_cat_a_and_1_volume",
+              "format": "#,0"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "report_end_date"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_advertised_main.report_end_date",
+              "nativeQueryRef": "report_end_date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "report_run_date"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_advertised_main.report_run_date",
+              "nativeQueryRef": "report_run_date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "report_start_date"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_advertised_main.report_start_date",
+              "nativeQueryRef": "report_start_date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "total_volume_salvage_all_fire_year_lrm"
+                }
+              },
+              "queryRef": "Sum(bcts_reporting licence_issued_advertised_main.total_volume_salvage_all_fire_year_lrm)",
+              "nativeQueryRef": "total_volume_salvage_all_fire_year_lrm",
+              "format": "#,0"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "x_axis_date"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_advertised_main.x_axis_date",
+              "nativeQueryRef": "x_axis_date"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "x_axis_fiscal"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_advertised_main.x_axis_fiscal",
+              "nativeQueryRef": "x_axis_fiscal"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting licence_issued_advertised_main"
+                    }
+                  },
+                  "Property": "x_axis_quarter"
+                }
+              },
+              "queryRef": "bcts_reporting licence_issued_advertised_main.x_axis_quarter",
+              "nativeQueryRef": "x_axis_quarter"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "grid": [
+        {
+          "properties": {
+            "outlineStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
+            },
+            "outlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#013366'"
+                    }
+                  }
+                }
+              }
+            },
+            "outlineWeight": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "gridVerticalColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#013366'"
+                    }
+                  }
+                }
+              }
+            },
+            "gridHorizontal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "gridHorizontalColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#013366'"
+                    }
+                  }
+                }
+              }
+            },
+            "gridHorizontalWeight": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "rowPadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "outlineStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
+            },
+            "outlineWeight": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Left'"
+                }
+              }
+            },
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "96.39352147178232D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(bcts_reporting bcts_performance_report_ytd_all.Q1 Licence Issued Target)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "83.19047619047619D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(bcts_reporting bcts_performance_report_ytd_all.Auctioned)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "100.9600629162673D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(bcts_reporting bcts_performance_report_ytd_all.Currently in Market)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "86.84287551369846D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(bcts_reporting bcts_performance_report_ytd_all.Licence Issued)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "78.1269644405998D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(bcts_reporting bcts_performance_report_ytd_all.Not Awarded)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "134.05820105820106D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(bcts_reporting bcts_performance_report_ytd_all.Q1 Licence Issued Target: Value Added)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "107.28382696699529D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(bcts_reporting bcts_performance_report_ytd_all.Auctioned: Value Added)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "127.35423197492163D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(bcts_reporting bcts_performance_report_ytd_all.Currently in Market: Value Added)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "100.06472592733067D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(bcts_reporting bcts_performance_report_ytd_all.Licence Issued: Value Added)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "99.57021328535873D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(bcts_reporting bcts_performance_report_ytd_all.Not Awarded: Value Added)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "212D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "bcts_reporting bcts_performance_report_ytd_all.business_area_region_category Hierarchy.business_area_region_category"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.3
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            },
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
+                }
+              }
+            },
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
+                }
+              }
+            },
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Default'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

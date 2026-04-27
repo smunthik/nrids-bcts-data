@@ -1,0 +1,21 @@
+model Model
+	culture: en-CA
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-CA
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["bcts_reporting write_off_forms","bcts_reporting write_off_forms_v2"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table 'bcts_reporting write_off_forms'
+ref table 'bcts_reporting write_off_forms_v2'
+ref table DateTableTemplate_96eb93c3-4fe3-4dba-97e3-854c045966b1
+ref table LocalDateTable_175b459b-03b6-4b58-90d2-287a147ef06f
+
+ref cultureInfo en-CA
+

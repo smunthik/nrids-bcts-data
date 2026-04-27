@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "name": "3854ce72b0802be03b15",
+  "position": {
+    "x": 13,
+    "y": 104,
+    "z": 3000,
+    "height": 421,
+    "width": 1194,
+    "tabOrder": 17001
+  },
+  "visualGroup": {
+    "displayName": "ytd_layered_charts_group",
+    "groupMode": "ScaleMode"
+  },
+  "parentGroupName": "e7a7f013314db980190d"
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "name": "b969b443a9baa2d610b2",
+  "position": {
+    "x": 20,
+    "y": 837,
+    "z": 4000,
+    "height": 275,
+    "width": 880.08653846232721,
+    "tabOrder": 7000
+  },
+  "visualGroup": {
+    "displayName": "current_prev_ytd_south_interior_charts",
+    "groupMode": "ScaleMode"
+  },
+  "parentGroupName": "5eefcbbd9631dde914cd"
+}

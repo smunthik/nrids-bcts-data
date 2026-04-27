@@ -1,0 +1,258 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "name": "760049220604c0b68991",
+  "position": {
+    "x": 873,
+    "y": 102,
+    "z": 0,
+    "height": 142,
+    "width": 387,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting bcts_performance_report_current_prev_ytd_issued_lic_volume"
+                    }
+                  },
+                  "Property": "Total Current YTD Licence Issued"
+                }
+              },
+              "queryRef": "bcts_reporting bcts_performance_report_current_prev_ytd_issued_lic_volume.Total Current YTD Licence Issued",
+              "nativeQueryRef": "Total Current YTD Licence Issued"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting bcts_performance_report_current_prev_ytd_issued_lic_volume"
+                    }
+                  },
+                  "Property": "Total Current YTD Licence Issued: Value Added"
+                }
+              },
+              "queryRef": "bcts_reporting bcts_performance_report_current_prev_ytd_issued_lic_volume.Total Current YTD Licence Issued: Value Added",
+              "nativeQueryRef": "Total Current YTD Licence Issued: Value Added"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting bcts_performance_report_current_prev_ytd_issued_lic_volume"
+                    }
+                  },
+                  "Property": "Total Previous YTD Licence Issued"
+                }
+              },
+              "queryRef": "bcts_reporting bcts_performance_report_current_prev_ytd_issued_lic_volume.Total Previous YTD Licence Issued",
+              "nativeQueryRef": "Total Previous YTD Licence Issued"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting bcts_performance_report_current_prev_ytd_issued_lic_volume"
+                    }
+                  },
+                  "Property": "Total Previous YTD Licence Issued: Value Added"
+                }
+              },
+              "queryRef": "bcts_reporting bcts_performance_report_current_prev_ytd_issued_lic_volume.Total Previous YTD Licence Issued: Value Added",
+              "nativeQueryRef": "Total Previous YTD Licence Issued: Value Added"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "valuesOnRow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "outlineStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "7D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTotals": [
+        {
+          "properties": {
+            "columnSubtotals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "rowSubtotals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "gridHorizontal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "gridHorizontalColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#013366'"
+                    }
+                  }
+                }
+              }
+            },
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "gridVerticalColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#013366'"
+                    }
+                  }
+                }
+              }
+            },
+            "outlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#013366'"
+                    }
+                  }
+                }
+              }
+            },
+            "outlineStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "outlineStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "rowHeaders": [
+        {
+          "properties": {
+            "outlineStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'current_prev_ytd_provincewide_table'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "5eefcbbd9631dde914cd",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "e7fabec09c0d511c967c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "bcts_reporting bcts_performance_report_current_prev_ytd_issued_lic_volume"
+              }
+            },
+            "Property": "business_area_region"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User",
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

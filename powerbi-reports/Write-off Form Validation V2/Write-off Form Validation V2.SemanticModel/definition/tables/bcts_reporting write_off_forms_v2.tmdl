@@ -1,0 +1,70 @@
+table 'bcts_reporting write_off_forms_v2'
+	lineageTag: 67eea4f7-825e-4552-bf9e-2a9848760284
+
+	column field_name
+		dataType: string
+		lineageTag: 6d803f93-40e2-4edd-889b-0a15dd68c3b3
+		summarizeBy: none
+		sourceColumn: field_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column expected_value
+		dataType: string
+		lineageTag: c5acb20e-bfc5-41d5-8288-c354eb1507b0
+		summarizeBy: none
+		sourceColumn: expected_value
+
+		annotation SummarizationSetBy = Automatic
+
+	column filled_value
+		dataType: string
+		lineageTag: d175aa35-b860-4b62-b4e8-d9ff03f3a0f8
+		summarizeBy: none
+		sourceColumn: filled_value
+
+		annotation SummarizationSetBy = Automatic
+
+	column match
+		dataType: string
+		lineageTag: 1344e88d-e854-4f9f-baae-fafc1c8ad0f2
+		summarizeBy: none
+		sourceColumn: match
+
+		annotation SummarizationSetBy = Automatic
+
+	column form
+		dataType: string
+		lineageTag: 5602f4eb-418a-4d82-a40c-f0e9f6ef1c88
+		summarizeBy: none
+		sourceColumn: form
+
+		annotation SummarizationSetBy = Automatic
+
+	column validated_date
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: 31e2804f-9742-4993-bc9b-cb590e19da7f
+		summarizeBy: none
+		sourceColumn: validated_date
+
+		variation Variation
+			isDefault
+			relationship: 028fa8f5-6be2-4215-b9d6-c49c86aa62c1
+			defaultHierarchy: LocalDateTable_175b459b-03b6-4b58-90d2-287a147ef06f.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	partition 'bcts_reporting write_off_forms_v2' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("existence.bcgov:5435", "odsprd"),
+				    bcts_reporting_write_off_forms_v2 = Source{[Schema="bcts_reporting",Item="write_off_forms_v2"]}[Data]
+				in
+				    bcts_reporting_write_off_forms_v2
+

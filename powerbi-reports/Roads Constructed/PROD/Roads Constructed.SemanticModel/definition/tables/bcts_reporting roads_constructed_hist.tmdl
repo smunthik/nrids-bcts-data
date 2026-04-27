@@ -197,6 +197,14 @@ table 'bcts_reporting roads_constructed_hist'
 
 		annotation SummarizationSetBy = Automatic
 
+	column field_team_desc
+		dataType: string
+		lineageTag: cb419d42-8c4d-4de0-87db-d15ec95eece5
+		summarizeBy: none
+		sourceColumn: field_team_desc
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 'bcts_reporting roads_constructed_hist' = m
 		mode: import
 		source =

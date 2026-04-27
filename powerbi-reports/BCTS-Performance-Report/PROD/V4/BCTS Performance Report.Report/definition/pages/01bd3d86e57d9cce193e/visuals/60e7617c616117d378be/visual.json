@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "name": "60e7617c616117d378be",
+  "position": {
+    "x": 0,
+    "y": 4072,
+    "z": 6000,
+    "height": 848,
+    "width": 1280,
+    "tabOrder": 17006
+  },
+  "visualGroup": {
+    "displayName": "Volume and FTE Trends",
+    "groupMode": "ScaleMode"
+  }
+}

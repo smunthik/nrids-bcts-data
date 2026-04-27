@@ -1,0 +1,8 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "f2e63aeeae9f3a3cf63b",
+  "displayName": "Roads Deactivated - by Accounting Type",
+  "displayOption": "FitToPage",
+  "height": 800,
+  "width": 1280
+}

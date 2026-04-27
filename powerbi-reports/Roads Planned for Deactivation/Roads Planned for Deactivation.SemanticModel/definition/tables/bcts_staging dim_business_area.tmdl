@@ -1,0 +1,76 @@
+table 'bcts_staging dim_business_area'
+	lineageTag: fef678bd-f80b-4e97-8c28-d0935f8485db
+
+	column business_area_region_category
+		dataType: string
+		lineageTag: 519bc585-6655-460b-8a4b-e912de45245b
+		summarizeBy: none
+		sourceColumn: business_area_region_category
+		sortByColumn: business_area_region_cat_sort_order
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Business Area Region'
+		dataType: string
+		lineageTag: 884fb83b-a419-41ac-9d87-50ab36dbfc62
+		summarizeBy: none
+		sourceColumn: Business Area Region
+		sortByColumn: business_area_region_sort_order
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Business Area'
+		dataType: string
+		lineageTag: addb631d-df8a-4963-b0f0-8b5650ae1718
+		summarizeBy: none
+		sourceColumn: Business Area
+
+		annotation SummarizationSetBy = Automatic
+
+	column business_area_region_sort_order
+		dataType: int64
+		formatString: 0
+		lineageTag: ec67b683-581e-408e-969f-819e34b73fd0
+		summarizeBy: none
+		sourceColumn: business_area_region_sort_order
+
+		annotation SummarizationSetBy = Automatic
+
+	column business_area_region_cat_sort_order
+		dataType: int64
+		formatString: 0
+		lineageTag: d2e9cb59-951a-49d3-9eaa-dab19cb7e49b
+		summarizeBy: none
+		sourceColumn: business_area_region_cat_sort_order
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'business_area_region_category Hierarchy'
+		lineageTag: c40c174b-e8d3-4c0c-b64e-d8e0b64fb09b
+
+		level business_area_region_category
+			lineageTag: 3b6ffc6b-02b7-4226-a098-e35327f6e9db
+			column: business_area_region_category
+
+		level 'Business Area Region'
+			lineageTag: 6910df8e-09bd-435d-a62d-4f0768171028
+			column: 'Business Area Region'
+
+		level 'Business Area'
+			lineageTag: 3903a460-2d43-471b-b665-963758ab812f
+			column: 'Business Area'
+
+	partition 'bcts_staging dim_business_area' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("existence.bcgov:5435", "odsprd"),
+				    bcts_staging_dim_business_area = Source{[Schema="bcts_staging",Item="dim_business_area"]}[Data],
+				    #"Renamed Columns" = Table.RenameColumns(bcts_staging_dim_business_area,{{"business_area", "Business Area"}, {"business_area_region", "Business Area Region"}})
+				in
+				    #"Renamed Columns"
+

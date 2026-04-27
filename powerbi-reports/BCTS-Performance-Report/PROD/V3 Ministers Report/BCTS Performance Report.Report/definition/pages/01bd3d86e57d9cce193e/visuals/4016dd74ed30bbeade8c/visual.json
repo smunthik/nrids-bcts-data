@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "name": "4016dd74ed30bbeade8c",
+  "position": {
+    "x": 0,
+    "y": 0,
+    "z": 16000,
+    "height": 274.003623188406,
+    "width": 859.09245838117113,
+    "tabOrder": 17001
+  },
+  "visualGroup": {
+    "displayName": "current_prev_ytd_provincewide_chart",
+    "groupMode": "ScaleMode"
+  },
+  "parentGroupName": "5eefcbbd9631dde914cd"
+}
