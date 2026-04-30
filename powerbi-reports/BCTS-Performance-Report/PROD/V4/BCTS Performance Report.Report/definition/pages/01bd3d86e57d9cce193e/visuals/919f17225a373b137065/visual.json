@@ -173,7 +173,7 @@
                     "Entity": "bcts_reporting bcts_performance_report_licence_issued_details"
                   }
                 },
-                "Property": "Max Value"
+                "Property": "Business Area Region"
               }
             },
             "direction": "Ascending"

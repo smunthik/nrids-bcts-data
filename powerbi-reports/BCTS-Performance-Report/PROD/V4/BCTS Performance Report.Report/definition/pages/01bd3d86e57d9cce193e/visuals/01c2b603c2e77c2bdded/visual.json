@@ -295,18 +295,18 @@
         "sort": [
           {
             "field": {
-              "Aggregation": {
+              "HierarchyLevel": {
                 "Expression": {
-                  "Column": {
+                  "Hierarchy": {
                     "Expression": {
                       "SourceRef": {
                         "Entity": "bcts_reporting bcts_performance_report_ytd_all"
                       }
                     },
-                    "Property": "Currently in Market"
+                    "Hierarchy": "business_area_region_category Hierarchy"
                   }
                 },
-                "Function": 0
+                "Level": "business_area_region"
               }
             },
             "direction": "Ascending"

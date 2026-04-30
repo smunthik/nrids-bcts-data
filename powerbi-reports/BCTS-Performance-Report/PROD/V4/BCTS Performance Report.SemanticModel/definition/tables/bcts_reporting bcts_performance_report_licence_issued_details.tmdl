@@ -44,7 +44,7 @@ table 'bcts_reporting bcts_performance_report_licence_issued_details'
 
 	column issued
 		dataType: dateTime
-		formatString: Short Date
+		formatString: yyyy-mm-dd
 		lineageTag: bce74a2c-4dc0-4e6e-94d9-4c09b6648db6
 		summarizeBy: none
 		sourceColumn: issued
@@ -57,6 +57,8 @@ table 'bcts_reporting bcts_performance_report_licence_issued_details'
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
 
 	column 'Volume (cubic metres)'
 		dataType: string

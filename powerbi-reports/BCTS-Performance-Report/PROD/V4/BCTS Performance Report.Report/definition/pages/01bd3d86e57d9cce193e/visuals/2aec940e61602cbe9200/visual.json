@@ -6,7 +6,8 @@
     "y": 64,
     "z": 1000,
     "height": 576,
-    "width": 1240
+    "width": 1240,
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "tableEx",
@@ -59,10 +60,10 @@
                     "Entity": "bcts_reporting bcts_performance_report_definitions"
                   }
                 },
-                "Property": "definition"
+                "Property": "term"
               }
             },
-            "direction": "Descending"
+            "direction": "Ascending"
           }
         ]
       }

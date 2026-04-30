@@ -6,7 +6,6 @@ table 'bcts_reporting bcts_performance_report_definitions'
 		lineageTag: 94885ca5-d22a-441c-a3f6-5991b1d755b8
 		summarizeBy: none
 		sourceColumn: term
-		sortByColumn: id
 
 		changedProperty = SortByColumn
 

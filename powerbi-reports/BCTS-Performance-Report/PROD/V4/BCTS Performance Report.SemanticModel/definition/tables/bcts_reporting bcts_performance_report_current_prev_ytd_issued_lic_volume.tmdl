@@ -2,24 +2,28 @@ table 'bcts_reporting bcts_performance_report_current_prev_ytd_issued_lic_volume
 	lineageTag: f021f7d2-7107-440d-bb6c-5a368df6d012
 
 	measure 'Total Current YTD Licence Issued' = SUM('bcts_reporting bcts_performance_report_current_prev_ytd_issued_lic_volume'[Current YTD Licence Issued])
+		formatString: #,0
 		lineageTag: fbffd27e-e4dc-4d60-965f-f13fde4ef4a3
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"isDecimal":true}
 
 	measure 'Total Previous YTD Licence Issued' = SUM('bcts_reporting bcts_performance_report_current_prev_ytd_issued_lic_volume'[Previous YTD Licence Issued])
+		formatString: #,0
 		lineageTag: fe5eae37-f6e1-41cb-b216-e96b3e8c0f13
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"isDecimal":true}
 
 	measure 'Total Current YTD Licence Issued: Value Added' = SUM('bcts_reporting bcts_performance_report_current_prev_ytd_issued_lic_volume'[Current YTD Licence Issued: Value Added])
+		formatString: #,0
 		lineageTag: 773c52ee-6634-4a8a-bbfa-2df8d9ceff38
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"isDecimal":true}
 
 	measure 'Total Previous YTD Licence Issued: Value Added' = SUM('bcts_reporting bcts_performance_report_current_prev_ytd_issued_lic_volume'[Previous YTD Licence Issued: Value Added])
+		formatString: #,0
 		lineageTag: 9c10ac6a-a29f-4bb0-bc64-8ff78fd25acc
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"isDecimal":true}
 
 	column business_area_region_category
 		dataType: string

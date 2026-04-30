@@ -117,33 +117,30 @@ table 'bcts_reporting licence_issued_ra_apportionment'
 
 	column licence_issued
 		dataType: double
+		formatString: 0.0
 		lineageTag: 6b8123e1-ecc1-4030-8ee7-dbdbdabfe5de
 		summarizeBy: sum
 		sourceColumn: licence_issued
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column ra
 		dataType: double
+		formatString: 0.0
 		lineageTag: a82ba56e-26ee-429d-ad31-59596f690b68
 		summarizeBy: sum
 		sourceColumn: ra
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column full_apportionment
 		dataType: double
+		formatString: 0.0
 		lineageTag: 0b4005e2-1c6a-4633-9e8d-07c8d2dbae4c
 		summarizeBy: sum
 		sourceColumn: full_apportionment
 
 		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column actual_fte_count
 		dataType: double
@@ -158,23 +155,21 @@ table 'bcts_reporting licence_issued_ra_apportionment'
 
 	column annual_developed_volume
 		dataType: double
+		formatString: 0.0
 		lineageTag: 2c7a82ed-2757-4904-a59e-45de6ba9098c
 		summarizeBy: sum
 		sourceColumn: annual_developed_volume
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column volume_harvested
 		dataType: double
+		formatString: 0.0
 		lineageTag: 5e2d84e5-1dd6-4949-b0f3-693048768c0d
 		summarizeBy: sum
 		sourceColumn: volume_harvested
 
 		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column 'FY Start Year' = ```
 			

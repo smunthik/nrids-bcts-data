@@ -11,23 +11,25 @@ table 'bcts_reporting bcts_volume_summary_chart_2'
 
 	column Total
 		dataType: double
+		formatString: #,0
 		lineageTag: 28585fdd-5d92-4453-b8c5-a6aa7d972a93
 		summarizeBy: sum
 		sourceColumn: Total
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"isDecimal":true}
 
 	column 'Value Added'
 		dataType: double
+		formatString: #,0
 		lineageTag: 606fe80f-2f0f-4103-8ef7-4594ba206272
 		summarizeBy: sum
 		sourceColumn: Value Added
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"isDecimal":true}
 
 	partition 'bcts_reporting bcts_volume_summary_chart_2' = m
 		mode: import

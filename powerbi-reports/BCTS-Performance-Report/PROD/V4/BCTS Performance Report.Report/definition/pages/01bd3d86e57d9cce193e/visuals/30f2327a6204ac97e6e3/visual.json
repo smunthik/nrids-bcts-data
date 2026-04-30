@@ -7,7 +7,7 @@
     "z": 1000,
     "height": 520,
     "width": 1232,
-    "tabOrder": 17002
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "lineClusteredColumnComboChart",
@@ -258,7 +258,7 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 0,
-                      "Percent": -0.3
+                      "Percent": -0.5
                     }
                   }
                 }
@@ -482,6 +482,24 @@
           },
           "selector": {
             "metadata": "Sum(bcts_reporting licence_issued_ra_apportionment.volume_harvested)"
+          }
+        },
+        {
+          "properties": {
+            "strokeWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
+                }
+              }
+            },
+            "areaShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
           }
         }
       ],

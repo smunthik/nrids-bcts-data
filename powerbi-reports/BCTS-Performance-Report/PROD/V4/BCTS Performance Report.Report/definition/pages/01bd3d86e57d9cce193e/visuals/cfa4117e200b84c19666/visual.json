@@ -6,7 +6,8 @@
     "y": 4958,
     "z": 0,
     "height": 792,
-    "width": 1280
+    "width": 1280,
+    "tabOrder": 5000
   },
   "visualGroup": {
     "displayName": "Footer",
