@@ -2,10 +2,10 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "01c2b603c2e77c2bdded",
   "position": {
-    "x": 20,
-    "y": 537.20930232558146,
+    "x": 24,
+    "y": 536,
     "z": 1000,
-    "height": 500,
+    "height": 520,
     "width": 1240,
     "tabOrder": 0
   },
@@ -372,7 +372,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#013366'"
+                      "Value": "'#252423'"
                     }
                   }
                 }
@@ -395,7 +395,7 @@
             "gridVertical": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -418,7 +418,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#013366'"
+                      "Value": "'#252423'"
                     }
                   }
                 }
@@ -429,7 +429,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#013366'"
+                      "Value": "'#252423'"
                     }
                   }
                 }
@@ -465,6 +465,25 @@
               "expr": {
                 "Literal": {
                   "Value": "10D"
+                }
+              }
+            },
+            "backColorSecondary": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "outlineStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "6D"
                 }
               }
             }
@@ -542,6 +561,13 @@
                   "Value": "15D"
                 }
               }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
           }
         }
@@ -573,7 +599,18 @@
             "outlineStyle": {
               "expr": {
                 "Literal": {
-                  "Value": "15D"
+                  "Value": "14D"
+                }
+              }
+            },
+            "outlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#252423'"
+                    }
+                  }
                 }
               }
             }

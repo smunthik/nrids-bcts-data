@@ -1,0 +1,387 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "name": "26073cb5c8788e57b4e9",
+  "position": {
+    "x": 0,
+    "y": 304,
+    "z": 11002,
+    "height": 400,
+    "width": 1232,
+    "tabOrder": 11002
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting vw_stumpage_rate_main"
+                    }
+                  },
+                  "Property": "business_area_region_category"
+                }
+              },
+              "queryRef": "bcts_reporting vw_stumpage_rate_main.business_area_region_category",
+              "nativeQueryRef": "business_area_region_category"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting vw_stumpage_rate_main"
+                    }
+                  },
+                  "Property": "business_area_region"
+                }
+              },
+              "queryRef": "bcts_reporting vw_stumpage_rate_main.business_area_region",
+              "nativeQueryRef": "business_area_region"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting vw_stumpage_rate_main"
+                    }
+                  },
+                  "Property": "business_area"
+                }
+              },
+              "queryRef": "bcts_reporting vw_stumpage_rate_main.business_area",
+              "nativeQueryRef": "business_area"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting vw_stumpage_rate_main"
+                    }
+                  },
+                  "Property": "business_area_code"
+                }
+              },
+              "queryRef": "bcts_reporting vw_stumpage_rate_main.business_area_code",
+              "nativeQueryRef": "business_area_code"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "bcts_reporting vw_stumpage_rate_main"
+                        }
+                      },
+                      "Property": "acti_mps70"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(bcts_reporting vw_stumpage_rate_main.acti_mps70)",
+              "nativeQueryRef": "Sum of acti_mps70"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "bcts_reporting vw_stumpage_rate_main"
+                        }
+                      },
+                      "Property": "acti_total_cost_upset"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(bcts_reporting vw_stumpage_rate_main.acti_total_cost_upset)",
+              "nativeQueryRef": "Sum of acti_total_cost_upset"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "bcts_reporting vw_stumpage_rate_main"
+                        }
+                      },
+                      "Property": "acti_variable_cost_upset"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(bcts_reporting vw_stumpage_rate_main.acti_variable_cost_upset)",
+              "nativeQueryRef": "Sum of acti_variable_cost_upset"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting vw_stumpage_rate_main"
+                    }
+                  },
+                  "Property": "auction_date"
+                }
+              },
+              "queryRef": "bcts_reporting vw_stumpage_rate_main.auction_date",
+              "nativeQueryRef": "auction_date"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "bcts_reporting vw_stumpage_rate_main"
+                        }
+                      },
+                      "Property": "bonus_bid"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(bcts_reporting vw_stumpage_rate_main.bonus_bid)",
+              "nativeQueryRef": "Sum of bonus_bid"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting vw_stumpage_rate_main"
+                    }
+                  },
+                  "Property": "bcts_category_code"
+                }
+              },
+              "queryRef": "bcts_reporting vw_stumpage_rate_main.bcts_category_code",
+              "nativeQueryRef": "bcts_category_code"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "bcts_reporting vw_stumpage_rate_main"
+                        }
+                      },
+                      "Property": "bonus_offer"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(bcts_reporting vw_stumpage_rate_main.bonus_offer)",
+              "nativeQueryRef": "Sum of bonus_offer"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "bcts_reporting vw_stumpage_rate_main"
+                        }
+                      },
+                      "Property": "client_count"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(bcts_reporting vw_stumpage_rate_main.client_count)",
+              "nativeQueryRef": "Sum of client_count"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting vw_stumpage_rate_main"
+                    }
+                  },
+                  "Property": "file_status_st"
+                }
+              },
+              "queryRef": "bcts_reporting vw_stumpage_rate_main.file_status_st",
+              "nativeQueryRef": "file_status_st"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting vw_stumpage_rate_main"
+                    }
+                  },
+                  "Property": "forest_file_id"
+                }
+              },
+              "queryRef": "bcts_reporting vw_stumpage_rate_main.forest_file_id",
+              "nativeQueryRef": "forest_file_id"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting vw_stumpage_rate_main"
+                    }
+                  },
+                  "Property": "legal_effective_dt"
+                }
+              },
+              "queryRef": "bcts_reporting vw_stumpage_rate_main.legal_effective_dt",
+              "nativeQueryRef": "legal_effective_dt"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting vw_stumpage_rate_main"
+                    }
+                  },
+                  "Property": "licence_id"
+                }
+              },
+              "queryRef": "bcts_reporting vw_stumpage_rate_main.licence_id",
+              "nativeQueryRef": "licence_id"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "bcts_reporting vw_stumpage_rate_main"
+                        }
+                      },
+                      "Property": "sale_volume"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(bcts_reporting vw_stumpage_rate_main.sale_volume)",
+              "nativeQueryRef": "Sum of sale_volume"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "bcts_reporting vw_stumpage_rate_main"
+                        }
+                      },
+                      "Property": "total_stumpage_m3"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(bcts_reporting vw_stumpage_rate_main.total_stumpage_m3)",
+              "nativeQueryRef": "Sum of total_stumpage_m3"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "bcts_reporting vw_stumpage_rate_main"
+                        }
+                      },
+                      "Property": "total_stumpage_value"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(bcts_reporting vw_stumpage_rate_main.total_stumpage_value)",
+              "nativeQueryRef": "Sum of total_stumpage_value"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "bcts_reporting vw_stumpage_rate_main"
+                        }
+                      },
+                      "Property": "total_upset_value"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(bcts_reporting vw_stumpage_rate_main.total_upset_value)",
+              "nativeQueryRef": "Sum of total_upset_value"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bcts_reporting vw_stumpage_rate_main"
+                    }
+                  },
+                  "Property": "tso_name"
+                }
+              },
+              "queryRef": "bcts_reporting vw_stumpage_rate_main.tso_name",
+              "nativeQueryRef": "tso_name"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "bcts_reporting vw_stumpage_rate_main"
+                        }
+                      },
+                      "Property": "upset_rate"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(bcts_reporting vw_stumpage_rate_main.upset_rate)",
+              "nativeQueryRef": "Sum of upset_rate"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

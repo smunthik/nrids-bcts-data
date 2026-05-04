@@ -80,6 +80,18 @@
                   "Value": "false"
                 }
               }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -99,7 +111,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#055808'"
+                      "Value": "'#023C04'"
                     }
                   }
                 }

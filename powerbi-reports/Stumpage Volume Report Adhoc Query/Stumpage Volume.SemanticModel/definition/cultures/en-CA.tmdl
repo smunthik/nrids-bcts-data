@@ -1,0 +1,18 @@
+cultureInfo en-CA
+
+	linguisticMetadata =
+			{
+			  "Version": "1.0.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "bcts_reporting_timber_inventory_ready_to_develop.inventory_category": {
+			      "Binding": {
+			        "ConceptualEntity": "bcts_reporting timber_inventory_ready_to_develop",
+			        "ConceptualProperty": "inventory_category"
+			      },
+			      "State": "Generated"
+			    }
+			  }
+			}
+		contentType: json
+

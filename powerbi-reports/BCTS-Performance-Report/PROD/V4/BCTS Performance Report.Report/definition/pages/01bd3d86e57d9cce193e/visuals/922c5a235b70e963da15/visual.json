@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "922c5a235b70e963da15",
   "position": {
-    "x": 20,
+    "x": 24,
     "y": 648,
     "z": 2000,
     "height": 200,
-    "width": 1224,
+    "width": 1232,
     "tabOrder": 1000
   },
   "visual": {
@@ -191,7 +191,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#013366'"
+                      "Value": "'#252423'"
                     }
                   }
                 }
@@ -200,7 +200,7 @@
             "gridVertical": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -209,7 +209,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#013366'"
+                      "Value": "'#252423'"
                     }
                   }
                 }
@@ -227,7 +227,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#013366'"
+                      "Value": "'#252423'"
                     }
                   }
                 }
@@ -292,6 +292,18 @@
                   "Value": "true"
                 }
               }
+            },
+            "backColorSecondary": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -339,7 +351,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "88D"
+                  "Value": "57D"
                 }
               }
             }
@@ -376,7 +388,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "60D"
+                  "Value": "54D"
                 }
               }
             }
@@ -400,6 +412,191 @@
                     "Right": {
                       "Literal": {
                         "Value": "'27/28'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "53D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "bcts_reporting licence_issued_ra_apportionment"
+                          }
+                        },
+                        "Property": "fiscal_year"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'26/27'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "58D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "bcts_reporting licence_issued_ra_apportionment"
+                          }
+                        },
+                        "Property": "fiscal_year"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'25/26'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "57D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "bcts_reporting licence_issued_ra_apportionment"
+                          }
+                        },
+                        "Property": "fiscal_year"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'24/25'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "53D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "bcts_reporting licence_issued_ra_apportionment"
+                          }
+                        },
+                        "Property": "fiscal_year"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'23/24'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "53D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "bcts_reporting licence_issued_ra_apportionment"
+                          }
+                        },
+                        "Property": "fiscal_year"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'21/22'"
                       }
                     }
                   }

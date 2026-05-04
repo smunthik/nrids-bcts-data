@@ -4,10 +4,10 @@
   "position": {
     "x": 0,
     "y": 4072,
-    "z": 6000,
+    "z": 1000,
     "height": 848,
     "width": 1280,
-    "tabOrder": 4000
+    "tabOrder": 3000
   },
   "visualGroup": {
     "displayName": "Volume and FTE Trends",

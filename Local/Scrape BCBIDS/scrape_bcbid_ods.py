@@ -17,11 +17,15 @@ from datetime import datetime, timedelta
 import time
 import pandas as pd
 import io
-
+from pathlib import Path
 from dotenv import load_dotenv
 
-load_dotenv('./secrets.env')
 
+# Get current file directory
+BASE_DIR = Path(__file__).resolve().parent
+# Build absolute path to .env
+env_path = BASE_DIR / "secrets.env"
+load_dotenv(env_path)
 
 postgres_username = os.environ["ODS_USERNAME"]
 postgres_password = os.environ["ODS_PASSWORD"]

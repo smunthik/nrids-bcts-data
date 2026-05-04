@@ -1,0 +1,233 @@
+table 'bcts_reporting vw_stumpage_rate_main'
+	lineageTag: fbb12c52-a5cb-44d7-9fa0-492fc71b7439
+
+	column business_area_region_category
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: e7c79c1f-9e6d-45b8-a951-d0c8b3d8acb5
+		summarizeBy: none
+		sourceColumn: business_area_region_category
+
+		annotation SummarizationSetBy = Automatic
+
+	column business_area_region
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 0faa4afa-0ff7-4095-aea5-0f050a83a0fc
+		summarizeBy: none
+		sourceColumn: business_area_region
+
+		annotation SummarizationSetBy = Automatic
+
+	column business_area
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 8f661f41-5ef2-4f49-8a62-f4318e0ce1b8
+		summarizeBy: none
+		sourceColumn: business_area
+
+		annotation SummarizationSetBy = Automatic
+
+	column business_area_code
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 5ab615ad-a006-4b81-a501-4319b1af62b0
+		summarizeBy: none
+		sourceColumn: business_area_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column forest_file_id
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 51c7f6f6-40a0-4f8f-9b46-c93061d82c8c
+		summarizeBy: none
+		sourceColumn: forest_file_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column bcts_category_code
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 76cac1a4-4756-4d7f-8e8b-eb2197e1ed25
+		summarizeBy: none
+		sourceColumn: bcts_category_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column auction_date
+		dataType: dateTime
+		formatString: Short Date
+		sourceProviderType: datetime2
+		lineageTag: b74f3d1d-6f3f-498a-9851-6faaa2b13481
+		summarizeBy: none
+		sourceColumn: auction_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column legal_effective_dt
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: cdaec2d9-cace-4898-a3cc-2b1cb4d926e5
+		summarizeBy: none
+		sourceColumn: legal_effective_dt
+
+		annotation SummarizationSetBy = Automatic
+
+	column sale_volume
+		dataType: double
+		sourceProviderType: decimal
+		lineageTag: 6dd7c2b3-02c4-4e0a-b3c9-f8a07d808af3
+		summarizeBy: sum
+		sourceColumn: sale_volume
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column upset_rate
+		dataType: double
+		sourceProviderType: decimal
+		lineageTag: 076ca725-a516-4fb8-9bef-b9360767db38
+		summarizeBy: sum
+		sourceColumn: upset_rate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column total_upset_value
+		dataType: double
+		sourceProviderType: decimal
+		lineageTag: 2cc8daf1-0cd9-47d3-af51-8ee55c3f8fbe
+		summarizeBy: sum
+		sourceColumn: total_upset_value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column bonus_bid
+		dataType: double
+		sourceProviderType: decimal
+		lineageTag: 42de8338-e84e-48ed-adde-cb01cbce9889
+		summarizeBy: sum
+		sourceColumn: bonus_bid
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column bonus_offer
+		dataType: double
+		sourceProviderType: decimal
+		lineageTag: c7d933c1-406b-4805-b55f-d0333f0762c9
+		summarizeBy: sum
+		sourceColumn: bonus_offer
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column client_count
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 5ee61f63-d880-4b4e-be60-c3ac2c09d1a7
+		summarizeBy: sum
+		sourceColumn: client_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column file_status_st
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: f72c2c8c-b033-422a-b245-2159ea10de51
+		summarizeBy: none
+		sourceColumn: file_status_st
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_stumpage_m3
+		dataType: double
+		sourceProviderType: decimal
+		lineageTag: 38b7f813-30e7-490e-82f7-34568be89636
+		summarizeBy: sum
+		sourceColumn: total_stumpage_m3
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column total_stumpage_value
+		dataType: double
+		sourceProviderType: decimal
+		lineageTag: 97cff34b-5f88-4814-9f26-f91a4e35584b
+		summarizeBy: sum
+		sourceColumn: total_stumpage_value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column licence_id
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 315d46da-73fe-4ba6-aa2f-d51f4b349c31
+		summarizeBy: none
+		sourceColumn: licence_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column tso_name
+		dataType: string
+		sourceProviderType: nvarchar(max)
+		lineageTag: 283ac5f5-9c35-496b-bc37-0696e399fda1
+		summarizeBy: none
+		sourceColumn: tso_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column acti_variable_cost_upset
+		dataType: double
+		sourceProviderType: decimal
+		lineageTag: 8965b3b7-5866-4010-ab03-fc2f1c2d8edb
+		summarizeBy: sum
+		sourceColumn: acti_variable_cost_upset
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column acti_total_cost_upset
+		dataType: double
+		sourceProviderType: decimal
+		lineageTag: 6e79af6f-37e6-4652-87c4-ef78f5fe6f35
+		summarizeBy: sum
+		sourceColumn: acti_total_cost_upset
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column acti_mps70
+		dataType: double
+		sourceProviderType: decimal
+		lineageTag: f1ff7d0b-7613-4eb1-b133-d152e8ffdaa5
+		summarizeBy: sum
+		sourceColumn: acti_mps70
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'bcts_reporting vw_stumpage_rate_main' = m
+		mode: directQuery
+		source =
+				let
+				    Source = PostgreSQL.Database("existence.bcgov:5435", "odsprd"),
+				    bcts_reporting_vw_stumpage_rate_main = Source{[Schema="bcts_reporting",Item="vw_stumpage_rate_main"]}[Data]
+				in
+				    bcts_reporting_vw_stumpage_rate_main
+

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "bbf2c1580c4baa718d31",
   "position": {
-    "x": 925,
-    "y": 391.70376285058387,
+    "x": 912,
+    "y": 384,
     "z": 2000,
-    "height": 155.04940612835614,
-    "width": 329,
+    "height": 176,
+    "width": 328,
     "tabOrder": 3000
   },
   "visual": {
@@ -132,7 +132,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#013366'"
+                      "Value": "'#252423'"
                     }
                   }
                 }
@@ -141,7 +141,7 @@
             "gridVertical": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -183,7 +183,18 @@
             "outlineStyle": {
               "expr": {
                 "Literal": {
-                  "Value": "0D"
+                  "Value": "11D"
+                }
+              }
+            },
+            "outlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#252423'"
+                    }
+                  }
                 }
               }
             }
@@ -219,7 +230,63 @@
                   "Value": "false"
                 }
               }
+            },
+            "backColorSecondary": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
             }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "76D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(bcts_reporting bcts_volume_summary_chart_2.Total)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "73D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(bcts_reporting bcts_volume_summary_chart_2.Value Added)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "160D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "bcts_reporting bcts_volume_summary_chart_2.metric"
           }
         }
       ]

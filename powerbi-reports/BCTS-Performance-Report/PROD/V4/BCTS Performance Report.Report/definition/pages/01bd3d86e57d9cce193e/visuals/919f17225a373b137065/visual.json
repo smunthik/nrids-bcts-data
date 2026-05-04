@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "919f17225a373b137065",
   "position": {
-    "x": 20,
-    "y": 637.28191000918287,
+    "x": 24,
+    "y": 640,
     "z": 3000,
-    "height": 195,
-    "width": 1232,
+    "height": 192,
+    "width": 1240,
     "tabOrder": 3000
   },
   "visual": {
@@ -195,7 +195,7 @@
             "gridVertical": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -211,7 +211,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#013366'"
+                      "Value": "'#252423'"
                     }
                   }
                 }
@@ -222,7 +222,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#013366'"
+                      "Value": "'#252423'"
                     }
                   }
                 }
@@ -233,7 +233,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#013366'"
+                      "Value": "'#252423'"
                     }
                   }
                 }
@@ -263,8 +263,9 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#013366'"
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
                     }
                   }
                 }
@@ -296,6 +297,18 @@
                   "Value": "10D"
                 }
               }
+            },
+            "backColorSecondary": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -306,7 +319,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "223.22724477868405D"
+                  "Value": "269.1853909097356D"
                 }
               }
             }
@@ -320,7 +333,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "146.0090274968028D"
+                  "Value": "98.00902749680279D"
                 }
               }
             }
