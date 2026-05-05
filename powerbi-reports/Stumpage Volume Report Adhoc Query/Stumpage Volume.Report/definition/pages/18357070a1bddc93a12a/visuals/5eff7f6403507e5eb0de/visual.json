@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "5eff7f6403507e5eb0de",
   "position": {
     "x": 0,
@@ -11,28 +11,6 @@
   },
   "visual": {
     "visualType": "card",
-    "query": {
-      "queryState": {
-        "Values": {
-          "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "bcts_reporting annual_developed_volume"
-                    }
-                  },
-                  "Property": "Blank Title"
-                }
-              },
-              "queryRef": "bcts_reporting annual_developed_volume.Blank Title",
-              "nativeQueryRef": "Blank Title"
-            }
-          ]
-        }
-      }
-    },
     "objects": {
       "labels": [
         {
@@ -122,18 +100,6 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
-                }
-              }
-            },
-            "text": {
-              "expr": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "bcts_reporting annual_developed_volume"
-                    }
-                  },
-                  "Property": "Title Measure"
                 }
               }
             },
@@ -317,5 +283,6 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "isHidden": true
 }

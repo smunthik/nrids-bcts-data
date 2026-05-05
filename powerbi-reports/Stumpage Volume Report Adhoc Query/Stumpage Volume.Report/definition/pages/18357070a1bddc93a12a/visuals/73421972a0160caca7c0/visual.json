@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "73421972a0160caca7c0",
   "position": {
     "x": 0,
@@ -151,7 +151,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Annual Developed Volume'"
+                  "Value": "'MPS70/VCU/TCU/Final Stumpage Rate Report'"
                 }
               }
             },
