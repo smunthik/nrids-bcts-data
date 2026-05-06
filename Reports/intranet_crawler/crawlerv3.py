@@ -20,26 +20,24 @@ from selenium.common.exceptions import WebDriverException
 # Config
 # -----------------------------
 # START_URL = "https://www2.gov.bc.ca/gov/content/sports-culture/recreation/fishing-hunting/hunting/frequently-asked-questions"
-START_URL = "https://intranet.gov.bc.ca/csnr/csnr-services/procurement-contract-management-support/learning-tools-and-resources/a-z-index"
-# START_URL = "https://www2.gov.bc.ca/gov/content/bc-procurement-resources/buy-for-government/solicitation-processes-and-templates?keyword=templates"
+# START_URL = "https://intranet.gov.bc.ca/csnr/csnr-services/procurement-contract-management-support/learning-tools-and-resources/a-z-index"
+START_URL = "https://www2.gov.bc.ca/gov/content/bc-procurement-resources/buy-for-government/solicitation-processes-and-templates?keyword=templates"
 # START_URL = "https://intranet.fin.gov.bc.ca/program/insurance-program-types"
 owning_business_area = "BC Timber Sales (BCTS) Contracts and Procurement Branch" 
 MAX_DEPTH = 2
 
-OUTPUT_FILE = "intranet_full_crawl.txt"
 HIERARCHY_FILE = "intranet_url_tree.txt"
 
-DOWNLOAD_FOLDER = "downloads"
-METADATA_FOLDER = "metadata"
+DOWNLOAD_FOLDER = "files"
+PAGES_FOLDER = "pages"  # <-- NEW: per-page scraped text + metadata side-by-side
 
 visited = set()
 
 os.makedirs(DOWNLOAD_FOLDER, exist_ok=True)
-os.makedirs(METADATA_FOLDER, exist_ok=True)
+os.makedirs(PAGES_FOLDER, exist_ok=True)
 
-# Optional: provide fallback support contacts by business area (if you want)
 DEFAULT_SUPPORT_CONTACT_BY_AREA = {
-    # "BCTS": {"email": "bcts.support@gov.bc.ca", "role": "Business Support"},
+    # "BC Timber Sales (BCTS) Contracts and Procurement Branch": {"email": "...", "role": "..."},
 }
 
 # -----------------------------
@@ -71,53 +69,57 @@ def clean_and_extract_text(html):
     soup = BeautifulSoup(html, "html.parser")
     return " ".join(soup.stripped_strings)
 
-
 def safe_filename_from_url(url, max_length=80):
     parsed = urlparse(url)
 
-    # Build short readable base
     base = (parsed.netloc + parsed.path).strip("/")
     base = re.sub(r"[^A-Za-z0-9._-]+", "_", base)
-
-    # Trim to max_length
     base = base[:max_length]
 
-    # Add hash to guarantee uniqueness
     hash_part = hashlib.md5(url.encode()).hexdigest()[:10]
-
     return f"{base}__{hash_part}"
 
+def write_page_text(folder, base_name, text):
+    """
+    Writes: <folder>/<base_name>.txt
+    """
+    path = os.path.join(folder, f"{base_name}.txt")
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(text)
+    return path
+
+def write_metadata_json_for_basename(folder, base_name, record):
+    """
+    Writes: <folder>/<base_name>.json
+    (same base filename as .txt, only extension differs)
+    """
+    path = os.path.join(folder, f"{base_name}.json")
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(record, f, ensure_ascii=False, indent=2)
+    return path
 
 def normalize_date_to_yyyy_mm_dd(dt):
     if not dt:
         return None
     try:
         if isinstance(dt, str):
-            # try parse common formats
-            # YYYY-MM-DD
             m = re.search(r"\b(\d{4})-(\d{2})-(\d{2})\b", dt)
             if m:
                 return f"{m.group(1)}-{m.group(2)}-{m.group(3)}"
 
-            # Month name formats (e.g., April 13, 2026)
+            # optional dateutil parse if installed
             try:
-                from dateutil import parser as dateparser  # optional dependency
+                from dateutil import parser as dateparser
                 parsed_dt = dateparser.parse(dt, fuzzy=True)
                 return parsed_dt.date().isoformat()
             except Exception:
                 return None
 
-        # datetime
         return dt.date().isoformat()
     except Exception:
         return None
 
 def find_last_modified_in_html(soup):
-    """
-    Try to find a last modified date from common meta tags or visible text.
-    Returns YYYY-MM-DD or None.
-    """
-    # Meta tags commonly used
     meta_candidates = [
         ("meta", {"property": "article:modified_time"}),
         ("meta", {"name": "last-modified"}),
@@ -129,7 +131,6 @@ def find_last_modified_in_html(soup):
         if tag and tag.get("content"):
             return normalize_date_to_yyyy_mm_dd(tag["content"])
 
-    # Look for visible "Last updated" patterns
     text = " ".join(soup.stripped_strings)
     patterns = [
         r"last\s+updated[:\s]+([A-Za-z]+\s+\d{1,2},\s+\d{4})",
@@ -142,11 +143,9 @@ def find_last_modified_in_html(soup):
         m = re.search(p, text, flags=re.IGNORECASE)
         if m:
             return normalize_date_to_yyyy_mm_dd(m.group(1))
-
     return None
 
 def extract_document_title(soup):
-    # Prefer OG title, then HTML title, then H1
     og = soup.find("meta", attrs={"property": "og:title"})
     if og and og.get("content"):
         return og["content"].strip()
@@ -159,14 +158,9 @@ def extract_document_title(soup):
         t = h1.get_text(" ", strip=True)
         if t:
             return t
-
     return None
 
 def extract_support_contact(soup):
-    """
-    Try to find a support contact in the main body from mailto: links.
-    Returns {"email": "...", "role": "..."} or None.
-    """
     mailto = soup.select_one('a[href^="mailto:"]')
     if not mailto:
         return None
@@ -176,10 +170,8 @@ def extract_support_contact(soup):
     if not email:
         return None
 
-    # Try to infer role from nearby text (best-effort)
     role = None
     parent_text = mailto.parent.get_text(" ", strip=True) if mailto.parent else ""
-    # e.g., "Contact: Business Support - someone@gov.bc.ca"
     m = re.search(r"(support|business support|helpdesk|service desk|contact)\b", parent_text, re.IGNORECASE)
     if m:
         role = m.group(1)
@@ -187,58 +179,40 @@ def extract_support_contact(soup):
     return {"email": email, "role": role} if role else {"email": email, "role": None}
 
 def extract_security_classification(soup):
-    """
-    Best-effort detection of sensitivity labels from visible text.
-    Only returns a value if a clear label is found.
-    """
     text = " ".join(soup.stripped_strings).lower()
-
-    # look for explicit phrases like "Security classification: Internal"
     m = re.search(r"security\s+classification[:\s]+(public|internal|confidential|protected)", text)
     if m:
         return m.group(1).capitalize()
-
-    # Otherwise: cautious scan for standalone labels near "classification"
     for label in ["public", "internal", "confidential", "protected"]:
         if re.search(rf"\b{label}\b", text) and "classification" in text:
             return label.capitalize()
-
     return None
 
-
 def infer_topic_from_url(url):
+    """
+    Your requested rule: use parts[-1] as topic.
+    """
     parsed = urlparse(url)
-    parts = [p for p in parsed.path.split("/") if p][2:]  # skip domain and first path segment (often a section)
-    parts = [part.split(".")[0] for part in parts]  # remove extensions
-
+    parts = [p for p in parsed.path.split("/") if p]
     if not parts:
         return None
 
-    # Convert to readable format
-    topics = [part.replace("-", " ").replace("_", " ").title() for part in parts]
-    print(topics)
-    return topics
-
+    last_part = parts[-1].split(".")[0]  # remove extension
+    return last_part.replace("-", " ").replace("_", " ").title()
 
 def infer_document_status(url, soup):
-    # Conservative: only mark Archived when clearly indicated
     if "archive" in url.lower() or "archived" in url.lower():
         return "Archived"
-    text = " ".join(soup.stripped_strings).lower()
+    text = " ".join(soup.stripped_strings).lower() if soup else ""
     if re.search(r"\barchived\b", text) and re.search(r"\b(status|document status)\b", text):
         return "Archived"
     return "Active"
 
 def build_metadata_record(url, soup, owning_business_area, content_kind="page", file_last_modified=None):
-    """
-    Creates a metadata dict with required fields.
-    Any unknown fields are set to None (or False for pi_reviewed).
-    """
     document_title = extract_document_title(soup) if soup else None
-    print(f"Extracted title: {document_title}")
-    document_title = document_title.split('.')[0] if document_title else None  # remove file extension if present
-    print(f"Cleaned title: {document_title}")
-    topic_category = infer_topic_from_url(url) 
+    document_title = document_title.split(".")[0] if document_title else None
+
+    topic_category = infer_topic_from_url(url)
 
     last_modified = None
     if soup:
@@ -249,10 +223,10 @@ def build_metadata_record(url, soup, owning_business_area, content_kind="page", 
     security_classification = extract_security_classification(soup) if soup else None
 
     support_contact = extract_support_contact(soup) if soup else None
-    if not support_contact and owning_business_area and owning_business_area in DEFAULT_SUPPORT_CONTACT_BY_AREA:
+    if not support_contact and owning_business_area in DEFAULT_SUPPORT_CONTACT_BY_AREA:
         support_contact = DEFAULT_SUPPORT_CONTACT_BY_AREA[owning_business_area]
 
-    record = {
+    return {
         "source_url": url,
         "document_title": document_title,
         "owning_business_area": owning_business_area,
@@ -265,35 +239,22 @@ def build_metadata_record(url, soup, owning_business_area, content_kind="page", 
         "pi_reviewed": False,
         "pi_review_date": None,
         "pi_review_notes": None,
-        "_content_kind": content_kind  # internal helper (optional)
+        "_content_kind": content_kind
     }
-    return record
-
-def write_metadata_json(record):
-    fn = safe_filename_from_url(record["source_url"]) + ".metadata.json"
-    path = os.path.join(METADATA_FOLDER, fn)
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(record, f, ensure_ascii=False, indent=2)
-    return path
 
 def is_internal_link(link, base_url, start_url):
     href = link.get("href")
     if not href or href.startswith("#"):
         return False
-
     try:
         full_url = urljoin(base_url, href)
         parsed_full = urlparse(full_url)
         parsed_base = urlparse(start_url)
 
-        # Same domain OR same root domain (gov.bc.ca variants)
         if parsed_full.netloc == parsed_base.netloc:
             return True
-
-        # allow other subdomains within the same parent domain (best-effort)
         if parsed_full.netloc.endswith("gov.bc.ca") and parsed_base.netloc.endswith("gov.bc.ca"):
             return True
-
         return False
     except Exception:
         return False
@@ -301,17 +262,6 @@ def is_internal_link(link, base_url, start_url):
 def is_downloadable_file(link):
     href = link.get("href", "")
     return href.lower().split("?")[0].endswith((".pdf", ".doc", ".docx", ".xls", ".xlsx", ".ppt", ".pptx"))
-
-def wait_for_download_to_finish(existing_files, timeout=20):
-    start = time.time()
-    while time.time() - start < timeout:
-        current_files = set(os.listdir(DOWNLOAD_FOLDER))
-        downloading = glob.glob(os.path.join(DOWNLOAD_FOLDER, "*.crdownload"))
-        new_files = current_files - existing_files
-        if new_files and not downloading:
-            return True
-        time.sleep(1)
-    return False
 
 def requests_session_with_retries(max_retries=2):
     session = requests.Session()
@@ -322,17 +272,19 @@ def requests_session_with_retries(max_retries=2):
         allowed_methods=["GET", "HEAD"]
     )
     adapter = HTTPAdapter(max_retries=retries)
-    session.mount("https://", adapter)
-    session.mount("http://", adapter)
+    session.mount("https://", adapter)  # ✅ fixed
+    session.mount("http://", adapter)   # ✅ fixed
     return session
 
 def download_file_with_requests(file_url, indent, max_retries=2):
+    """
+    Downloads file to downloads/<filename>
+    Writes metadata to downloads/<filename>.json  (same filename + .json)
+    """
     try:
         print(f"📥 Downloading file: {file_url}")
 
-        # Get cookies from Selenium for authenticated downloads
         cookies = {c["name"]: c["value"] for c in driver.get_cookies()}
-
         session = requests_session_with_retries(max_retries=max_retries)
 
         headers = {
@@ -343,7 +295,7 @@ def download_file_with_requests(file_url, indent, max_retries=2):
             )
         }
 
-        # HEAD for Last-Modified if available
+        # HEAD for Last-Modified
         file_last_modified = None
         try:
             h = session.head(file_url, cookies=cookies, headers=headers, verify=False, timeout=10, allow_redirects=True)
@@ -372,18 +324,25 @@ def download_file_with_requests(file_url, indent, max_retries=2):
         with open(HIERARCHY_FILE, "a", encoding="utf-8") as f:
             f.write(f"{'    ' * indent}📎 Downloaded: {file_url}\n")
 
-        # Write metadata for the file (HTML soup not applicable)
-        record = build_metadata_record(file_url, None, owning_business_area, content_kind="file", file_last_modified=file_last_modified)
-        record["document_title"] = filename.split('.')[0] if filename else None  # for files, use filename if nothing else
-        write_metadata_json(record)
+        # Build metadata (no soup for file)
+        record = build_metadata_record(
+            file_url, None, owning_business_area,
+            content_kind="file", file_last_modified=file_last_modified
+        )
+
+        # For files, set title from filename if not found
+        record["document_title"] = filename.split(".")[0] if filename else record.get("document_title")
+
+        # ✅ Write metadata beside the downloaded file:
+        # downloads/<filename>.json
+        meta_path = os.path.join(DOWNLOAD_FOLDER, f"{filename}.json")
+        with open(meta_path, "w", encoding="utf-8") as f:
+            json.dump(record, f, ensure_ascii=False, indent=2)
+
+        print(f"🧾 File metadata written: {meta_path}")
 
     except requests.exceptions.RequestException as e:
         print(f"❌ Failed to download {file_url}: {e}")
-
-# def wait_for_login_if_needed():
-#     page_text = driver.page_source.lower()
-#     if "idir" in page_text or "password" in page_text:
-#         input("🔒 Login prompt detected. Please complete login and press Enter to continue...")
 
 def extract_main_content(soup):
     for tag in soup.select("header, nav, footer, aside, .sidebar, .menu, .navbar"):
@@ -414,14 +373,9 @@ def crawl(url, depth):
 
     try:
         driver.get(url)
-        # wait_for_login_if_needed()
 
         html = driver.page_source
         text = clean_and_extract_text(html)
-
-        # Save extracted text (as before)
-        with open(OUTPUT_FILE, "a", encoding="utf-8") as f:
-            f.write(f"\n\n--- URL: {url} ---\n{text}")
 
         # Parse main content
         soup = BeautifulSoup(html, "html.parser")
@@ -431,15 +385,22 @@ def crawl(url, depth):
         with open(HIERARCHY_FILE, "a", encoding="utf-8") as f:
             f.write(f"{'    ' * depth}- {url}\n")
 
-        # Build and write metadata for the page
+        # ✅ Deterministic basename for THIS URL
+        base_name = safe_filename_from_url(url)
+
+        # ✅ Save per-page text NOW (no post-processing needed)
+        text_path = write_page_text(PAGES_FOLDER, base_name, text)
+        print(f"📄 Page text written: {text_path}")
+
+        # ✅ Build metadata + write to same basename (.json)
         record = build_metadata_record(url, soup, owning_business_area, content_kind="page")
-        metadata_path = write_metadata_json(record)
-        print(f"🧾 Metadata written: {metadata_path}")
+        meta_path = write_metadata_json_for_basename(PAGES_FOLDER, base_name, record)
+        print(f"🧾 Page metadata written: {meta_path}")
 
         if not main_content:
             return
 
-        # Traverse links in main content
+        # Traverse links
         for link in main_content.find_all("a", href=True):
             href = link.get("href")
             if not href or href.startswith("#"):
@@ -447,17 +408,12 @@ def crawl(url, depth):
 
             full_url = urljoin(url, href)
 
-            # Downloadable files
             if is_downloadable_file(link) and full_url not in visited:
                 download_file_with_requests(full_url, depth + 1)
                 visited.add(full_url)
 
-            # Internal links
             elif depth < MAX_DEPTH and is_internal_link(link, url, START_URL) and full_url not in visited:
                 crawl(full_url, depth + 1)
-
-            else:
-                pass
 
     except WebDriverException as e:
         print(f"⚠️ Error loading {url}: {e}")
@@ -472,7 +428,6 @@ crawl(START_URL, depth=0)
 driver.quit()
 
 print("\n✅ Done.")
-print(f"📄 Text saved to: '{OUTPUT_FILE}'")
 print(f"🗂️ URL hierarchy saved to: '{HIERARCHY_FILE}'")
-print(f"📎 Files downloaded to: '{DOWNLOAD_FOLDER}/'")
-print(f"🧾 Metadata JSON saved to: '{METADATA_FOLDER}/'")
+print(f"📄 Per-page text + metadata saved to: '{PAGES_FOLDER}/'")
+print(f"📎 Files downloaded to: '{DOWNLOAD_FOLDER}/' (and metadata beside each file)")

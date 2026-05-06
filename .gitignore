@@ -15,3 +15,12 @@ __pycache__/
 **/*.ppt
 **/*.txt
 
+Reports/intranet_crawler/**/*.json
+Reports/intranet_crawler/**/*.xlsx
+Reports/intranet_crawler/**/*.pdf
+Reports/intranet_crawler/**/*.xls
+Reports/intranet_crawler/**/*.xlsm
+Reports/intranet_crawler/**/*.oft
+Reports/intranet_crawler/**/*.doc
+Reports/intranet_crawler/**/*.docx
+Reports/intranet_crawler/**/*.crdownload   
